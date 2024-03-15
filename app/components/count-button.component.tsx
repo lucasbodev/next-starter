@@ -1,10 +1,10 @@
 'use client'
 
-function CounterButton() {
+function CountButton() {
 
     return (
         <button type="submit">Click me</button>
     );
 }
 
-export default CounterButton;
+export default CountButton;
