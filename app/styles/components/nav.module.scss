@@ -1,0 +1,31 @@
+@use '@/app/styles/variables.module.scss' as variables;
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding: variables.$spacing-medium variables.$spacing-huge;
+    background-color: transparent;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+        li {
+            cursor: pointer;
+            transition: all 0.1s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

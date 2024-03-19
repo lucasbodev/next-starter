@@ -1,6 +1,6 @@
-import CountViewer from "@/app/components/count-viewer.component";
-import CountUpdater from "@/app/components/count-updater.component";
-import styles from "@/app/styles/count.module.scss";
+import CountViewer from "@/app/components/count/count-viewer.component";
+import CountUpdater from "@/app/components/count/count-updater.component";
+import styles from "@/app/styles/pages/count.module.scss";
 
 const Count = async () => {
 
@@ -12,11 +12,11 @@ const Count = async () => {
         });
 
     return (
-        <>
+        <section className={styles.section}>
             <h1 className={styles.title}>Count</h1>
             <CountViewer countValue={count!}/>
             <CountUpdater/>
-        </>
+        </section>
     );
 }
 

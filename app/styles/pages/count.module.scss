@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     padding: 6rem;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .title {
@@ -26,7 +26,7 @@
     color: variables.$white;
     font-weight: bold;
     font-size: variables.$font-size-small;
-    padding: variables.$spacing-small variables.$spacing-medium;
+    padding: variables.$spacing-tiny variables.$spacing-medium;
     text-transform: uppercase;
     transition: all 0.1s ease;
     border: none;

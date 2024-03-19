@@ -1,6 +1,6 @@
 'use client'
 
-import styles from "@/app/styles/count.module.scss";
+import styles from "@/app/styles/pages/count.module.scss";
 import { incrementCount } from "@/app/actions/count-actions";
 
 const CountUpdater = () => {

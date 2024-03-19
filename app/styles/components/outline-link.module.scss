@@ -1,0 +1,17 @@
+@use '@/app/styles/variables.module.scss' as variables;
+
+.outline_link {
+    background-color: transparent;
+    border-radius: variables.$border-radius-round;
+    color: variables.$white;
+    font-weight: bold;
+    font-size: variables.$font-size-small;
+    padding: variables.$spacing-tiny variables.$spacing-medium;
+    text-transform: uppercase;
+    transition: all 0.1s ease;
+    outline: solid 1px white;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
