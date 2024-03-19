@@ -1,7 +1,7 @@
 'use server';
 
 import { prisma } from "@/app/db";
-import {revalidateTag} from "next/cache";
+import {revalidatePath} from "next/cache";
 
 const countId = 1;
 
@@ -25,5 +25,5 @@ export async function incrementCount() {
             value: count + 1,
         },
     });
-    revalidateTag('count')
+    revalidatePath('/count');
 }

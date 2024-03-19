@@ -1,0 +1,22 @@
+.flex_container {
+    display: flex;
+    height: 100dvh;
+    padding-top: 3rem;
+}
+
+.flex_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex_item_40 {
+    @extend .flex_item;
+    border-right: 1px solid #000;
+    width: 40%;
+}
+
+.flex_item_60 {
+    @extend .flex_item;
+    width: 60%;
+}

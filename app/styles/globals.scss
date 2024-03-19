@@ -1,5 +1,9 @@
 @use '@/app/styles/variables.module.scss' as variables;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
   padding: 0;

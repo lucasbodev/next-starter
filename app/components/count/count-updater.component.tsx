@@ -1,7 +1,7 @@
-'use client'
+'use client';
 
 import styles from "@/app/styles/pages/count.module.scss";
-import { incrementCount } from "@/app/actions/count-actions";
+import {incrementCount} from "@/app/actions/count-actions";
 
 const CountUpdater = () => {
 
@@ -11,7 +11,7 @@ const CountUpdater = () => {
     };
 
     return (
-        <form action={ onSubmit }>
+        <form action={onSubmit}>
             <button type="submit" className={styles.button}>Click me</button>
         </form>
     );

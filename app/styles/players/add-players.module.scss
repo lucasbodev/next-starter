@@ -1,0 +1,21 @@
+.transparent {
+  background-color: transparent;
+}
+
+
+.form_container {
+  @extend .transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_container {
+  form {
+  }
+}
+
+.pointer {
+    cursor: pointer!important;
+}
