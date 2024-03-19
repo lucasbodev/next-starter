@@ -1,0 +1,69 @@
+$primary-color: hsl(273, 98%, 60%);
+$secondary-color: hsl(200, 73%, 44%);
+$white: hsl(0, 0%, 100%);
+$white-250: hsl(0, 0%, 90%);
+$white-500: hsl(0, 0%, 80%);
+$white-750: hsl(0, 0%, 70%);
+$black: hsl(0, 0%, 0%);
+$black-250: hsl(0, 0%, 10%);
+$black-500: hsl(0, 0%, 20%);
+$black-750: hsl(0, 0%, 30%);
+
+$font-family: 'Inter', sans-serif;
+
+$font-size-tiny: 0.5rem;
+$font-size-small: 0.75rem;
+$font-size-medium: 1rem;
+$font-size-large: 1.5rem;
+$font-size-huge: 5rem;
+
+$line-height-tiny: 1rem;
+$line-height-small: 1.5rem;
+$line-height-medium: 2rem;
+$line-height-large: 3rem;
+
+$spacing-tiny: 0.5rem;
+$spacing-small: 1rem;
+$spacing-medium: 1.5rem;
+$spacing-large: 2rem;
+$spacing-huge: 3rem;
+
+$border-radius-round: 50px;
+$border-radius-normal: 40px;
+
+$shadow-small: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.1);
+$shadow-large: 0 0 2rem 1rem rgba(0, 0, 0, 0.1);
+
+:export {
+    primaryColor: $primary-color;
+    secondaryColor: $secondary-color;
+    white: $white;
+    white250: $white-250;
+    white500: $white-500;
+    white750: $white-750;
+    black: $black;
+    black250: $black-250;
+    black500: $black-500;
+    black750: $black-750;
+    fontFamily: $font-family;
+    fontSizeTiny: $font-size-tiny;
+    fontSizeSmall: $font-size-small;
+    fontSizeMedium: $font-size-medium;
+    fontSizeLarge: $font-size-large;
+    fontSizeHuge: $font-size-huge;
+    lineHeightTiny: $line-height-tiny;
+    lineHeightSmall: $line-height-small;
+    lineHeightMedium: $line-height-medium;
+    lineHeightLarge: $line-height-large;
+    spacingTiny: $spacing-tiny;
+    spacingSmall: $spacing-small;
+    spacingMedium: $spacing-medium;
+    spacingLarge: $spacing-large;
+    spacingHuge: $spacing-huge;
+    borderRadiusRound: $border-radius-round;
+    borderRadiusNormal: $border-radius-normal;
+    shadowSmall: $shadow-small;
+    shadowMedium: $shadow-medium;
+    shadowLarge: $shadow-large;
+}

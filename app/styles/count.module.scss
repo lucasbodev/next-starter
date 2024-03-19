@@ -1,0 +1,37 @@
+@use '@/app/styles/variables.module.scss' as variables;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem;
+    height: 100vh;
+}
+
+.title {
+    font-size: variables.$font-size-huge;
+}
+
+.description {
+    color: variables.$white-500;
+    font-size: variables.$font-size-medium;
+    line-height: variables.$line-height-tiny;
+    margin-bottom: variables.$spacing-medium;
+}
+
+.button {
+    background-color: variables.$primary-color;
+    border-radius: variables.$border-radius-round;
+    color: variables.$white;
+    font-weight: bold;
+    font-size: variables.$font-size-small;
+    padding: variables.$spacing-small variables.$spacing-medium;
+    text-transform: uppercase;
+    transition: all 0.1s ease;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+    }
+}

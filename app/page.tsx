@@ -1,11 +1,14 @@
-import Image from "next/image";
-import styles from "@/app/page.module.css";
+import styles from "@/app/styles/page.module.scss";
 import Link from "next/link";
 
-export default function Home() {
+const Home = () => {
+  
   return (
     <main className={styles.main}>
-        <Link href={"/count"}>Count</Link>
+      <h1 className={styles.title}>Welcome to Next.js starter</h1>
+      <Link href={"/count"}>Go to Count</Link>
     </main>
   );
 }
+
+export default Home;

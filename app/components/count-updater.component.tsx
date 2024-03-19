@@ -1,18 +1,21 @@
-import { revalidatePath } from "next/cache";
-import countActions from "@/app/actions/count-actions";
-import CountButton from "@/app/components/count-button.component";
+'use client'
 
-async function CountUpdater() {
+import styles from "@/app/styles/count.module.scss";
+import { countStore } from "@/store/count-store";
+import { incrementCount } from "@/app/actions/count-actions";
 
-    const incrementCount = async () => {
-        "use server";
-        await countActions.incrementCount();
-        revalidatePath("/count");
+const CountUpdater = () => {
+
+    const { setUpdatedCount } = countStore();
+
+    const onSubmit = async () => {
+        await incrementCount();
+        setUpdatedCount();
     };
 
     return (
-        <form action={ incrementCount }>
-            <CountButton />
+        <form action={ onSubmit }>
+            <button type="submit" className={styles.button}>Click me</button>
         </form>
     );
 }
