@@ -8,6 +8,13 @@ datasource db {
 }
 
 model count {
-  id    Int @id @default(autoincrement())
+  id    Int  @id @default(autoincrement())
   value Int?
+}
+
+model player {
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
+  age   Int     @default(18)
 }

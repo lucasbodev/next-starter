@@ -1,18 +1,50 @@
 'use client';
 
-import {Button, Input} from "@nextui-org/react";
-import addPlayer from "@/app/styles/players/add-players.module.scss";
+import { Button, Input } from "@nextui-org/react";
+import { addPlayer } from "@/app/actions/player-actions";
 import UploadIcon from "@/app/components/players/UploadIcon";
+import { z } from "zod";
+import { player } from "@prisma/client";
+import styles from "@/app/styles/players/add-players.module.scss";
+
+const Player = z.object({
+    email: z.string().min(1, { message: 'Username is required'}),
+    name: z.string().min(1, { message: 'firstname is required'}),
+    age: z.number()
+    //photo: z.string(),
+});
+
+type Player = z.infer<typeof Player>;
 
 const AddPlayer = () => {
+
+    const onSubmit = async (player: FormData) => {
+        const data = {
+            email: player.get('email') as string,
+            name: player.get('name') as string,
+            age: Number(player.get('age') as string),
+        }
+        if (validateForm(data)) {
+            await addPlayer(data as player);
+        }
+    };
+
+    const validateForm = (data: Player) => {
+        try {
+            Player.parse(data);
+            return true;
+        } catch (error) {
+            console.log(error);
+            return false;
+        }
+    }
 
     let fileInput: HTMLInputElement | null;
     const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
         const file = event.currentTarget.files?.[0];
-        console.log(file); // Here, you might upload the file or perform other actions
+        console.log(file);
     }
 
-    // Step 3: The conjuration method for the file selection dialogue
     const triggerFileInput = () => {
         if (fileInput) {
             fileInput.click();
@@ -20,28 +52,28 @@ const AddPlayer = () => {
     }
 
     return (
-        <div className={`${addPlayer.form_container} dark`}>
+        <div className={`${styles.form_container} dark`}>
             <h1>Add Player</h1>
-            <form className="flex flex-col gap-4">
-                <Input type="text" placeholder="Login"/>
-                <Input type="text" placeholder="First Name"/>
-                <Input type="text" placeholder="Last Name"/>
-                <Input type="number" placeholder="Age"/>
-                <div className={`${addPlayer.pointer}`} onClick={triggerFileInput}>
+            <form className="flex flex-col gap-4" action={onSubmit}>
+                <Input type="text" placeholder="Email" name="email" isRequired />
+                    {/* isInvalid={validateEmail(value)} errorMessage="Please enter a valid email" */}
+                <Input type="text" placeholder="Name" name="name" isRequired/>
+                <Input type="number" placeholder="Age" name="age" isRequired/>
+                <div className={`${styles.pointer}`} onClick={triggerFileInput}>
                     <Input
                         readOnly={true}
                         endContent={
                             <div>
-                                <UploadIcon width="16" height="16"/>
+                                <UploadIcon width="16" height="16" />
                                 <input
-                                    type="file" style={{display: 'none'}}
+                                    type="file" style={{ display: 'none' }}
                                     onChange={handleFileSelect}
-                                    ref={(input) => (fileInput = input)}/>
+                                    ref={(input) => (fileInput = input)} />
                             </div>
                         }
-                        placeholder="Photo"/>
+                        placeholder="Photo" />
                 </div>
-                <Button>Add Player</Button>
+                <Button type="submit">Add Player</Button>
             </form>
         </div>
     );

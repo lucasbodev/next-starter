@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "@/app/styles/components/nav.module.scss";
 import linkStyles from "@/app/styles/components/outline-link.module.scss";
+import Account from "@/app/components/account";
 
 const Nav = () => {
     return (
@@ -12,14 +13,12 @@ const Nav = () => {
                     </Link>
                 </li>
                 <li>
-                   <Link href="/players">
-                       <strong>Joueurs</strong>
-                   </Link>
+                    <Link href="/players">
+                        <strong>Joueurs</strong>
+                    </Link>
                 </li>
                 <li>
-                    <Link href="/" className={linkStyles.outline_link}>
-                        Login
-                    </Link>
+                    <Account />
                 </li>
             </ul>
         </nav>

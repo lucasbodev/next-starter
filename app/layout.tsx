@@ -1,10 +1,11 @@
-import type {Metadata} from "next";
-import {Inter} from "next/font/google";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "@/app/styles/globals.scss";
 import Nav from "./components/nav.component";
-import {Providers} from "@/app/providers";
+import { Providers } from "@/app/providers";
+import { UserProvider } from '@auth0/nextjs-auth0/client';
 
-const inter = Inter({subsets: ["latin"]});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Create Next App",
@@ -12,19 +13,20 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({
-                        children,
-                    }: Readonly<{
+    children,
+}: Readonly<{
     children: React.ReactNode;
 }>) => {
     return (
         <html lang="en">
-
-        <body className={inter.className}>
-        <Nav/>
-        <Providers>
-            {children}
-        </Providers>
-        </body>
+            <UserProvider>
+                <body className={inter.className}>
+                    <Nav />
+                    <Providers>
+                        {children}
+                    </Providers>
+                </body>
+            </UserProvider>
         </html>
     );
 }
