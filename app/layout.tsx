@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@/lib/styles/globals.scss";
+import "@/app/globals.scss";
 import Nav from "@/lib/components/nav.component";
 import { Providers } from "@/app/providers";
 import { UserProvider } from '@auth0/nextjs-auth0/client';
