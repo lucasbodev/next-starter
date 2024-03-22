@@ -7,11 +7,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model count {
-  id    Int  @id @default(autoincrement())
-  value Int?
-}
-
 model player {
   id    Int     @id @default(autoincrement())
   email String  @unique

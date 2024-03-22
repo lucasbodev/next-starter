@@ -1,7 +1,6 @@
 import Link from "next/link";
-import styles from "@/app/styles/components/nav.module.scss";
-import linkStyles from "@/app/styles/components/outline-link.module.scss";
-import Account from "@/app/components/account";
+import styles from "@/lib/styles/components/nav.module.scss";
+import Account from "@/lib/components/account";
 
 const Nav = () => {
     return (

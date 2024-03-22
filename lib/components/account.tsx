@@ -1,4 +1,4 @@
-import linkStyles from "@/app/styles/components/outline-link.module.scss";
+import linkStyles from "@/lib/styles/components/outline-link.module.scss";
 import { getSession } from '@auth0/nextjs-auth0';
 
 const Nav = async () => {

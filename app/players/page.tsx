@@ -1,6 +1,6 @@
-import players from "@/app/styles/players/players.module.scss";
-import ViewPlayers from "@/app/components/players/view-players";
-import AddPlayer from "@/app/components/players/add-player";
+import players from "@/lib/styles/players/players.module.scss";
+import ViewPlayers from "@/lib/components/players/view-players";
+import AddPlayer from "@/lib/components/players/add-player";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import { NextPage } from "next";
 

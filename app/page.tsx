@@ -1,5 +1,5 @@
-import styles from "@/app/styles/pages/page.module.scss";
-import linkStyles from "@/app/styles/components/outline-link.module.scss";
+import styles from "@/lib/styles/pages/page.module.scss";
+import linkStyles from "@/lib/styles/components/outline-link.module.scss";
 import Link from "next/link";
 
 const Home = () => {
