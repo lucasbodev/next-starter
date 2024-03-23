@@ -39,6 +39,7 @@ const AddPlayer = () => {
                 await addPlayer(data);
                 popSuccess('Player added successfully');
             } catch (e) {
+                console.log(e);
                 popError('Email already exists');
             }
         }

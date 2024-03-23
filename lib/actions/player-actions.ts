@@ -19,12 +19,18 @@ export async function getPlayer() {
 }
 
 export async function addPlayer(player: any) {
-    await prisma.player.create({
-        data: {
-            email: player.email,
-            name: player.name,
-            age: player.age,
-        },
-    });
+    // try {
+        await prisma.player.create({
+            data: {
+                email: player.email,
+                name: player.name,
+                age: player.age,
+            },
+        });
+    
+    // } catch (e) {
+    //     throw new Error('player already exists');
+    // }
+
     revalidatePath('/players');
 }
