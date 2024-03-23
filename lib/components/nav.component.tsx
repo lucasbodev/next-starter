@@ -1,9 +1,10 @@
-import Link from "next/link";
-import styles from "@/lib/styles/components/nav.module.scss";
-import Account from "@/lib/components/account";
+import Link from 'next/link';
+import styles from '@/lib/styles/components/nav.module.scss';
+import Account from '@/lib/components/account';
+import React, { type ReactElement } from 'react';
 
-const Nav = () => {
-    return (
+const Nav = async (): Promise<ReactElement> => {
+  return (
         <nav className={styles.nav}>
             <ul>
                 <li>
@@ -17,11 +18,11 @@ const Nav = () => {
                     </Link>
                 </li>
                 <li>
-                    <Account />
+                    <Account/>
                 </li>
             </ul>
         </nav>
-    );
-}
+  );
+};
 
 export default Nav;

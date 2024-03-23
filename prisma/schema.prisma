@@ -12,4 +12,5 @@ model player {
   email String  @unique
   name  String?
   age   Int     @default(18)
+  pictureUrl String?
 }

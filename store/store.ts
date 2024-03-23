@@ -1,8 +1,8 @@
 import { create } from 'zustand';
 
-type StoreState = {
+interface StoreState {
     count: number;
-};
+}
 
 const initialState: StoreState = {
     count: 0,
@@ -15,7 +15,7 @@ interface Store {
 
 export const useStore = create<Store>((set) => ({
     ...initialState,
-    setUpdatedCount: async () => {
+    setUpdatedCount: (): void => {
         set((state : StoreState) => ({...state, count: state.count + 1}));
     }
 }));
