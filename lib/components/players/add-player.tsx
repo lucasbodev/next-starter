@@ -36,7 +36,7 @@ const AddPlayer = () => {
         }
         if (validateForm(data)) {
             try {
-                await addPlayer(data as player);
+                await addPlayer(data);
                 popSuccess('Player added successfully');
             } catch (e) {
                 popError('Email already exists');

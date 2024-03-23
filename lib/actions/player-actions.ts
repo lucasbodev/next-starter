@@ -18,7 +18,7 @@ export async function getPlayer() {
     return player;
 }
 
-export async function addPlayer(player: player) {
+export async function addPlayer(player: any) {
     await prisma.player.create({
         data: {
             email: player.email,
