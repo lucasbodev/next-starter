@@ -1,15 +1,15 @@
 'use client';
 
-import styles from "@/lib/styles/pages/count.module.scss";
-import { useStore } from "@/store/store";
+import styles from '@/lib/styles/pages/count.module.scss';
+import { useStore } from '@/store/store';
+import React, { type ReactElement } from 'react';
 
-const CountUpdater = () => {
+const CountUpdater = (): ReactElement => {
+  const incrementCount = useStore(state => state.setUpdatedCount);
 
-    const incrementCount = useStore(state => state.setUpdatedCount);
-
-    return (
+  return (
         <button type="submit" className={styles.button} onClick={incrementCount}>Click me</button>
-    );
-}
+  );
+};
 
 export default CountUpdater;
