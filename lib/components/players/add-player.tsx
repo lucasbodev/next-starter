@@ -55,13 +55,6 @@ const AddPlayer = (): ReactElement => {
                     }
                 }
 
-            }
-        } catch (e) {
-            console.log(e);
-        }
-
-    };
-
     const popError = (message: string): void => {
         setPopupData({message, color: 'danger', error: true});
         setPopup(true);
