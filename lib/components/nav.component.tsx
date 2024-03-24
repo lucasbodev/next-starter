@@ -18,6 +18,11 @@ const Nav = async (): Promise<ReactElement> => {
                     </Link>
                 </li>
                 <li>
+                    <Link href="/speedtest">
+                        <strong>SpeedTest</strong>
+                    </Link>
+                </li>
+                <li>
                     <Account/>
                 </li>
             </ul>
