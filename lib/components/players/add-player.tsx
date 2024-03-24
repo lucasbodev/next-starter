@@ -5,7 +5,6 @@ import {Button, Input, Popover, PopoverContent, PopoverTrigger} from '@nextui-or
 import {addPlayer} from '@/lib/actions/player-actions';
 import UploadIcon from '@/lib/components/players/UploadIcon';
 import {z, type ZodIssue} from 'zod';
-import {type player} from '@prisma/client';
 import styles from '@/lib/styles/players/add-players.module.scss';
 
 const playerData = z.object({
@@ -48,12 +47,19 @@ const AddPlayer = (): ReactElement => {
                 };
                 if (validateForm(data)) {
                     try {
-                        await addPlayer(data as player);
+                        await addPlayer(data);
                         popSuccess('playerData added successfully');
                     } catch (e) {
                         popError('Email already exists');
                     }
                 }
+            }
+        } catch (e) {
+            console.log(e);
+            popError('An error occurred');
+        }
+    };
+
 
     const popError = (message: string): void => {
         setPopupData({message, color: 'danger', error: true});

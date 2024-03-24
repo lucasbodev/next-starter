@@ -1,6 +1,5 @@
 import {getPlayers} from '@/lib/actions/player-actions';
 import {Image, Card, CardBody} from '@nextui-org/react';
-import styles from '@/lib/styles/players/view-players.module.scss';
 
 import React, {type ReactElement} from 'react';
 
