@@ -31,19 +31,19 @@ const AddPlayer = (): ReactElement => {
 
 
          try {
-            const res = await fetch('/api/images', {
-                method: 'POST',
-                body: formData
-            });
-            if (res.ok) {
-                console.log(res);
-                const pictureUrl = (await res.json()).url;
+            // const res = await fetch('/api/images', {
+            //     method: 'POST',
+            //     body: formData
+            // });
+            // if (res.ok) {
+            //     console.log(res);
+            //     const pictureUrl = (await res.json()).url;
 
                 const data = {
                     email: formData.get('email') as string,
                     name: formData.get('name') as string,
                     age: Number(formData.get('age') as string),
-                    pictureUrl
+                    pictureUrl: 'pictureUrl'
                 };
                 if (validateForm(data)) {
                     try {
@@ -53,7 +53,7 @@ const AddPlayer = (): ReactElement => {
                         popError('Email already exists');
                     }
                 }
-            }
+            // }
         } catch (e) {
             console.log(e);
             popError('An error occurred');
@@ -122,7 +122,7 @@ const AddPlayer = (): ReactElement => {
         <div className={`${styles.form_container} dark`}>
             <h1>Add Player</h1>
             <form className="flex flex-col gap-4" onSubmit={(event) => {
-                void onSubmit(event).then(r => {
+                onSubmit(event).then(r => {
                     console.log(r);
                 }).catch(e => {
                     console.log(e);
