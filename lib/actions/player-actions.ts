@@ -1,18 +1,9 @@
 'use server';
 
 import {prisma} from '@/app/db';
+import { getSession } from '@auth0/nextjs-auth0';
 
 import {revalidatePath} from 'next/cache';
-
-export async function getPlayers(): Promise<any> {
-    const players = await prisma.player.findMany();
-
-    if (players === undefined || players === null) {
-        throw new Error('players not found');
-    }
-
-    return players;
-}
 
 interface Player {
     email: any
@@ -20,7 +11,21 @@ interface Player {
     age: any
 }
 
-export async function addPlayer(player: any): Promise<void> {
+export const getPlayers = async (): Promise<any> => {
+    const players = await prisma.player.findMany();
+
+    if (players === undefined || players === null) {
+        throw new Error('players not found');
+    }
+
+    return players;
+};
+
+export const addPlayer = async (player: any): Promise<void> => {
+    const session = await getSession();
+    if (session === null || session === undefined) {
+        throw new Error('Session not found');
+    }
     await prisma.player.create({
         data: {
             email: player.email,
@@ -29,4 +34,4 @@ export async function addPlayer(player: any): Promise<void> {
         } satisfies Player
     });
     revalidatePath('/players');
-}
+};

@@ -1,0 +1,22 @@
+@use '@/lib/styles/variables.module.scss' as variables;
+
+.transparent {
+  background-color: transparent;
+}
+
+
+.form__container {
+  @extend .transparent;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-medium;
+}
+
+.form__container {
+  form {
+  }
+}
+
+.pointer {
+    cursor: pointer!important;
+}

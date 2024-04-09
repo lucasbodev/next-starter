@@ -1,0 +1,49 @@
+{
+    "home": {
+        "title": "Bienvenue dans le démarrage de Next.js"
+    },
+    "links": {
+        "playerLink": "Joueurs",
+        "homeLink": "Accueil",
+        "countLink": "Compteur"
+    },
+    "log": {
+        "login": "Connexion",
+        "logout": "Déconnexion"
+    },
+    "count": {
+        "title": "Compteur",
+        "countViewer": "Vous avez cliqué {count} fois",
+        "increment": "Incrémenter"
+    },
+    "players": {
+        "form": {
+            "title": "Ajouter un joueur",
+            "name": "Nom",
+            "age": "Âge",
+            "position": "Position",
+            "add": "Ajouter"
+        },
+        "list": {
+            "title": "Joueurs",
+            "name": "Nom",
+            "age": "Âge",
+            "position": "Position",
+            "delete": "Supprimer",
+            "edit": "Modifier"
+        },
+        "messages": {
+            "addPlayerSuccess": "Joueur ajouté avec succès",
+            "addPlayerError": "Impossible d'ajouter le joueur"
+        }
+    },
+    "errors": {
+        "general": "Une erreur s'est produite",
+        "required": "Ce champ est requis",
+        "min": "La valeur minimale est de {min}",
+        "max": "La valeur maximale est de {max}",
+        "integer": "Ce champ doit être un entier",
+        "email": "Ce champ doit être un email",
+        "unique": "Ce champ doit être unique"
+    }
+}

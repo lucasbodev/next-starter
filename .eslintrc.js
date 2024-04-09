@@ -32,5 +32,10 @@ module.exports = {
   ],
   rules: {
     '@typescript-eslint/semi': ['error', 'always'],
+    "@typescript-eslint/no-misused-promises": [2, {
+      "checksVoidReturn": {
+        "attributes": false
+      }
+    }]
   }
 };

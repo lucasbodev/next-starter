@@ -1,0 +1,49 @@
+{
+    "home": {
+        "title": "Willkommen bei Next.js Starter"
+    },
+    "links": {
+        "playerLink": "Spieler",
+        "homeLink": "Startseite",
+        "countLink": "Zähler"
+    },
+    "log": {
+        "login": "Anmelden",
+        "logout": "Abmelden"
+    },
+    "count": {
+        "title": "Zähler",
+        "countViewer": "Sie haben {count} Mal geklickt",
+        "increment": "Erhöhen"
+    },
+    "players": {
+        "form": {
+            "title": "Spieler hinzufügen",
+            "name": "Name",
+            "age": "Alter",
+            "position": "Position",
+            "add": "Hinzufügen"
+        },
+        "list": {
+            "title": "Spieler",
+            "name": "Name",
+            "age": "Alter",
+            "position": "Position",
+            "delete": "Löschen",
+            "edit": "Bearbeiten"
+        },
+        "messages": {
+            "addPlayerSuccess": "Spieler erfolgreich hinzugefügt",
+            "addPlayerError": "Fehler beim Hinzufügen des Spielers"
+        }
+    },
+    "errors": {
+        "general": "Ein Fehler ist aufgetreten",
+        "required": "Dieses Feld ist erforderlich",
+        "min": "Mindestwert beträgt {min}",
+        "max": "Höchstwert beträgt {max}",
+        "integer": "Dieses Feld muss eine ganze Zahl sein",
+        "email": "Dieses Feld muss eine E-Mail sein",
+        "unique": "Dieses Feld muss eindeutig sein"
+    }
+}
