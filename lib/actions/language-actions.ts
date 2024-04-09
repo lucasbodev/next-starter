@@ -2,13 +2,13 @@
 
 import { locales } from '@/middleware';
 import { cookies, headers } from 'next/headers';
-import { permanentRedirect } from 'next/navigation';
+import { redirect } from 'next/navigation';
 
 export const setPreferredLanguage = async (formData: FormData): Promise<void> => {
     const locale = formData.get('lang') as string;
     const cookieStore = cookies();
     cookieStore.set('NEXT_LOCALE', locale);
-    permanentRedirect(getRedirectUrl(locale));
+    redirect(getRedirectUrl(locale));
 };
 
 const getRedirectUrl = (locale: string): string => {
@@ -18,7 +18,7 @@ const getRedirectUrl = (locale: string): string => {
     if (refererUrl !== null) {
         const previousLocale = getLocaleInReferer(refererUrl) ?? '';
         if (previousLocale !== '') {
-            const refererPage = refererUrl.replace(`http://localhost:3000/${previousLocale}`, '');
+            const refererPage = refererUrl.replace(`https://next-starter-five-murex.vercel.app/${previousLocale}`, '');
             redirectUrl = `/${locale}${refererPage}`;
         }
     }
