@@ -1,14 +1,16 @@
 'use client';
 
-import styles from '@/lib/styles/pages/count.module.scss';
+import { type Dictionary } from '@/app/dictionaries';
+import styles from '@/app/[lang]/count/count.module.scss';
 import { useStore } from '@/store/store';
 import React, { type ReactElement } from 'react';
 
-const CountViewer = (): ReactElement => {
+const CountViewer = (dictionary: Dictionary): ReactElement => {
+  
   const count = useStore(state => state.count);
 
   return (
-        <p className={styles.description}>You clicked {count} times</p>
+        <p className={styles.description}>{dictionary.count.countViewer.replace("{count}", count.toFixed())}</p>
   );
 };
 
