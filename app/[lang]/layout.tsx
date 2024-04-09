@@ -8,6 +8,7 @@ import { type LangParams } from '../dictionaries';
 import '@/lib/animations/gsap-config';
 import Footer from '@/lib/components/footer/footer.component';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react";
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -30,6 +31,7 @@ const RootLayout = (
           {children}
           <Footer params={{ lang }} />
           <SpeedInsights />
+          <Analytics />
         </Providers>
       </body>
     </html>
