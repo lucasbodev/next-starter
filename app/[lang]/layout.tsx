@@ -7,6 +7,7 @@ import { Providers } from '@/app/providers';
 import { type LangParams } from '../dictionaries';
 import '@/lib/animations/gsap-config';
 import Footer from '@/lib/components/footer/footer.component';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -28,6 +29,7 @@ const RootLayout = (
           <Nav params={{ lang }} />
           {children}
           <Footer params={{ lang }} />
+          <SpeedInsights />
         </Providers>
       </body>
     </html>
