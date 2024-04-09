@@ -2,13 +2,13 @@
 
 import { locales } from '@/middleware';
 import { cookies, headers } from 'next/headers';
-import { redirect } from 'next/navigation';
+import { permanentRedirect } from 'next/navigation';
 
 export const setPreferredLanguage = async (formData: FormData): Promise<void> => {
     const locale = formData.get('lang') as string;
     const cookieStore = cookies();
     cookieStore.set('NEXT_LOCALE', locale);
-    redirect(getRedirectUrl(locale));
+    permanentRedirect(getRedirectUrl(locale));
 };
 
 const getRedirectUrl = (locale: string): string => {
