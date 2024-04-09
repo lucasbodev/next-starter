@@ -18,7 +18,7 @@ const getRedirectUrl = (locale: string): string => {
     if (refererUrl !== null) {
         const previousLocale = getLocaleInReferer(refererUrl) ?? '';
         if (previousLocale !== '') {
-            const refererPage = refererUrl.replace(`http://localhost:3000/${previousLocale}`, '');
+            const refererPage = refererUrl.replace(`https://next-starter-five-murex.vercel.app/${previousLocale}`, '');
             redirectUrl = `/${locale}${refererPage}`;
         }
     }
