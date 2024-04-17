@@ -1,7 +1,7 @@
-import { type LangParams } from '@/app/dictionaries';
+import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 import players from '@/app/[lang]/players/players.module.scss';
 import React, { type ReactElement } from 'react';
-import { getDictionary } from '../../dictionaries';
+import { getDictionary } from '../../../dictionaries';
 import AddPlayer from '@/lib/components/players/add-player.component';
 import { getSession } from '@auth0/nextjs-auth0';
 import { redirect } from 'next/navigation';

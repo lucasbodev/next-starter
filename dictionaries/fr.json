@@ -44,6 +44,7 @@
         "max": "La valeur maximale est de {max}",
         "integer": "Ce champ doit être un entier",
         "email": "Ce champ doit être un email",
-        "unique": "Ce champ doit être unique"
+        "unique": "Ce champ doit être unique",
+        "unlogged": "Vous devez être connecté pour accéder à cette page"
     }
 }

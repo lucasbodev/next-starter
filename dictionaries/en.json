@@ -45,7 +45,8 @@
       "max": "Maximum value is {max}",
       "integer": "This field must be an integer",
       "email": "This field must be an email",
-      "unique": "This field must be unique"
+      "unique": "This field must be unique",
+      "unlogged": "You must be logged in to access this page"
     }
   }
 }

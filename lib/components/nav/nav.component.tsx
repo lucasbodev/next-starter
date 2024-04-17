@@ -1,7 +1,7 @@
 import styles from '@/lib/components/nav/nav.module.scss';
 import Account from '@/lib/components/account/account.component';
 import React, { type ReactElement } from 'react';
-import { getDictionary, type LangParams } from '@/app/dictionaries';
+import { getDictionary, type LangParams } from '@/dictionaries';
 import { getSession } from '@auth0/nextjs-auth0';
 import NavLink from './nav-link.component';
 import ResponsiveNavLayout from './responsive-nav-layout.component';
