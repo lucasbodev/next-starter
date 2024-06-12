@@ -5,7 +5,8 @@
     "links": {
         "playerLink": "Spieler",
         "homeLink": "Startseite",
-        "countLink": "Zähler"
+        "countLink": "Zähler",
+        "datasheetsLink": "Datenblatt"
     },
     "log": {
         "login": "Anmelden",

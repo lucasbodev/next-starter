@@ -16,6 +16,7 @@ export interface Dictionary {
     playerLink: string;
     homeLink: string;
     countLink: string;
+    datasheetsLink: string;
   };
   log: {
     login: string;

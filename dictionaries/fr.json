@@ -5,7 +5,8 @@
     "links": {
         "playerLink": "Joueurs",
         "homeLink": "Accueil",
-        "countLink": "Compteur"
+        "countLink": "Compteur",
+        "datasheetsLink": "Fiche technique"
     },
     "log": {
         "login": "Connexion",

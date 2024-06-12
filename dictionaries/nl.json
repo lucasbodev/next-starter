@@ -5,7 +5,8 @@
     "links": {
         "playerLink": "Spelers",
         "homeLink": "Startpagina",
-        "countLink": "Tegen"
+        "countLink": "Tegen",
+        "datasheetsLink": "Datasheet"
     },
     "log": {
         "login": "Inloggen",

@@ -16,6 +16,7 @@ const Nav = async ({ params: { lang } }: Readonly<{ params: LangParams }>): Prom
             <NavLink href="/" name={dictionary.links.homeLink} />
             <NavLink href="/count" name={dictionary.links.countLink} />
             {(user != null) && <NavLink href="/players" name={dictionary.links.playerLink} />}
+            <NavLink href="/data-sheet/view-datasheets" name={dictionary.links.datasheetsLink} />
             <div className={styles.account}>
                 <div className={styles.link}>
                     <Account params={{ lang }} />
