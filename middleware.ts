@@ -1,25 +1,17 @@
 import { type NextRequest, NextResponse } from "next/server";
+import { getLocale } from "@/lib/services/language-service";
 
 export const locales = ['fr', 'en', 'nl', 'de'];
+export const DEFAULT_LOCALE = locales[0];
 
-function getLocale(request: NextRequest): string {
-  const cookieLocale = request.cookies.get('NEXT_LOCALE');
-  if ((cookieLocale != null || cookieLocale !== undefined) && locales.includes(cookieLocale.value)) {
-    return cookieLocale.value;
-  } else {
-    const acceptLanguage = request.headers.get('Accept-Language');
-    const preferredLocale = acceptLanguage?.split(',').map((locale) => locale.split(';')[0]);
-    const locale = preferredLocale?.find((locale) => locales.includes(locale));
-    return locale ?? locales[0];
-  }
-}
-
-export function middleware(request: NextRequest): NextResponse {
+export const middleware = async (request: NextRequest): Promise<NextResponse> => {
   const { pathname } = request.nextUrl;
   const locale = getLocale(request);
+  request.cookies.set('NEXT_LOCALE', locale);
   request.nextUrl.pathname = `/${locale}${pathname}`;
   return NextResponse.redirect(request.nextUrl);
-}
+
+};
 
 export const config = {
   matcher: [

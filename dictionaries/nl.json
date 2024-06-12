@@ -45,6 +45,7 @@
         "max": "Maximale waarde is {max}",
         "integer": "Dit veld moet een geheel getal zijn",
         "email": "Dit veld moet een e-mail zijn",
-        "unique": "Dit veld moet uniek zijn"
+        "unique": "Dit veld moet uniek zijn",
+        "unlogged": "U moet inloggen om deze pagina te bekijken"
     }
 }

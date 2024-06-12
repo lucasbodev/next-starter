@@ -1,6 +1,6 @@
 import styles from '@/lib/components/footer/footer.module.scss';
 import React, { type ReactElement } from 'react';
-import { type LangParams } from '@/app/dictionaries';
+import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 import Languages from '../languages/languages.component';
 
 const Footer = async ({ params: { lang } }: Readonly<{ params: LangParams }>): Promise<ReactElement> => {

@@ -5,7 +5,7 @@ import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@
 import { locales } from '@/middleware';
 import { setPreferredLanguage } from '@/lib/actions/language-actions';
 import styles from '@/lib/components/languages/languages.module.scss';
-import { type LangParams } from '@/app/dictionaries';
+import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 
 const Languages: React.FC<LangParams> = ({ lang }) => {
 

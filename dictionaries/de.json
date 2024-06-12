@@ -45,6 +45,7 @@
         "max": "Höchstwert beträgt {max}",
         "integer": "Dieses Feld muss eine ganze Zahl sein",
         "email": "Dieses Feld muss eine E-Mail sein",
-        "unique": "Dieses Feld muss eindeutig sein"
+        "unique": "Dieses Feld muss eindeutig sein",
+        "unlogged": "Sie müssen angemeldet sein, um diese Seite zu sehen"
     }
 }

@@ -4,13 +4,12 @@ import type { Metadata } from 'next';
 import '@/app/globals.scss';
 import Nav from '@/lib/components/nav/nav.component';
 import { Providers } from '@/app/providers';
-import { type LangParams } from '../dictionaries';
-import '@/lib/animations/gsap-config';
+import { type LangParams } from '@/lib/models/dictionaries/lang-params';
+import '@/lib/styles/animations/gsap-config';
 import Footer from '@/lib/components/footer/footer.component';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react";
 import { GeistSans } from 'geist/font/sans';
-
 
 // const inter = Inter({ subsets: ['latin'] });
 
@@ -23,6 +22,7 @@ const RootLayout = (
   { params: { lang }, children }:
     Readonly<{ params: LangParams; children: React.ReactNode }>):
   ReactElement => {
+
 
   return (
     <html lang={lang}>

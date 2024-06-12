@@ -2,7 +2,8 @@ import CountViewer from '@/lib/components/count/count-viewer.component';
 import CountUpdater from '@/lib/components/count/count-updater.component';
 import styles from '@/app/[lang]/count/count.module.scss';
 import React, { type ReactElement } from 'react';
-import { getDictionary, type LangParams } from '../../dictionaries';
+import { getDictionary} from '@/dictionaries';
+import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 
 const Count = async ({ params: { lang } }: Readonly<{ params: LangParams }>): Promise<ReactElement> => {
 
