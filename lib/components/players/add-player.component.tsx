@@ -5,7 +5,7 @@ import { Button, Input, Popover, PopoverContent, PopoverTrigger } from '@nextui-
 import { addPlayer } from '@/lib/actions/player-actions';
 import UploadIcon from '@/lib/components/players/upload-icon.component';
 import styles from '@/lib/components/players/add-players.module.scss';
-import { type Dictionary } from '@/dictionaries';
+import { type Dictionary } from '@/lib/models/dictionaries/dictionary';
 
 interface PopupData {
     message: string

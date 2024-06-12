@@ -9,7 +9,7 @@ import { PlayerValidation } from '@/lib/models/validations/player-validation';
 import { getPlayersDictionary } from '@/dictionaries';
 import { DEFAULT_LOCALE } from '@/middleware';
 import { cookies } from 'next/headers';
-import { type PlayerDictionary } from '../models/dictionaries/player/player-dictionary';
+import { type PlayerDictionary } from '@/lib/models/dictionaries/player/player-dictionary';
 
 export const getPlayers = async (): Promise<ActionResult<Player[]>> => {
     const locale = cookies().get('NEXT_LOCALE')?.value ?? DEFAULT_LOCALE;

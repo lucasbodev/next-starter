@@ -1,4 +1,5 @@
-import { getDictionary, type LangParams } from '@/dictionaries';
+import { getDictionary } from '@/dictionaries';
+import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 import utils from '@/lib/styles/utils.module.scss';
 import { getSession } from '@auth0/nextjs-auth0';
 import React, { type ReactElement } from 'react';
