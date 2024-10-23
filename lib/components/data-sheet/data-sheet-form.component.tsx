@@ -44,7 +44,7 @@ const DataSheetForm = (): ReactElement => {
       {step === 2 && <NewDataSheetStep3Component control={control}
                                                  setValue={setValue}
                                                  onBack={prevStep}
-                                                 onSubmit={(event) => handleSubmit(onSubmit)}
+                                                 onSubmit={handleSubmit(onSubmit)}
                                                  errors={errors} />}
     </>
   );

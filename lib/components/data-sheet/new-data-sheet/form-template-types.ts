@@ -46,6 +46,6 @@ export const formTemplate: FormField[] = [
   {
     type: 'checkbox',
     label: 'Conditionnement',
-    options: ['1L', '2.5L', '5L', '10L']
+    options: ['1L', '2L', '5L', '10L']
   },
 ];
