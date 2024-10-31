@@ -40,7 +40,7 @@ $shadow-small: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.1);
 $shadow-medium: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.1);
 $shadow-large: 0 0 2rem 1rem rgba(0, 0, 0, 0.1);
 
-:root {
+:export {
     --primaryColor: $primary-color;
     --secondaryColor: $secondary-color;
     --white: $white;
