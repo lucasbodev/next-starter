@@ -4,7 +4,14 @@ import utils from '@/lib/styles/utils.module.scss';
 import { getSession } from '@auth0/nextjs-auth0';
 import React, { type ReactElement } from 'react';
 
-const Nav = async ({ params: { lang } }: Readonly<{ params: LangParams }>): Promise<ReactElement> => {
+interface NavParams {
+  params: LangParams | Promise<LangParams>;
+}
+
+const Nav = async ({ params }: Readonly<NavParams>): Promise<ReactElement> => {
+
+  const awaitedParams = await params;
+  const { lang } = awaitedParams;
 
   const user = await getSession();
   const dictionary = await getDictionary(lang);

@@ -52,7 +52,7 @@ const NewDataSheetStep1Component =  (props: NewDataSheetStep1ComponentProps): Re
       <form className="base_form">
         <h1>Étape 1</h1>
         <Image
-          src={image ?? ''}
+          src={image ?? null}
           width={300}
           height={300}
           className="h-auto object-contain mx-auto"

@@ -1,35 +1,41 @@
-import { type LangParams } from '@/lib/models/dictionaries/lang-params';
-import players from '@/app/[lang]/players/players.module.scss';
-import React, { type ReactElement } from 'react';
-import { getDictionary } from '../../../dictionaries';
-import AddPlayer from '@/lib/components/players/add-player.component';
-import { getSession } from '@auth0/nextjs-auth0';
-import { redirect } from 'next/navigation';
+import { type LangParams } from "@/lib/models/dictionaries/lang-params";
+import players from "@/app/[lang]/players/players.module.scss";
+import React, { type ReactElement } from "react";
+import { getDictionary } from "@/dictionaries";
+import AddPlayer from "@/lib/components/players/add-player.component";
+import { getSession } from "@auth0/nextjs-auth0";
+import { redirect } from "next/navigation";
+
+interface PlayerLayoutParams {
+  params: LangParams | Promise<LangParams>;
+  children: React.ReactNode;
+}
 
 const PlayersLayout = async (
-    { params: { lang }, children }:
-        Readonly<{ params: LangParams; children: React.ReactNode }>):
-    Promise<ReactElement> => {
+  { params, children }: Readonly<PlayerLayoutParams>): Promise<ReactElement> => {
 
-    const user = await getSession();
+  const awaitedParams = await params;
+  const { lang } = awaitedParams;
 
-    const dictionary = await getDictionary(lang);
+  const user = await getSession();
 
-    if (user == null) {
-        redirect(`/api/auth/login`);
-    }
+  const dictionary = await getDictionary(lang);
 
-    return (
-        <div className={players.double__panel}>
-            <section>
-                <AddPlayer {...dictionary} />
-            </section>
-            <div className={players.right__panel}>
-                {dictionary.players.list.title}
-                {children}
-            </div>
-        </div>
-    );
+  if (user == null) {
+    redirect(`/api/auth/login`);
+  }
+
+  return (
+    <div className={players.double__panel}>
+      <section>
+        <AddPlayer {...dictionary} />
+      </section>
+      <div className={players.right__panel}>
+        {dictionary.players.list.title}
+        {children}
+      </div>
+    </div>
+  );
 };
 
 export default PlayersLayout;
