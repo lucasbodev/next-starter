@@ -5,7 +5,14 @@ import React, { type ReactElement } from 'react';
 import { getDictionary} from '@/dictionaries';
 import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 
-const Count = async ({ params: { lang } }: Readonly<{ params: LangParams }>): Promise<ReactElement> => {
+interface CountParams {
+  params: LangParams | Promise<LangParams>;
+}
+
+const Count = async ({ params }: Readonly<CountParams>): Promise<ReactElement> => {
+
+  const awaitedParams = await params;
+  const { lang } = awaitedParams;
 
   const dictionary = await getDictionary(lang);
   

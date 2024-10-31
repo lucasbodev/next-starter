@@ -3,7 +3,14 @@ import React, { type ReactElement } from 'react';
 import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 import Languages from '../languages/languages.component';
 
-const Footer = async ({ params: { lang } }: Readonly<{ params: LangParams }>): Promise<ReactElement> => {
+interface FooterParams {
+  params: LangParams | Promise<LangParams>;
+}
+
+const Footer = async ({ params }: Readonly<FooterParams>): Promise<ReactElement> => {
+
+  const awaitedParams = await params;
+  const { lang } = awaitedParams;
 
     return (
         <div className={styles.footer}>

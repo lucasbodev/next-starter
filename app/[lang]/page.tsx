@@ -1,16 +1,19 @@
 import React, { type ReactElement } from 'react';
 import styles from '@/app/[lang]/home.module.scss';
-import { getDictionary } from '../../dictionaries';
+import { getDictionary } from "@/dictionaries";
 import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 import HomeAnimations from '@/app/[lang]/home.animations';
-// import { initLocaleCookie } from '@/lib/actions/language-actions';
 
+interface HomeParams {
+  params: LangParams | Promise<LangParams>
+}
 
-const Home = async ({ params: { lang } }: Readonly<{ params: LangParams }>): Promise<ReactElement> => {
+const Home = async ({ params }: Readonly<HomeParams>): Promise<ReactElement> => {
+
+  const awaitedParams = await params;
+  const { lang } = awaitedParams;
 
   const dictionary = await getDictionary(lang);
-
-  // await initLocaleCookie({ lang });
 
   return (
     <main className={styles.main}>

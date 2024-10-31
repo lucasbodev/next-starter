@@ -1,31 +1,31 @@
 'use server';
 
-import { cookies, headers } from 'next/headers';
-import { redirect } from 'next/navigation';
-import { locales } from '@/middleware';
+import { cookies, headers } from "next/headers";
+import { redirect } from "next/navigation";
+import { locales } from "@/middleware";
 
 export const setPreferredLanguage = async (formData: FormData): Promise<void> => {
     const locale = formData.get('lang') as string;
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     cookieStore.set('NEXT_LOCALE', locale);
-    redirect(getRedirectUrl(locale));
+    redirect(await getRedirectUrl(locale));
 };
 
-const getRedirectUrl = (locale: string): string => {
-    const headersList = headers();
+const getRedirectUrl = async (locale: string): Promise<string> => {
+    const headersList = await headers();
     const refererUrl = headersList.get('referer');
     let redirectUrl = `/${locale}`;
+
     if (refererUrl !== null) {
         const previousLocale = getLocaleInReferer(refererUrl) ?? '';
         if (previousLocale !== '') {
             redirectUrl = refererUrl.replace(`/${previousLocale}`, `/${locale}`);
         }
     }
+
     return redirectUrl;
 };
 
 const getLocaleInReferer = (refererUrl: string): string | undefined => {
-    let locale = null;
-    locale = locales.find((locale) => refererUrl.includes(locale));
-    return locale;
+    return locales.find((locale) => refererUrl.includes(locale));
 };

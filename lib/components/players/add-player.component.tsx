@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, type ReactElement } from 'react';
+import React, { useState, type ReactElement, useRef } from "react";
 import { Button, Input, Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
 import { addPlayer } from '@/lib/actions/player-actions';
 import UploadIcon from '@/lib/components/players/upload-icon.component';
@@ -42,7 +42,8 @@ const AddPlayer = (dictionary: Dictionary): ReactElement => {
         }, 3000);
     };
 
-    let fileInput: HTMLInputElement | null;
+    const fileInput = useRef<HTMLInputElement>(null);
+
     const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const file = event.currentTarget.files?.[0];
         console.log(file);
@@ -50,7 +51,7 @@ const AddPlayer = (dictionary: Dictionary): ReactElement => {
 
     const triggerFileInput = (): void => {
         if (fileInput != null) {
-            fileInput.click();
+            fileInput.current?.click();
         }
     };
 
@@ -74,7 +75,7 @@ const AddPlayer = (dictionary: Dictionary): ReactElement => {
                                 <input
                                     type="file" style={{ display: 'none' }}
                                     onChange={handleFileSelect}
-                                    ref={(input) => (fileInput = input)}
+                                    ref={fileInput}
                                     name="image" />
                             </div>
                         }

@@ -1,27 +1,28 @@
-"use server";
+'use server';
 
-import { cookies } from 'next/headers';
-import { type NextRequest } from 'next/server';
-import { locales, DEFAULT_LOCALE } from '@/middleware';
+import { cookies } from "next/headers";
+import { type NextRequest } from "next/server";
+import { DEFAULT_LOCALE, locales } from "@/middleware";
 
-export const getBrowserLocale = (request: NextRequest): string | undefined => {
+export const getBrowserLocale = async (request: NextRequest): Promise<string> => {
     const acceptLanguage = request.headers.get('Accept-Language');
     const preferredLocale = acceptLanguage?.split(',').map((locale) => locale.split(';')[0]);
-    const locale = preferredLocale?.find((locale) => locales.includes(locale));
-    return locale;
+    return preferredLocale?.find((locale) => locales.includes(locale)) ?? "";
 };
 
-export const getCookieLocale = (): string | undefined => {
-    const cookieLocale = cookies().get('NEXT_LOCALE');
-    console.log('cookieLocale', cookieLocale?.value);
-    if((cookieLocale != null || cookieLocale !== undefined) && locales.includes(cookieLocale?.value)) {
+export const getCookieLocale = async (): Promise<string> => {
+    const cookieLocale = (await cookies()).get('NEXT_LOCALE');
+
+    if(((cookieLocale?.value) != null) && locales.includes(cookieLocale?.value)) {
         return cookieLocale.value;
     }
+
+    return "";
 };
 
-export const getLocale = (request: NextRequest): string => {
-    const cookieLocale = getCookieLocale();
+export const getLocale = async (request: NextRequest): Promise<string> => {
+    const cookieLocale =  getCookieLocale();
     const browserLocale = getBrowserLocale(request);
-    const locale = cookieLocale ?? browserLocale ?? DEFAULT_LOCALE;
-    return locale;
+
+    return await (cookieLocale ?? browserLocale ?? DEFAULT_LOCALE);
 };
