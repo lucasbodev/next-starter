@@ -1,8 +1,8 @@
 import { type NextPage } from "next";
 import React from "react";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
-import '@/app/globals.scss';
-import dataSheetStyles from "./data-sheet.module.scss";
+import '@/app/globals.css';
+import dataSheetStyles from "./data-sheet.module.css";
 import LinkButton from "@/lib/components/buttons/LinkButton";
 
 

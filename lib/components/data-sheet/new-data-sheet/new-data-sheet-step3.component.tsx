@@ -2,7 +2,7 @@
 
 import React, { type ReactElement } from "react";
 import { Autocomplete, AutocompleteItem, Button, Checkbox, Input } from "@nextui-org/react";
-import "@/app/globals.scss";
+import "@/app/globals.css";
 import Link from "next/link";
 import { formTemplate } from "@/lib/components/data-sheet/new-data-sheet/form-template-types";
 import { type Control, Controller, type FieldErrors, type FieldValues, type UseFormSetValue } from "react-hook-form";

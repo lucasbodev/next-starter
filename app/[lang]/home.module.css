@@ -1,0 +1,119 @@
+/*@use '@/lib/styles/variables.module.scss' as variables;
+@use '@/lib/styles/_mixins.module.scss' as mixins;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  height: 100svh;
+
+  @include mixins.mobile {
+    padding: 3rem;
+  }
+}
+
+.title__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: variables.$font-size-huge;
+  margin-bottom: variables.$spacing-large;
+  max-width: 15ch;
+  width: 100%;
+
+  @include mixins.mobile {
+    font-size: variables.$font-size-large;
+  }
+}
+
+.title {
+  opacity: 0;
+  transform: translateY(-3rem);
+  background: -webkit-linear-gradient(0.9turn, #eee, #eee, #808080);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin: variables.$spacing-large 0;
+  max-width: 100%;
+}
+
+.line {
+  transform: scaleX(0);
+  border-radius: 50px;
+  height: 16px;
+  width: 100%;
+  transform-origin: left;
+  background: -webkit-linear-gradient(135deg, #d2c, hsl(336, 100%, 67%));
+}
+
+.reverse__line {
+  @extend .line;
+  background: -webkit-linear-gradient(135deg, hsl(336, 100%, 67%), #d2c);
+  transform-origin: right;
+} */
+
+/* Utilisation des variables CSS définies dans le fichier globals.css */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  height: 100svh;
+}
+
+/* Media query pour mobile (équivalent de @include mixins.mobile) */
+@media (max-width: var(--breakpoint-mobile)) {
+  .main {
+    padding: 3rem;
+  }
+}
+
+.title__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-huge);
+  margin-bottom: var(--spacing-large);
+  max-width: 15ch;
+  width: 100%;
+}
+
+/* Media query pour mobile (équivalent de @include mixins.mobile) */
+@media (max-width: var(--breakpoint-mobile)) {
+  .title__wrapper {
+    font-size: var(--font-size-large);
+  }
+}
+
+.title {
+  opacity: 0;
+  transform: translateY(-3rem);
+  background: -webkit-linear-gradient(0.9turn, #eee, #eee, #808080);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin: var(--spacing-large) 0;
+  max-width: 100%;
+}
+
+.line {
+  transform: scaleX(0);
+  border-radius: 50px;
+  height: 16px;
+  width: 100%;
+  transform-origin: left;
+  background: -webkit-linear-gradient(135deg, #d2c, hsl(336, 100%, 67%));
+}
+
+.reverse__line {
+  /* Réutilisation des styles de .line */
+  transform-origin: right;
+  background: -webkit-linear-gradient(135deg, hsl(336, 100%, 67%), #d2c);
+}

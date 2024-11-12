@@ -4,7 +4,7 @@ import React from 'react';
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
 import { locales } from '@/middleware';
 import { setPreferredLanguage } from '@/lib/actions/language-actions';
-import styles from '@/lib/components/languages/languages.module.scss';
+import styles from '@/lib/components/languages/languages.module.css';
 import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 
 const Languages: React.FC<LangParams> = ({ lang }) => {

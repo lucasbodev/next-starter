@@ -1,7 +1,7 @@
 'use client';
 
 import { type Dictionary } from '@/lib/models/dictionaries/dictionary';
-import styles from '@/app/[lang]/count/count.module.scss';
+import styles from '@/app/[lang]/count/count.module.css';
 import { useStore } from '@/store/store';
 import React, { type ReactElement } from 'react';
 

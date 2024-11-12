@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@/lib/components/nav/nav.module.scss';
+import styles from '@/lib/components/nav/nav.module.css';
 import Link from 'next/link';
 import React, { useEffect, useState, type ReactElement } from 'react';
 import Image from 'next/image';

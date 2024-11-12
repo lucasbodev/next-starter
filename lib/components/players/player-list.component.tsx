@@ -2,7 +2,7 @@
 
 import React, { type ReactElement } from "react";
 import { type Player } from "@prisma/client";
-import styles from "@/app/[lang]/players/players.module.scss";
+import styles from "@/app/[lang]/players/players.module.css";
 import { Card, CardBody, Image } from "@nextui-org/react";
 
 interface PlayerListProps {

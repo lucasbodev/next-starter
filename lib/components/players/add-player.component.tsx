@@ -4,7 +4,7 @@ import React, { useState, type ReactElement, useRef } from "react";
 import { Button, Input, Popover, PopoverContent, PopoverTrigger } from '@nextui-org/react';
 import { addPlayer } from '@/lib/actions/player-actions';
 import UploadIcon from '@/lib/components/players/upload-icon.component';
-import styles from '@/lib/components/players/add-players.module.scss';
+import styles from '@/lib/components/players/add-players.module.css';
 import { type Dictionary } from '@/lib/models/dictionaries/dictionary';
 
 interface PopupData {

@@ -1,6 +1,6 @@
 import CountViewer from '@/lib/components/count/count-viewer.component';
 import CountUpdater from '@/lib/components/count/count-updater.component';
-import styles from '@/app/[lang]/count/count.module.scss';
+import styles from '@/app/[lang]/count/count.module.css';
 import React, { type ReactElement } from 'react';
 import { getDictionary} from '@/dictionaries';
 import { type LangParams } from '@/lib/models/dictionaries/lang-params';

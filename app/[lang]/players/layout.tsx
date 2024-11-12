@@ -1,5 +1,5 @@
 import { type LangParams } from "@/lib/models/dictionaries/lang-params";
-import players from "@/app/[lang]/players/players.module.scss";
+import players from "@/app/[lang]/players/players.module.css";
 import React, { type ReactElement } from "react";
 import { getDictionary } from "@/dictionaries";
 import AddPlayer from "@/lib/components/players/add-player.component";

@@ -14,7 +14,6 @@ export const middleware = async (request: NextRequest): Promise<NextResponse> =>
 };
 
 export const config = {
-
   matcher: [
     // Skip all internal paths (_next, api, fr, nl, en, de)
     `/((?!_next|api|fr|nl|en|de|favicon.ico|next.svg).*)`

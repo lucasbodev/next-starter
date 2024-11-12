@@ -1,5 +1,5 @@
 import React, { type ReactElement } from 'react';
-import styles from '@/app/[lang]/home.module.scss';
+import styles from '@/app/[lang]/home.module.css';
 import { getDictionary } from "@/dictionaries";
 import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 import HomeAnimations from '@/app/[lang]/home.animations';

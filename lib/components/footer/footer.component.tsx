@@ -1,4 +1,4 @@
-import styles from '@/lib/components/footer/footer.module.scss';
+import styles from '@/lib/components/footer/footer.module.css';
 import React, { type ReactElement } from 'react';
 import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 import Languages from '../languages/languages.component';

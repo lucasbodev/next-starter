@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
+import path from 'path';
+
 const nextConfig = {
   sassOptions: {
     silenceDeprecations: ["legacy-js-api"],
+    includePaths: [path.join(process.cwd(), 'styles')],
   },
 
   images: {
@@ -16,9 +19,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-
-import path from 'path';
-
-export const sassOptions = {
-  includePaths: [path.join(process.cwd(), 'styles')],
-}

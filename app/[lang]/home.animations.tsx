@@ -1,7 +1,7 @@
 'use client';
 
 import React, { type ReactElement } from 'react';
-import '@/app/globals.scss';
+import '@/app/globals.css';
 import useIsomorphicLayoutEffect from '@/lib/styles/animations/use-isomorphic-layout-effect';
 import { revealHomeTitle } from '@/lib/styles/animations/animations';
 

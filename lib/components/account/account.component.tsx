@@ -1,6 +1,6 @@
 import { getDictionary } from '@/dictionaries';
 import { type LangParams } from '@/lib/models/dictionaries/lang-params';
-import utils from '@/lib/styles/utils.module.scss';
+import styles from '@/app/utils.module.css';
 import { getSession } from '@auth0/nextjs-auth0';
 import React, { type ReactElement } from 'react';
 
@@ -19,9 +19,9 @@ const Nav = async ({ params }: Readonly<NavParams>): Promise<ReactElement> => {
   return (
     (user != null)
       ?
-      <a href="/api/auth/logout" className={utils.outlined__button}>{dictionary.log.logout}</a>
+      <a href="/api/auth/logout" className={styles.outlined__button}>{dictionary.log.logout}</a>
       :
-      <a href="/api/auth/login" className={utils.outlined__button}>{dictionary.log.login}</a>
+      <a href="/api/auth/login" className={styles.outlined__button}>{dictionary.log.login}</a>
   );
 };
 

@@ -1,4 +1,4 @@
-import styles from '@/lib/components/nav/nav.module.scss';
+import styles from '@/lib/components/nav/nav.module.css';
 import Account from '@/lib/components/account/account.component';
 import React, { type ReactElement } from 'react';
 import { getDictionary } from '@/dictionaries';

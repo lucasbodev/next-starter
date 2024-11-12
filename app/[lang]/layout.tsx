@@ -1,7 +1,7 @@
 import React, { type ReactElement } from 'react';
 import type { Metadata } from 'next';
 // import { Inter } from 'next/font/google';
-import '@/app/globals.scss';
+import '@/app/globals.css';
 import Nav from '@/lib/components/nav/nav.component';
 import { Providers } from '@/app/providers';
 import { type LangParams } from '@/lib/models/dictionaries/lang-params';
