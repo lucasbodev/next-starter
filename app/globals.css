@@ -51,9 +51,11 @@
   --shadow-large: 0 0 2rem 1rem rgba(0, 0, 0, 0.1);
 
   /* Breakpoints */
-  --breakpoint-mobile: 1023px;
-  --breakpoint-desktop: 1024px;
-  --breakpoint-players: 470px;
+  --is-mobile: false;
+
+  @media (max-width: 1023px) {
+    --is-mobile: true;
+  }
 }
 
 /* Global reset */

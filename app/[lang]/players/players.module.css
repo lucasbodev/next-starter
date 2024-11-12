@@ -50,7 +50,7 @@
 }
 
 /* Media query pour les "players" (équivalent de @include mixins.players) */
-@media (max-width: var(--breakpoint-players)) {
+@media (max-width: 470px) {
     .double__panel {
         flex-direction: column;
     }
