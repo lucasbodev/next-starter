@@ -36,6 +36,7 @@ module.exports = {
       "checksVoidReturn": {
         "attributes": false
       }
-    }]
+    }],
+    '@typescript-eslint/strict-boolean-expressions': 'off'
   }
 };
