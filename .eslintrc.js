@@ -21,7 +21,13 @@ module.exports = {
       parserOptions: {
         sourceType: 'script'
       }
-    }
+    },
+    {
+      files: ['*.tsx'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'off',
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: 'latest',
