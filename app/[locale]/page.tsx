@@ -1,24 +1,15 @@
 import React from 'react';
 import styles from '@/app/[locale]/home.module.css';
-// import { getDictionary } from "@/dictionaries";
-// import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 import HomeAnimations from '@/app/[locale]/home.animations';
-import { useTranslations } from 'next-intl';
-// import { Link } from '@/i18n/routing';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 
-// interface HomeParams {
-//   params: LangParams | Promise<LangParams>
-// }
+const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
 
-const Home = async () => {
+  const { locale } = await params;
 
-  // const awaitedParams = await params;
-  // const { lang } = awaitedParams;
-  // const dictionary = await getDictionary(lang);
+  setRequestLocale(locale);
 
-  const t = useTranslations('home');
-
-
+  const t = await getTranslations('Home');
 
   return (
     <main className={styles.main}>

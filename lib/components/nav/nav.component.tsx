@@ -1,34 +1,26 @@
+import React from 'react';
 import styles from '@/lib/components/nav/nav.module.css';
 import Account from '@/lib/components/account/account.component';
-import React, { type ReactElement } from 'react';
-import { getDictionary } from '@/dictionaries';
-import { type LangParams } from '@/lib/models/dictionaries/lang-params';
 import { getSession } from '@auth0/nextjs-auth0';
 import NavLink from './nav-link.component';
 import ResponsiveNavLayout from './responsive-nav-layout.component';
+import { getTranslations } from 'next-intl/server';
 
-interface NavParams {
-  params: LangParams | Promise<LangParams>;
-}
+const Nav = async () => {
 
-const Nav = async ({ params}: Readonly<NavParams>): Promise<ReactElement> => {
-
-    const awaitedParams = await params;
-    const { lang } = awaitedParams;
-
+    const t = await getTranslations('Nav');
 
     const user = await getSession();
-    const dictionary = await getDictionary(lang);
 
     return (
         <ResponsiveNavLayout>
-            <NavLink href="/" name={dictionary.links.homeLink} />
-            <NavLink href="/count" name={dictionary.links.countLink} />
-            {(user != null) && <NavLink href="/players" name={dictionary.links.playerLink} />}
-            <NavLink href="/data-sheet/view-datasheets" name={dictionary.links.datasheetsLink} />
+            <NavLink href="/" name={t('homeLink')} />
+            <NavLink href="/count" name={t('countLink')} />
+            {(user != null) && <NavLink href="/players" name={t('playerLink')} />}
+            <NavLink href="/data-sheet/view-datasheets" name={t('datasheetsLink')} />
             <div className={styles.account}>
                 <div className={styles.link}>
-                    <Account params={{ lang }} />
+                    <Account />
                 </div>
             </div>
         </ResponsiveNavLayout>

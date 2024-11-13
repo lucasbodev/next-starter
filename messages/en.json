@@ -1,14 +1,14 @@
 {
-  "home": {
+  "Home": {
     "title": "Welcome to Next.js starter"
   },
-  "links": {
+  "Nav": {
     "playerLink": "Players",
     "homeLink": "Home",
     "countLink": "Counter",
     "datasheetsLink": "Datasheet"
   },
-  "log": {
+  "Account": {
     "login": "Login",
     "logout": "Logout"
   },

@@ -1,38 +1,40 @@
 'use client';
 
 import styles from '@/lib/components/nav/nav.module.css';
-import React, { type ReactElement } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { locales } from '@/middleware';
+// import { usePathname } from 'next/navigation';
+// import { locales } from '@/middleware';
+
 
 interface NavLinkProps {
     href: string;
     name: string;
 }
 
-const NavLink = (props: NavLinkProps): ReactElement => {
+const NavLink = (props: NavLinkProps) => {
 
-    const pathname = usePathname();
+    // const pathname = usePathname();
 
-    const isCurrentPathname = (pathname: string, href: string): boolean => {
-        let isCurrent = false;
-        if (href === '/') {
-            locales.forEach((locale) => {
-                if(pathname === `/${locale}`) {
-                    isCurrent = true;
-                }
-            });
-        } else {
-            isCurrent = pathname.includes(href);
-        }
-        return isCurrent;
-    };
+    // const isCurrentPathname = (pathname: string, href: string): boolean => {
+    //     let isCurrent = false;
+    //     if (href === '/') {
+    //         locales.forEach((locale) => {
+    //             if(pathname === `/${locale}`) {
+    //                 isCurrent = true;
+    //             }
+    //         });
+    //     } else {
+    //         isCurrent = pathname.includes(href);
+    //     }
+    //     return isCurrent;
+    // };
 
-    const active = (isCurrentPathname(pathname, props.href)) ? styles.active : '';
+    // const active = (isCurrentPathname(pathname, props.href)) ? styles.active : '';
 
     return (
-        <Link className={`${styles.link} ${active}`} href={props.href}>{props.name}</Link>
+        // <Link className={`${styles.link} ${active}`} href={props.href}>{props.name}</Link>
+        <Link className={`${styles.link}`} href={props.href}>{props.name}</Link>
     );
 };
 

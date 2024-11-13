@@ -1,28 +1,21 @@
-import { getDictionary } from '@/dictionaries';
-import { type LangParams } from '@/lib/models/dictionaries/lang-params';
+import React from 'react';
 import styles from '@/app/utils.module.css';
 import { getSession } from '@auth0/nextjs-auth0';
-import React, { type ReactElement } from 'react';
+import { getTranslations } from 'next-intl/server';
 
-interface NavParams {
-  params: LangParams | Promise<LangParams>;
-}
+const Account = async () => {
 
-const Nav = async ({ params }: Readonly<NavParams>): Promise<ReactElement> => {
-
-  const awaitedParams = await params;
-  const { lang } = awaitedParams;
+  const t = await getTranslations('Account');
 
   const user = await getSession();
-  const dictionary = await getDictionary(lang);
 
   return (
     (user != null)
       ?
-      <a href="/api/auth/logout" className={styles.outlined__button}>{dictionary.log.logout}</a>
+      <a href="/api/auth/logout" className={styles.outlined__button}>{t('logout')}</a>
       :
-      <a href="/api/auth/login" className={styles.outlined__button}>{dictionary.log.login}</a>
+      <a href="/api/auth/login" className={styles.outlined__button}>{t('login')}</a>
   );
 };
 
-export default Nav;
+export default Account;
