@@ -1,11 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Link } from '@/i18n/routing';
+import { Link, usePathname } from '@/i18n/routing';
 import styles from '@/lib/components/nav/nav.module.css';
-// import { usePathname } from 'next/navigation';
-// import { locales } from '@/middleware';
-
 
 interface NavLinkProps {
     href: any;
@@ -14,27 +11,12 @@ interface NavLinkProps {
 
 const NavLink = (props: NavLinkProps) => {
 
-    // const pathname = usePathname();
+    const pathname = usePathname();
 
-    // const isCurrentPathname = (pathname: string, href: string): boolean => {
-    //     let isCurrent = false;
-    //     if (href === '/') {
-    //         locales.forEach((locale) => {
-    //             if(pathname === `/${locale}`) {
-    //                 isCurrent = true;
-    //             }
-    //         });
-    //     } else {
-    //         isCurrent = pathname.includes(href);
-    //     }
-    //     return isCurrent;
-    // };
-
-    // const active = (isCurrentPathname(pathname, props.href)) ? styles.active : '';
+    const active = pathname === (props.href as string) ? styles.active : '';
 
     return (
-        // <Link className={`${styles.link} ${active}`} href={props.href}>{props.name}</Link>
-        <Link className={`${styles.link}`} href={props.href}>{props.name}</Link>
+        <Link className={`${styles.link} ${active}`} href={props.href}>{props.name}</Link>
     );
 };
 
