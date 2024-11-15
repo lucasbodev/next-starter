@@ -1,14 +1,14 @@
 'use client';
 
-import styles from '@/lib/components/nav/nav.module.css';
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
+import styles from '@/lib/components/nav/nav.module.css';
 // import { usePathname } from 'next/navigation';
 // import { locales } from '@/middleware';
 
 
 interface NavLinkProps {
-    href: string;
+    href: any;
     name: string;
 }
 

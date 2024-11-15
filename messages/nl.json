@@ -1,21 +1,25 @@
 {
-    "home": {
+    "Home": {
         "title": "Welkom bij de start van Next.js"
     },
-    "links": {
+    "Nav": {
         "playerLink": "Spelers",
         "homeLink": "Startpagina",
         "countLink": "Tegen",
         "datasheetsLink": "Datasheet"
     },
-    "log": {
+    "Account": {
         "login": "Inloggen",
         "logout": "Uitloggen"
     },
-    "count": {
-        "title": "Tegen",
-        "countViewer": "U heeft {count} keer geklikt",
+    "Count": {
+        "title": "Tegen"
+    },
+    "CountUpdater": {
         "increment": "Toenemen"
+    },
+    "CountViewer": {
+        "countViewer": "U heeft {count} keer geklikt"
     },
     "players": {
         "form": {

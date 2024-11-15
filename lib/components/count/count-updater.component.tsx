@@ -1,16 +1,17 @@
 'use client';
 
-import { type Dictionary } from '@/lib/models/dictionaries/dictionary';
-import styles from '@/app/[lang]/count/count.module.css';
+import styles from '@/app/[locale]/count/count.module.css';
 import { useStore } from '@/store/store';
-import React, { type ReactElement } from 'react';
+import { useTranslations } from 'next-intl';
+import React from 'react';
 
-const CountUpdater = (dictionary: Dictionary): ReactElement => {
-  
+const CountUpdater = () => {
+
   const incrementCount = useStore(state => state.setUpdatedCount);
+  const t = useTranslations('CountUpdater');
 
   return (
-        <button type="submit" className={styles.button} onClick={incrementCount}>{dictionary.count.increment}</button>
+    <button type="submit" className={styles.button} onClick={incrementCount}>{t('increment')}</button>
   );
 };
 

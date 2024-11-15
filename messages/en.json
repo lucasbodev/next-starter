@@ -12,10 +12,14 @@
     "login": "Login",
     "logout": "Logout"
   },
-  "count": {
-    "title": "Counter",
-    "countViewer": "You clicked {count} times",
+  "Count": {
+    "title": "Counter"
+  },
+  "CountUpdater": {
     "increment": "Increment"
+  },
+  "CountViewer": {
+    "countViewer": "You clicked {count} times"
   },
   "players": {
     "form": {
@@ -36,7 +40,7 @@
     "messages": {
       "addPlayerSuccess": "Player added successfully",
       "addPlayerError": "Unable to add the player"
-  }
+    }
   },
   "errors": {
     "errors": {

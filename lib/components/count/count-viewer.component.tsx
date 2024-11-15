@@ -1,16 +1,17 @@
 'use client';
 
-import { type Dictionary } from '@/lib/models/dictionaries/dictionary';
-import styles from '@/app/[lang]/count/count.module.css';
+import React from 'react';
+import styles from '@/app/[locale]/count/count.module.css';
 import { useStore } from '@/store/store';
-import React, { type ReactElement } from 'react';
+import { useTranslations } from 'next-intl';
 
-const CountViewer = (dictionary: Dictionary): ReactElement => {
-  
+const CountViewer = () => {
+
   const count = useStore(state => state.count);
+  const t = useTranslations('CountViewer');
 
   return (
-        <p className={styles.description}>{dictionary.count.countViewer.replace("{count}", count.toFixed())}</p>
+    <p className={styles.description}>{t('countViewer', {count})}</p>
   );
 };
 

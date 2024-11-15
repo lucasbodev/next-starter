@@ -4,7 +4,7 @@ import '@/app/globals.css';
 import Nav from '@/lib/components/nav/nav.component';
 import { Providers } from '@/app/providers';
 import '@/lib/styles/animations/gsap-config';
-// import Footer from '@/lib/components/footer/footer.component';
+import Footer from '@/lib/components/footer/footer.component';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react";
 import { GeistSans } from 'geist/font/sans';
@@ -44,7 +44,7 @@ const LocaleLayout = async (
           <Providers>
             <Nav />
             {children}
-            {/* <Footer params={{ locale }} /> */}
+            <Footer/>
             <SpeedInsights />
             <Analytics />
           </Providers>

@@ -1,21 +1,25 @@
 {
-    "home": {
+    "Home": {
         "title": "Willkommen bei Next.js Starter"
     },
-    "links": {
+    "Nav": {
         "playerLink": "Spieler",
         "homeLink": "Startseite",
         "countLink": "Zähler",
         "datasheetsLink": "Datenblatt"
     },
-    "log": {
+    "Account": {
         "login": "Anmelden",
         "logout": "Abmelden"
     },
-    "count": {
-        "title": "Zähler",
-        "countViewer": "Sie haben {count} Mal geklickt",
+    "Count": {
+        "title": "Zähler"
+    },
+    "CountUpdater": {
         "increment": "Erhöhen"
+    },
+    "CountViewer": {
+        "countViewer": "Sie haben {count} Mal geklickt"
     },
     "players": {
         "form": {
