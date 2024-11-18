@@ -6,6 +6,7 @@
     "playerLink": "Players",
     "homeLink": "Home",
     "countLink": "Counter",
+    "productsLink": "Products",
     "datasheetsLink": "Datasheet"
   },
   "Account": {
@@ -53,5 +54,27 @@
       "unique": "This field must be unique",
       "unlogged": "You must be logged in to access this page"
     }
-  }
+  },
+  "Products": {
+    "title": "Products",
+    "description": "Here you can see the products added to the shop.",
+    "addProductBtn": "Add a new product"
+  },
+  "AddProductForm": {
+    "nameLabel": "What is the product name?",
+    "descriptionLabel": "What is the description?",
+    "priceLabel": "What is the product price?",
+    "imagePickerLabel": "Pick an image.",
+    "addProductBtn": "Add product",
+    "addProductTitle": "Add new product",
+    "addProductDescription": "Here your can add a new product to your shop!",
+    "successModalTitle": "Success!",
+    "successModalDescription": "You successfully added a new product to the shop!",
+    "successModalLinkButton": "Go back to products",
+    "successModalCloseButton": "Add another product"
+  },
+  "successModalTitle": "Success!",
+  "successModalDescription": "You successfully added a new product to the shop!",
+  "successModalLinkButton": "Go back to products",
+  "successModalCloseButton": "Add another product"
 }

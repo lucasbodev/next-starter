@@ -1,55 +1,71 @@
 {
-    "Home": {
-        "title": "Willkommen bei Next.js Starter"
+  "Home": {
+    "title": "Willkommen bei Next.js Starter"
+  },
+  "Nav": {
+    "playerLink": "Spieler",
+    "homeLink": "Startseite",
+    "countLink": "Zähler",
+    "productsLink": "Produkte",
+    "datasheetsLink": "Datenblatt"
+  },
+  "Account": {
+    "login": "Anmelden",
+    "logout": "Abmelden"
+  },
+  "CountUpdater": {
+    "increment": "Erhöhen"
+  },
+  "CountViewer": {
+    "countViewer": "Sie haben {count} Mal geklickt"
+  },
+  "players": {
+    "form": {
+      "title": "Spieler hinzufügen",
+      "name": "Name",
+      "age": "Alter",
+      "position": "Position",
+      "add": "Hinzufügen"
     },
-    "Nav": {
-        "playerLink": "Spieler",
-        "homeLink": "Startseite",
-        "countLink": "Zähler",
-        "datasheetsLink": "Datenblatt"
+    "list": {
+      "title": "Spieler",
+      "name": "Name",
+      "age": "Alter",
+      "position": "Position",
+      "delete": "Löschen",
+      "edit": "Bearbeiten"
     },
-    "Account": {
-        "login": "Anmelden",
-        "logout": "Abmelden"
-    },
-    "Count": {
-        "title": "Zähler"
-    },
-    "CountUpdater": {
-        "increment": "Erhöhen"
-    },
-    "CountViewer": {
-        "countViewer": "Sie haben {count} Mal geklickt"
-    },
-    "players": {
-        "form": {
-            "title": "Spieler hinzufügen",
-            "name": "Name",
-            "age": "Alter",
-            "position": "Position",
-            "add": "Hinzufügen"
-        },
-        "list": {
-            "title": "Spieler",
-            "name": "Name",
-            "age": "Alter",
-            "position": "Position",
-            "delete": "Löschen",
-            "edit": "Bearbeiten"
-        },
-        "messages": {
-            "addPlayerSuccess": "Spieler erfolgreich hinzugefügt",
-            "addPlayerError": "Fehler beim Hinzufügen des Spielers"
-        }
-    },
-    "errors": {
-        "general": "Ein Fehler ist aufgetreten",
-        "required": "Dieses Feld ist erforderlich",
-        "min": "Mindestwert beträgt {min}",
-        "max": "Höchstwert beträgt {max}",
-        "integer": "Dieses Feld muss eine ganze Zahl sein",
-        "email": "Dieses Feld muss eine E-Mail sein",
-        "unique": "Dieses Feld muss eindeutig sein",
-        "unlogged": "Sie müssen angemeldet sein, um diese Seite zu sehen"
+    "messages": {
+      "addPlayerSuccess": "Spieler erfolgreich hinzugefügt",
+      "addPlayerError": "Fehler beim Hinzufügen des Spielers"
     }
+  },
+  "errors": {
+    "general": "Ein Fehler ist aufgetreten",
+    "required": "Dieses Feld ist erforderlich",
+    "min": "Mindestwert beträgt {min}",
+    "max": "Höchstwert beträgt {max}",
+    "integer": "Dieses Feld muss eine ganze Zahl sein",
+    "email": "Dieses Feld muss eine E-Mail sein",
+    "unique": "Dieses Feld muss eindeutig sein",
+    "unlogged": "Sie müssen angemeldet sein, um diese Seite zu sehen"
+  },
+  "Products": {
+    "title": "Produkte",
+    "description": "Hier sehen Sie die zum Shop hinzugefügten Produkte.",
+    "addProductBtn": "Fügen Sie ein neues Produkt hinzu"
+  },
+  "AddProductForm": {
+    "nameLabel": "Wie lautet der Produktname?",
+    "descriptionLabel": "Wie lautet die Beschreibung?",
+    "priceLabel": "Wie hoch ist der Produktpreis?",
+    "imagePickerLabel": "Wählen Sie ein Bild aus.",
+    "addProductBtn": "Produkt hinzufügen",
+    "addProductTitle": "Neues Produkt hinzufügen",
+    "addProductDescription": "Hier können Sie Ihrem Shop ein neues Produkt hinzufügen!",
+    "successModalTitle": "Erfolg!",
+    "successModalDescription": "Sie haben erfolgreich ein neues Produkt zum Shop hinzugefügt!",
+    "successModalLinkButton": "Gehen Sie zurück zu den Produkten",
+    "successModalCloseButton": "Fügen Sie ein weiteres Produkt hinzu"
+  }
 }

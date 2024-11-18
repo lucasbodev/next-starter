@@ -16,6 +16,7 @@ const Nav = async () => {
         <ResponsiveNavLayout>
             <NavLink href="/" name={t('homeLink')} />
             <NavLink href="/count" name={t('countLink')} />
+            <NavLink href="/products" name={t('productsLink')} />
             {(user != null) && <NavLink href="/players" name={t('playerLink')} />}
             <NavLink href="/data-sheet/view-datasheets" name={t('datasheetsLink')} />
             <div className={styles.account}>

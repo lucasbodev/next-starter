@@ -17,6 +17,18 @@ export const routing = defineRouting({
       de: '/zähler',
       nl: '/tellen',
     },
+    '/products': {
+      fr: '/produits',
+      en: '/products',
+      de: '/produkte',
+      nl: '/producten',
+    },
+    '/products/add-product': {
+      fr: '/produits/ajouter-produit',
+      en: '/products/add-product',
+      de: '/produkte/produkt-hinzufügen',
+      nl: '/producten/voeg-product-toe',
+    }
   }
 });
 

@@ -1,55 +1,74 @@
 {
-    "Home": {
-        "title": "Welkom bij de start van Next.js"
+  "Home": {
+    "title": "Welkom bij de start van Next.js"
+  },
+  "Nav": {
+    "playerLink": "Spelers",
+    "homeLink": "Startpagina",
+    "countLink": "Tegen",
+    "productsLink": "Producten",
+    "datasheetsLink": "Datasheet"
+  },
+  "Account": {
+    "login": "Inloggen",
+    "logout": "Uitloggen"
+  },
+  "Count": {
+    "title": "Tegen"
+  },
+  "CountUpdater": {
+    "increment": "Toenemen"
+  },
+  "CountViewer": {
+    "countViewer": "U heeft {count} keer geklikt"
+  },
+  "players": {
+    "form": {
+      "title": "Speler toevoegen",
+      "name": "Naam",
+      "age": "Leeftijd",
+      "position": "Positie",
+      "add": "Toevoegen"
     },
-    "Nav": {
-        "playerLink": "Spelers",
-        "homeLink": "Startpagina",
-        "countLink": "Tegen",
-        "datasheetsLink": "Datasheet"
+    "list": {
+      "title": "Spelers",
+      "name": "Naam",
+      "age": "Leeftijd",
+      "position": "Positie",
+      "delete": "Verwijderen",
+      "edit": "Bewerken"
     },
-    "Account": {
-        "login": "Inloggen",
-        "logout": "Uitloggen"
-    },
-    "Count": {
-        "title": "Tegen"
-    },
-    "CountUpdater": {
-        "increment": "Toenemen"
-    },
-    "CountViewer": {
-        "countViewer": "U heeft {count} keer geklikt"
-    },
-    "players": {
-        "form": {
-            "title": "Speler toevoegen",
-            "name": "Naam",
-            "age": "Leeftijd",
-            "position": "Positie",
-            "add": "Toevoegen"
-        },
-        "list": {
-            "title": "Spelers",
-            "name": "Naam",
-            "age": "Leeftijd",
-            "position": "Positie",
-            "delete": "Verwijderen",
-            "edit": "Bewerken"
-        },
-        "messages": {
-            "addPlayerSuccess": "Speler toegevoegd",
-            "addPlayerError": "Kan de speler niet toevoegen"
-        }
-    },
-    "errors": {
-        "general": "Er is een fout opgetreden",
-        "required": "Dit veld is verplicht",
-        "min": "Minimale waarde is {min}",
-        "max": "Maximale waarde is {max}",
-        "integer": "Dit veld moet een geheel getal zijn",
-        "email": "Dit veld moet een e-mail zijn",
-        "unique": "Dit veld moet uniek zijn",
-        "unlogged": "U moet inloggen om deze pagina te bekijken"
+    "messages": {
+      "addPlayerSuccess": "Speler toegevoegd",
+      "addPlayerError": "Kan de speler niet toevoegen"
     }
+  },
+  "errors": {
+    "general": "Er is een fout opgetreden",
+    "required": "Dit veld is verplicht",
+    "min": "Minimale waarde is {min}",
+    "max": "Maximale waarde is {max}",
+    "integer": "Dit veld moet een geheel getal zijn",
+    "email": "Dit veld moet een e-mail zijn",
+    "unique": "Dit veld moet uniek zijn",
+    "unlogged": "U moet inloggen om deze pagina te bekijken"
+  },
+  "Products": {
+    "title": "Producten",
+    "description": "Hier ziet u welke producten aan de winkel zijn toegevoegd.",
+    "addProductBtn": "Voeg een nieuw product toe"
+  },
+  "AddProductForm": {
+    "nameLabel": "Wat is de productnaam?",
+    "descriptionLabel": "Wat is de beschrijving?",
+    "priceLabel": "Wat is de productprijs?",
+    "imagePickerLabel": "Kies een afbeelding.",
+    "addProductBtn": "Product toevoegen",
+    "addProductTitle": "Nieuw product toevoegen",
+    "addProductDescription": "Hier kunt u een nieuw product aan uw winkel toevoegen!",
+    "successModalTitle": "Succes!",
+    "successModalDescription": "Je hebt succesvol een nieuw product aan de winkel toegevoegd!",
+    "successModalLinkButton": "Ga terug naar producten",
+    "successModalCloseButton": "Voeg nog een product toe"
+  }
 }

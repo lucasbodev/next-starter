@@ -1,55 +1,74 @@
 {
-    "Home": {
-        "title": "Bienvenue dans le démarrage de Next.js"
+  "Home": {
+    "title": "Bienvenue dans le démarrage de Next.js"
+  },
+  "Nav": {
+    "playerLink": "Joueurs",
+    "homeLink": "Accueil",
+    "countLink": "Compteur",
+    "productsLink": "Produits",
+    "datasheetsLink": "Fiche technique"
+  },
+  "Account": {
+    "login": "Connexion",
+    "logout": "Déconnexion"
+  },
+  "Count": {
+    "title": "Compteur"
+  },
+  "CountUpdater": {
+    "increment": "Incrémenter"
+  },
+  "CountViewer": {
+    "countViewer": "Vous avez cliqué {count} fois"
+  },
+  "players": {
+    "form": {
+      "title": "Ajouter un joueur",
+      "name": "Nom",
+      "age": "Âge",
+      "position": "Position",
+      "add": "Ajouter"
     },
-    "Nav": {
-        "playerLink": "Joueurs",
-        "homeLink": "Accueil",
-        "countLink": "Compteur",
-        "datasheetsLink": "Fiche technique"
+    "list": {
+      "title": "Joueurs",
+      "name": "Nom",
+      "age": "Âge",
+      "position": "Position",
+      "delete": "Supprimer",
+      "edit": "Modifier"
     },
-    "Account": {
-        "login": "Connexion",
-        "logout": "Déconnexion"
-    },
-    "Count": {
-        "title": "Compteur"
-    },
-    "CountUpdater": {
-        "increment": "Incrémenter"
-    },
-    "CountViewer": {
-        "countViewer": "Vous avez cliqué {count} fois"
-    },
-    "players": {
-        "form": {
-            "title": "Ajouter un joueur",
-            "name": "Nom",
-            "age": "Âge",
-            "position": "Position",
-            "add": "Ajouter"
-        },
-        "list": {
-            "title": "Joueurs",
-            "name": "Nom",
-            "age": "Âge",
-            "position": "Position",
-            "delete": "Supprimer",
-            "edit": "Modifier"
-        },
-        "messages": {
-            "addPlayerSuccess": "Joueur ajouté avec succès",
-            "addPlayerError": "Impossible d'ajouter le joueur"
-        }
-    },
-    "errors": {
-        "general": "Une erreur s'est produite",
-        "required": "Ce champ est requis",
-        "min": "La valeur minimale est de {min}",
-        "max": "La valeur maximale est de {max}",
-        "integer": "Ce champ doit être un entier",
-        "email": "Ce champ doit être un email",
-        "unique": "Ce champ doit être unique",
-        "unlogged": "Vous devez être connecté pour accéder à cette page"
+    "messages": {
+      "addPlayerSuccess": "Joueur ajouté avec succès",
+      "addPlayerError": "Impossible d'ajouter le joueur"
     }
+  },
+  "errors": {
+    "general": "Une erreur s'est produite",
+    "required": "Ce champ est requis",
+    "min": "La valeur minimale est de {min}",
+    "max": "La valeur maximale est de {max}",
+    "integer": "Ce champ doit être un entier",
+    "email": "Ce champ doit être un email",
+    "unique": "Ce champ doit être unique",
+    "unlogged": "Vous devez être connecté pour accéder à cette page"
+  },
+  "Products": {
+    "title": "Produits",
+    "description": "Ici vous pouvez voir les produits ajoutés à la boutique.",
+    "addProductBtn": "Ajouter un nouveau produit"
+  },
+  "AddProductForm": {
+    "nameLabel": "Quel est le nom du produit ?",
+    "descriptionLabel": "Quelle est la description?",
+    "priceLabel": "Quel est le prix du produit ?",
+    "imagePickerLabel": "Choisissez une image.",
+    "addProductBtn": "Ajouter un produit",
+    "addProductTitle": "Ajouter un nouveau produit",
+    "addProductDescription": "Ici, vous pouvez ajouter un nouveau produit à votre boutique !",
+    "successModalTitle": "Succès!",
+    "successModalDescription": "Vous avez ajouté avec succès un nouveau produit à la boutique !",
+    "successModalLinkButton": "Retour aux produits",
+    "successModalCloseButton": "Ajouter un autre produit"
+  }
 }
