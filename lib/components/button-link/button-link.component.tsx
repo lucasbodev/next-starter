@@ -6,17 +6,21 @@ import { useRouter } from '@/i18n/routing';
 interface ButtonLinkProps {
     href: any;
     name: string;
+    type?: string;
 }
 
 const ButtonLink = (props: ButtonLinkProps) => {
 
-    const { href, name } = props;
+    const { href, name, type } = props;
 
     const router = useRouter();
 
     return (
         // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-        <button className="btn btn-outline btn-primary" onClick={() => {router.push(href);}}>{name}</button>
+        <button
+            className={`btn ${type === 'outline' && 'btn-outline'} btn-primary`}
+            onClick={() => { router.push(href); }}>{name}
+        </button>
 
     );
 };

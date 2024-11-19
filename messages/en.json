@@ -68,13 +68,24 @@
     "addProductBtn": "Add product",
     "addProductTitle": "Add new product",
     "addProductDescription": "Here your can add a new product to your shop!",
-    "successModalTitle": "Success!",
-    "successModalDescription": "You successfully added a new product to the shop!",
-    "successModalLinkButton": "Go back to products",
-    "successModalCloseButton": "Add another product"
+    "nameRequired": "The product name is required.",
+    "nameMaxLength": "The product name must be less than 32 characters.",
+    "descriptionRequired": "The product description is required.",
+    "descriptionMaxLength": "The product description must be less than 256 characters.",
+    "priceRequired": "The product price is required.",
+    "priceMinValue": "The product price must be greater than 0.",
+    "imageRequired": "The product image is required.",
+    "namePlaceholder": "Type product name...",
+    "descriptionPlaceholder": "Type product description...",
+    "pricePlaceholder": "Enter product price..."
   },
-  "successModalTitle": "Success!",
-  "successModalDescription": "You successfully added a new product to the shop!",
-  "successModalLinkButton": "Go back to products",
-  "successModalCloseButton": "Add another product"
+  "AddProductSuccess": {
+    "title": "Success!",
+    "description": "You successfully added a new product to the shop!",
+    "linkButton": "Go back to products",
+    "closeButton": "Add another product"
+  },
+  "namePlaceholder": "Type product name",
+  "descriptionPlaceholder": "Type product description",
+  "pricePlaceholder": "Enter product price"
 }

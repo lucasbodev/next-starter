@@ -23,15 +23,8 @@ module.exports = {
       }
     },
     {
-      files: ['*.tsx'],
       rules: {
-        '@typescript-eslint/explicit-function-return-type': [
-          'off',
-          {
-            allowExpressions: true,
-            allowTypedFunctionExpressions: true,
-          },
-        ],
+        '@typescript-eslint/explicit-function-return-type':'off'
       },
     },
   ],

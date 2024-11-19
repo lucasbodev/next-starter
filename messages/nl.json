@@ -66,9 +66,21 @@
     "addProductBtn": "Product toevoegen",
     "addProductTitle": "Nieuw product toevoegen",
     "addProductDescription": "Hier kunt u een nieuw product aan uw winkel toevoegen!",
-    "successModalTitle": "Succes!",
-    "successModalDescription": "Je hebt succesvol een nieuw product aan de winkel toegevoegd!",
-    "successModalLinkButton": "Ga terug naar producten",
-    "successModalCloseButton": "Voeg nog een product toe"
+    "nameRequired": "De productnaam is verplicht.",
+    "nameMaxLength": "De productnaam moet minder dan 32 tekens zijn.",
+    "descriptionRequired": "De productbeschrijving is verplicht.",
+    "descriptionMaxLength": "De productbeschrijving moet minder dan 256 tekens zijn.",
+    "priceRequired": "De productprijs is verplicht.",
+    "priceMinValue": "De productprijs moet hoger zijn dan 0.",
+    "imageRequired": "De productafbeelding is verplicht.",
+    "namePlaceholder": "Typ productnaam...",
+    "descriptionPlaceholder": "Typ productbeschrijving...",
+    "pricePlaceholder": "Productprijs invoeren..."
+  },
+  "AddProductSuccess": {
+    "title": "Succes!",
+    "description": "Je hebt succesvol een nieuw product aan de winkel toegevoegd!",
+    "linkButton": "Ga terug naar producten",
+    "closeButton": "Voeg nog een product toe"
   }
 }

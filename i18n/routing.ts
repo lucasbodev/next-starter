@@ -28,7 +28,13 @@ export const routing = defineRouting({
       en: '/products/add-product',
       de: '/produkte/produkt-hinzufügen',
       nl: '/producten/voeg-product-toe',
-    }
+    },
+    '/products/add-product/success': {
+      fr: '/produits/ajouter-produit/succes',
+      en: '/products/add-product/success',
+      de: '/produkte/produkt-hinzufügen/erfolg',
+      nl: '/producten/voeg-product-toe/succes',
+    },
   }
 });
 

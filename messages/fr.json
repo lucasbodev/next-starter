@@ -59,16 +59,28 @@
     "addProductBtn": "Ajouter un nouveau produit"
   },
   "AddProductForm": {
-    "nameLabel": "Quel est le nom du produit ?",
+    "nameLabel": "Quel est le nom du produit?",
     "descriptionLabel": "Quelle est la description?",
-    "priceLabel": "Quel est le prix du produit ?",
+    "priceLabel": "Quel est le prix du produit?",
     "imagePickerLabel": "Choisissez une image.",
     "addProductBtn": "Ajouter un produit",
     "addProductTitle": "Ajouter un nouveau produit",
-    "addProductDescription": "Ici, vous pouvez ajouter un nouveau produit à votre boutique !",
-    "successModalTitle": "Succès!",
-    "successModalDescription": "Vous avez ajouté avec succès un nouveau produit à la boutique !",
-    "successModalLinkButton": "Retour aux produits",
-    "successModalCloseButton": "Ajouter un autre produit"
+    "addProductDescription": "Ici, vous pouvez ajouter un nouveau produit à votre boutique!",
+    "nameRequired": "Le nom du produit est requis.",
+    "nameMaxLength": "Le nom du produit doit comporter moins de 32 caractères.",
+    "descriptionRequired": "La description du produit est requise.",
+    "descriptionMaxLength": "La description du produit doit comporter moins de 256 caractères.",
+    "priceRequired": "Le prix du produit est requis.",
+    "priceMinValue": "Le prix du produit doit être supérieur à 0.",
+    "imageRequired": "L'image du produit est requise.",
+    "namePlaceholder": "Tapez le nom du produit...",
+    "descriptionPlaceholder": "Tapez la description du produit...",
+    "pricePlaceholder": "Entrez le prix du produit..."
+  },
+  "AddProductSuccess": {
+    "title": "Succès!",
+    "description": "Vous avez ajouté avec succès un nouveau produit à la boutique!",
+    "linkButton": "Retour aux produits",
+    "closeButton": "Ajouter un autre produit"
   }
 }

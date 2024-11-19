@@ -63,9 +63,21 @@
     "addProductBtn": "Produkt hinzufügen",
     "addProductTitle": "Neues Produkt hinzufügen",
     "addProductDescription": "Hier können Sie Ihrem Shop ein neues Produkt hinzufügen!",
-    "successModalTitle": "Erfolg!",
-    "successModalDescription": "Sie haben erfolgreich ein neues Produkt zum Shop hinzugefügt!",
-    "successModalLinkButton": "Gehen Sie zurück zu den Produkten",
-    "successModalCloseButton": "Fügen Sie ein weiteres Produkt hinzu"
+    "nameRequired": "Der Produktname ist erforderlich.",
+    "nameMaxLength": "Der Produktname muss weniger als 32 Zeichen lang sein.",
+    "descriptionRequired": "Die Produktbeschreibung ist erforderlich.",
+    "descriptionMaxLength": "Die Produktbeschreibung muss weniger als 256 Zeichen lang sein.",
+    "priceRequired": "Der Produktpreis ist erforderlich.",
+    "priceMinValue": "Der Produktpreis muss größer als 0 sein.",
+    "imageRequired": "Das Produktbild ist erforderlich.",
+    "namePlaceholder": "Geben Sie den Produktnamen ein...",
+    "descriptionPlaceholder": "Typ Produktbeschreibung...",
+    "pricePlaceholder": "Produktpreis eingeben..."
+  },
+  "AddProductSuccess": {
+    "title": "Erfolg!",
+    "description": "Sie haben erfolgreich ein neues Produkt zum Shop hinzugefügt!",
+    "linkButton": "Gehen Sie zurück zu den Produkten",
+    "closeButton": "Fügen Sie ein weiteres Produkt hinzu"
   }
 }
