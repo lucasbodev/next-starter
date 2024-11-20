@@ -15,7 +15,7 @@ const Products = async () => {
                     <h1 className={styles.products__title}>{t('title')}</h1>
                     <p className={styles.products__description}>{t('description')}</p>
                 </div>
-                <ButtonLink href="/products/add-product" name={t('addProductBtn')} />
+                <ButtonLink href="/products/add-product" name={t('addProductBtn')} type="outline"/>
             </div>
             <div className={styles.products__grid}>
                 <div className="card bg-base-100 shadow-xl">

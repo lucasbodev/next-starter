@@ -1,4 +1,6 @@
 import { z } from 'zod';
+import { type Prisma } from '@prisma/client';
+
 
 export const addProductSchema = (t: (key: string) => string) => z.object({
     name: z.string({ message: t('nameRequired') }).max(32, t('nameMaxLength')),
