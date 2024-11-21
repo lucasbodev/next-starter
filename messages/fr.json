@@ -59,6 +59,7 @@
     "addProductBtn": "Ajouter un nouveau produit"
   },
   "AddProductForm": {
+    "referenceLabel": "Quelle est la référence du produit ?",
     "nameLabel": "Quel est le nom du produit?",
     "descriptionLabel": "Quelle est la description?",
     "priceLabel": "Quel est le prix du produit?",
@@ -66,6 +67,7 @@
     "addProductBtn": "Ajouter un produit",
     "addProductTitle": "Ajouter un nouveau produit",
     "addProductDescription": "Ici, vous pouvez ajouter un nouveau produit à votre boutique!",
+    "referenceRequired": "La référence du produit est obligatoire.",
     "nameRequired": "Le nom du produit est requis.",
     "nameMaxLength": "Le nom du produit doit comporter moins de 32 caractères.",
     "descriptionRequired": "La description du produit est requise.",
@@ -73,9 +75,13 @@
     "priceRequired": "Le prix du produit est requis.",
     "priceMinValue": "Le prix du produit doit être supérieur à 0.",
     "imageRequired": "L'image du produit est requise.",
+    "referencePlaceholder": "Tapez la référence du produit...",
     "namePlaceholder": "Tapez le nom du produit...",
     "descriptionPlaceholder": "Tapez la description du produit...",
-    "pricePlaceholder": "Entrez le prix du produit..."
+    "pricePlaceholder": "Entrez le prix du produit...",
+    "imageUploadFailed": "Échec du téléchargement de l'image",
+    "productCreationFailed": "Erreur interne, veuillez contacter l'administrateur.",
+    "unicityConstraintViolation": "Un produit disposant de la même référence existe déjà."
   },
   "AddProductSuccess": {
     "title": "Succès!",

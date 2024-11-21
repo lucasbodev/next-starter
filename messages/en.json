@@ -61,6 +61,7 @@
     "addProductBtn": "Add a new product"
   },
   "AddProductForm": {
+    "referenceLabel": "What is the product reference?",
     "nameLabel": "What is the product name?",
     "descriptionLabel": "What is the description?",
     "priceLabel": "What is the product price?",
@@ -68,6 +69,7 @@
     "addProductBtn": "Add product",
     "addProductTitle": "Add new product",
     "addProductDescription": "Here your can add a new product to your shop!",
+    "referenceRequired": "The product reference is required.",
     "nameRequired": "The product name is required.",
     "nameMaxLength": "The product name must be less than 32 characters.",
     "descriptionRequired": "The product description is required.",
@@ -75,9 +77,13 @@
     "priceRequired": "The product price is required.",
     "priceMinValue": "The product price must be greater than 0.",
     "imageRequired": "The product image is required.",
+    "referencePlaceholder": "Type product reference...",
     "namePlaceholder": "Type product name...",
     "descriptionPlaceholder": "Type product description...",
-    "pricePlaceholder": "Enter product price..."
+    "pricePlaceholder": "Enter product price...",
+    "imageUploadFailed": "Image upload failed",
+    "productCreationFailed": "Internal error, please contact the administrator.",
+    "unicityConstraintViolation": "A product with the same reference already exists."
   },
   "AddProductSuccess": {
     "title": "Success!",
@@ -85,7 +91,6 @@
     "linkButton": "Go back to products",
     "closeButton": "Add another product"
   },
-  "namePlaceholder": "Type product name",
-  "descriptionPlaceholder": "Type product description",
-  "pricePlaceholder": "Enter product price"
+  "referenceLabel": "What is the product reference?",
+  "referencePlaceholder": "Type product reference..."
 }

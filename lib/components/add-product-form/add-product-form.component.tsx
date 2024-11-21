@@ -29,6 +29,31 @@ const AddProductForm = () => {
                 <div className="card-body">
                     <h2 className="card-title">{t('addProductTitle')}</h2>
                     <p className={styles.add__product__form__description}>{t('addProductDescription')}</p>
+                    {
+                        fields.errors.errors &&
+                        <span className="alert alert-error">
+                            {fields.errors.errors}
+                        </span>
+                    }
+                    <label className="form-control w-full max-w-xs">
+                        <div className="label">
+                            <span className="label-text">{t('referenceLabel')}</span>
+                        </div>
+                        <input
+                            key={fields.reference.key}
+                            name={fields.reference.name}
+                            defaultValue={fields.reference.initialValue}
+                            className={`input input-bordered w-full max-w-xs ${fields.reference.errors && "input-error"}`}
+                            type="text" placeholder={t('referencePlaceholder')}
+                        />
+                        {
+                            fields.reference.errors &&
+                            <div className="label">
+                                <span className="label-text-alt text-error">{fields.reference.errors}</span>
+                            </div>
+                        }
+
+                    </label>
                     <label className="form-control w-full max-w-xs">
                         <div className="label">
                             <span className="label-text">{t('nameLabel')}</span>

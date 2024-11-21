@@ -59,6 +59,7 @@
     "addProductBtn": "Voeg een nieuw product toe"
   },
   "AddProductForm": {
+    "referenceLabel": "Wat is de productreferentie?",
     "nameLabel": "Wat is de productnaam?",
     "descriptionLabel": "Wat is de beschrijving?",
     "priceLabel": "Wat is de productprijs?",
@@ -66,6 +67,7 @@
     "addProductBtn": "Product toevoegen",
     "addProductTitle": "Nieuw product toevoegen",
     "addProductDescription": "Hier kunt u een nieuw product aan uw winkel toevoegen!",
+    "referenceRequired": "De productreferentie is vereist.",
     "nameRequired": "De productnaam is verplicht.",
     "nameMaxLength": "De productnaam moet minder dan 32 tekens zijn.",
     "descriptionRequired": "De productbeschrijving is verplicht.",
@@ -73,9 +75,13 @@
     "priceRequired": "De productprijs is verplicht.",
     "priceMinValue": "De productprijs moet hoger zijn dan 0.",
     "imageRequired": "De productafbeelding is verplicht.",
+    "referencePlaceholder": "Type productreferentie...",
     "namePlaceholder": "Typ productnaam...",
     "descriptionPlaceholder": "Typ productbeschrijving...",
-    "pricePlaceholder": "Productprijs invoeren..."
+    "pricePlaceholder": "Productprijs invoeren...",
+    "imageUploadFailed": "Uploaden van afbeelding mislukt",
+    "productCreationFailed": "Interne fout, neem contact op met de beheerder.",
+    "unicityConstraintViolation": "Er bestaat al een product met dezelfde referentie."
   },
   "AddProductSuccess": {
     "title": "Succes!",
