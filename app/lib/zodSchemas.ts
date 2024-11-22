@@ -1,4 +1,3 @@
-import { error } from 'console';
 import { z } from 'zod';
 
 export const addProductSchema = (t: (key: string) => string) => z.object({

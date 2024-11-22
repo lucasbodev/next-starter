@@ -1,16 +1,12 @@
-import { type ActionResult } from "@/lib/actions/action-result";
-import { type z } from "zod";
+import { Submission } from "@conform-to/react";
 
-export abstract class Validation<DataType> {
+export abstract class Validation<T> {
 
-    abstract validate(data: DataType): ActionResult<void>;
+    protected readonly t: (key: string) => string;
 
-    static getZodMessage = (error: z.ZodError): string => {
-        const {issues} = error;
-        if (issues.length > 0) {
-            const currentIssue = issues[0];
-            return currentIssue.message;
-        }
-        return 'An error occured';
-    };
+    constructor(t: (key: string) => string) {
+        this.t = t;
+    }
+
+    abstract validate(data: FormData): Submission<T>;
 }

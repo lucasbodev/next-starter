@@ -79,7 +79,7 @@
     "namePlaceholder": "Tapez le nom du produit...",
     "descriptionPlaceholder": "Tapez la description du produit...",
     "pricePlaceholder": "Entrez le prix du produit...",
-    "imageUploadFailed": "Échec du téléchargement de l'image",
+    "fileUploadFailed": "Échec du téléchargement de l'image",
     "productCreationFailed": "Erreur interne, veuillez contacter l'administrateur.",
     "unicityConstraintViolation": "Un produit disposant de la même référence existe déjà."
   },

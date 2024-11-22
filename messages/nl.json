@@ -79,7 +79,7 @@
     "namePlaceholder": "Typ productnaam...",
     "descriptionPlaceholder": "Typ productbeschrijving...",
     "pricePlaceholder": "Productprijs invoeren...",
-    "imageUploadFailed": "Uploaden van afbeelding mislukt",
+    "fileUploadFailed": "Uploaden van afbeelding mislukt",
     "productCreationFailed": "Interne fout, neem contact op met de beheerder.",
     "unicityConstraintViolation": "Er bestaat al een product met dezelfde referentie."
   },

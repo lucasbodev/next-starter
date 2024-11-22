@@ -81,7 +81,7 @@
     "namePlaceholder": "Type product name...",
     "descriptionPlaceholder": "Type product description...",
     "pricePlaceholder": "Enter product price...",
-    "imageUploadFailed": "Image upload failed",
+    "fileUploadFailed": "Image upload failed",
     "productCreationFailed": "Internal error, please contact the administrator.",
     "unicityConstraintViolation": "A product with the same reference already exists."
   },

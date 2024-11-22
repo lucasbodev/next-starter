@@ -1,23 +1,23 @@
 "use client";
 
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useActionState, useRef } from "react";
+import React, { act, useActionState } from "react";
 import styles from "@/lib/components/add-product-form/add-product-form.module.css";
 import { useTranslations } from "next-intl";
 import { createProduct } from "@/lib/actions/product-actions";
 import { useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod";
-import { addProductSchema } from "@/app/lib/zodSchemas";
+import { productSchema } from "@/lib/models/validations/product-validation";
 
 const AddProductForm = () => {
 
     const t = useTranslations("AddProductForm");
-    const [lastResult, action] = useActionState(createProduct, undefined);
+    const [lastResult, action, isPending] = useActionState(createProduct, undefined);
 
     const [form, fields] = useForm({
         lastResult,
         onValidate({ formData }) {
-            return parseWithZod(formData, { schema: addProductSchema(t) });
+            return parseWithZod(formData, { schema: productSchema(t) });
         },
         shouldValidate: 'onBlur',
         shouldRevalidate: 'onInput',
@@ -42,9 +42,10 @@ const AddProductForm = () => {
                         <input
                             key={fields.reference.key}
                             name={fields.reference.name}
-                            defaultValue={fields.reference.initialValue}
+                            defaultValue={fields.reference.value ?? fields.reference.initialValue}
                             className={`input input-bordered w-full max-w-xs ${fields.reference.errors && "input-error"}`}
                             type="text" placeholder={t('referencePlaceholder')}
+                            disabled={isPending}
                         />
                         {
                             fields.reference.errors &&
@@ -61,9 +62,10 @@ const AddProductForm = () => {
                         <input
                             key={fields.name.key}
                             name={fields.name.name}
-                            defaultValue={fields.name.initialValue}
+                            defaultValue={fields.name.value ?? fields.name.initialValue}
                             className={`input input-bordered w-full max-w-xs ${fields.name.errors && "input-error"}`}
                             type="text" placeholder={t('namePlaceholder')}
+                            disabled={isPending}
                         />
                         {
                             fields.name.errors &&
@@ -80,9 +82,10 @@ const AddProductForm = () => {
                         <textarea
                             key={fields.description.key}
                             name={fields.description.name}
-                            defaultValue={fields.description.initialValue}
+                            defaultValue={fields.description.value ?? fields.description.initialValue}
                             className={`textarea textarea-bordered h-24 ${fields.description.errors && "textarea-error"}`}
-                            placeholder={t('descriptionPlaceholder')}></textarea>
+                            placeholder={t('descriptionPlaceholder')}
+                            disabled={isPending}></textarea>
                         {
                             fields.description.errors &&
                             <div className="label">
@@ -97,9 +100,10 @@ const AddProductForm = () => {
                         <input
                             key={fields.price.key}
                             name={fields.price.name}
-                            defaultValue={fields.price.initialValue}
+                            defaultValue={fields.price.value ?? fields.price.initialValue}
                             className={`input input-bordered w-full max-w-xs ${fields.price.errors && "input-error"}`}
                             type="number" placeholder={t('pricePlaceholder')}
+                            disabled={isPending}
                         />
                         {
                             fields.price.errors &&
@@ -117,6 +121,7 @@ const AddProductForm = () => {
                             name={fields.image.name}
                             className={`file-input file-input-bordered w-full max-w-xs ${fields.image.errors && "file-input-error"}`}
                             type="file"
+                            disabled={isPending}
                         />
                         {
                             fields.image.errors &&
@@ -126,7 +131,11 @@ const AddProductForm = () => {
                         }
                     </label>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">{t('addProductBtn')}</button>
+                        {
+                            isPending ?
+                            <span className="loading loading-ring loading-lg"></span> :
+                            <button className="btn btn-primary">{t('addProductBtn')}</button>
+                        }
                     </div>
                 </div>
             </div>

@@ -76,7 +76,7 @@
     "namePlaceholder": "Geben Sie den Produktnamen ein...",
     "descriptionPlaceholder": "Typ Produktbeschreibung...",
     "pricePlaceholder": "Produktpreis eingeben...",
-    "imageUploadFailed": "Das Hochladen des Bildes ist fehlgeschlagen",
+    "fileUploadFailed": "Das Hochladen des Bildes ist fehlgeschlagen",
     "productCreationFailed": "Interner Fehler, bitte wenden Sie sich an den Administrator.",
     "unicityConstraintViolation": "Es existiert bereits ein Produkt mit der gleichen Referenz."
   },

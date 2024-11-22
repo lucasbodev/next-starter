@@ -1,5 +1,6 @@
+import { SubmissionResult } from "@conform-to/react";
+
 export interface ActionResult<T> {
-    message: string;
-    error: boolean;
+    submissionResult?: SubmissionResult;
     data?: T;
 }
