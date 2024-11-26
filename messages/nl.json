@@ -1,0 +1,93 @@
+{
+  "Home": {
+    "title": "Welkom bij de start van Next.js"
+  },
+  "Nav": {
+    "playerLink": "Spelers",
+    "homeLink": "Startpagina",
+    "countLink": "Tegen",
+    "productsLink": "Producten",
+    "datasheetsLink": "Datasheet"
+  },
+  "Account": {
+    "login": "Inloggen",
+    "logout": "Uitloggen"
+  },
+  "Count": {
+    "title": "Tegen"
+  },
+  "CountUpdater": {
+    "increment": "Toenemen"
+  },
+  "CountViewer": {
+    "countViewer": "U heeft {count} keer geklikt"
+  },
+  "players": {
+    "form": {
+      "title": "Speler toevoegen",
+      "name": "Naam",
+      "age": "Leeftijd",
+      "position": "Positie",
+      "add": "Toevoegen"
+    },
+    "list": {
+      "title": "Spelers",
+      "name": "Naam",
+      "age": "Leeftijd",
+      "position": "Positie",
+      "delete": "Verwijderen",
+      "edit": "Bewerken"
+    },
+    "messages": {
+      "addPlayerSuccess": "Speler toegevoegd",
+      "addPlayerError": "Kan de speler niet toevoegen"
+    }
+  },
+  "errors": {
+    "general": "Er is een fout opgetreden",
+    "required": "Dit veld is verplicht",
+    "min": "Minimale waarde is {min}",
+    "max": "Maximale waarde is {max}",
+    "integer": "Dit veld moet een geheel getal zijn",
+    "email": "Dit veld moet een e-mail zijn",
+    "unique": "Dit veld moet uniek zijn",
+    "unlogged": "U moet inloggen om deze pagina te bekijken"
+  },
+  "Products": {
+    "title": "Producten",
+    "description": "Hier ziet u welke producten aan de winkel zijn toegevoegd.",
+    "addProductBtn": "Voeg een nieuw product toe",
+    "productsFetchFailed": "Fout bij het ophalen van producten."
+  },
+  "AddProductForm": {
+    "referenceLabel": "Wat is de productreferentie?",
+    "nameLabel": "Wat is de productnaam?",
+    "descriptionLabel": "Wat is de beschrijving?",
+    "priceLabel": "Wat is de productprijs?",
+    "imagePickerLabel": "Kies een afbeelding.",
+    "addProductBtn": "Product toevoegen",
+    "addProductTitle": "Nieuw product toevoegen",
+    "addProductDescription": "Hier kunt u een nieuw product aan uw winkel toevoegen!",
+    "referenceRequired": "De productreferentie is vereist.",
+    "nameRequired": "De productnaam is verplicht.",
+    "nameMaxLength": "De productnaam moet minder dan 32 tekens zijn.",
+    "descriptionRequired": "De productbeschrijving is verplicht.",
+    "descriptionMaxLength": "De productbeschrijving moet minder dan 256 tekens zijn.",
+    "priceRequired": "De productprijs is verplicht.",
+    "priceMinValue": "De productprijs moet hoger zijn dan 0.",
+    "imageRequired": "De productafbeelding is verplicht.",
+    "referencePlaceholder": "Type productreferentie...",
+    "namePlaceholder": "Typ productnaam...",
+    "descriptionPlaceholder": "Typ productbeschrijving...",
+    "pricePlaceholder": "Productprijs invoeren...",
+    "fileUploadFailed": "Uploaden van afbeelding mislukt",
+    "productCreationFailed": "Interne fout, neem contact op met de beheerder.",
+    "unicityConstraintViolation": "Er bestaat al een product met dezelfde referentie."
+  },
+  "AddProductSuccess": {
+    "title": "Succes!",
+    "description": "Je hebt succesvol een nieuw product aan de winkel toegevoegd!",
+    "linkButton": "Ga terug naar producten",
+    "closeButton": "Voeg nog een product toe"
+  }
+}

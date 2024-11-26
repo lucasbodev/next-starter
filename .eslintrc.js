@@ -21,7 +21,12 @@ module.exports = {
       parserOptions: {
         sourceType: 'script'
       }
-    }
+    },
+    {
+      rules: {
+        '@typescript-eslint/explicit-function-return-type':'off'
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -36,6 +41,7 @@ module.exports = {
       "checksVoidReturn": {
         "attributes": false
       }
-    }]
+    }],
+    '@typescript-eslint/strict-boolean-expressions': 'off',
   }
 };

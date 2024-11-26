@@ -1,0 +1,97 @@
+{
+  "Home": {
+    "title": "Welcome to Next.js starter"
+  },
+  "Nav": {
+    "playerLink": "Players",
+    "homeLink": "Home",
+    "countLink": "Counter",
+    "productsLink": "Products",
+    "datasheetsLink": "Datasheet"
+  },
+  "Account": {
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "Count": {
+    "title": "Counter"
+  },
+  "CountUpdater": {
+    "increment": "Increment"
+  },
+  "CountViewer": {
+    "countViewer": "You clicked {count} times"
+  },
+  "players": {
+    "form": {
+      "title": "Add player",
+      "name": "Name",
+      "age": "Age",
+      "position": "Position",
+      "add": "Add"
+    },
+    "list": {
+      "title": "Players",
+      "name": "Name",
+      "age": "Age",
+      "position": "Position",
+      "delete": "Delete",
+      "edit": "Edit"
+    },
+    "messages": {
+      "addPlayerSuccess": "Player added successfully",
+      "addPlayerError": "Unable to add the player"
+    }
+  },
+  "errors": {
+    "errors": {
+      "general": "An error occurred",
+      "required": "This field is required",
+      "min": "Minimum value is {min}",
+      "max": "Maximum value is {max}",
+      "integer": "This field must be an integer",
+      "email": "This field must be an email",
+      "unique": "This field must be unique",
+      "unlogged": "You must be logged in to access this page"
+    }
+  },
+  "Products": {
+    "title": "Products",
+    "description": "Here you can see the products added to the shop.",
+    "addProductBtn": "Add a new product",
+    "productsFetchFailed": "Failed to fetch products."
+  },
+  "AddProductForm": {
+    "referenceLabel": "What is the product reference?",
+    "nameLabel": "What is the product name?",
+    "descriptionLabel": "What is the description?",
+    "priceLabel": "What is the product price?",
+    "imagePickerLabel": "Pick an image.",
+    "addProductBtn": "Add product",
+    "addProductTitle": "Add new product",
+    "addProductDescription": "Here your can add a new product to your shop!",
+    "referenceRequired": "The product reference is required.",
+    "nameRequired": "The product name is required.",
+    "nameMaxLength": "The product name must be less than 32 characters.",
+    "descriptionRequired": "The product description is required.",
+    "descriptionMaxLength": "The product description must be less than 256 characters.",
+    "priceRequired": "The product price is required.",
+    "priceMinValue": "The product price must be greater than 0.",
+    "imageRequired": "The product image is required.",
+    "referencePlaceholder": "Type product reference...",
+    "namePlaceholder": "Type product name...",
+    "descriptionPlaceholder": "Type product description...",
+    "pricePlaceholder": "Enter product price...",
+    "fileUploadFailed": "Image upload failed",
+    "productCreationFailed": "Internal error, please contact the administrator.",
+    "unicityConstraintViolation": "A product with the same reference already exists."
+  },
+  "AddProductSuccess": {
+    "title": "Success!",
+    "description": "You successfully added a new product to the shop!",
+    "linkButton": "Go back to products",
+    "closeButton": "Add another product"
+  },
+  "referenceLabel": "What is the product reference?",
+  "referencePlaceholder": "Type product reference..."
+}
