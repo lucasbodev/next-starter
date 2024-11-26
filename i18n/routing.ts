@@ -23,17 +23,17 @@ export const routing = defineRouting({
       de: '/produkte',
       nl: '/producten',
     },
-    '/products/add-product': {
-      fr: '/produits/ajouter-produit',
-      en: '/products/add-product',
-      de: '/produkte/produkt-hinzufügen',
-      nl: '/producten/voeg-product-toe',
+    '/add-product': {
+      fr: '/ajouter-produit',
+      en: '/add-product',
+      de: '/produkt-hinzufügen',
+      nl: '/voeg-product-toe',
     },
-    '/products/add-product/success': {
-      fr: '/produits/ajouter-produit/succes',
-      en: '/products/add-product/success',
-      de: '/produkte/produkt-hinzufügen/erfolg',
-      nl: '/producten/voeg-product-toe/succes',
+    '/add-product/success': {
+      fr: '/ajouter-produit/succes',
+      en: '/add-product/success',
+      de: '/produkt-hinzufügen/erfolg',
+      nl: '/voeg-product-toe/succes',
     },
   }
 });

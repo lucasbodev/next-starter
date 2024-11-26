@@ -56,7 +56,8 @@
   "Products": {
     "title": "Producten",
     "description": "Hier ziet u welke producten aan de winkel zijn toegevoegd.",
-    "addProductBtn": "Voeg een nieuw product toe"
+    "addProductBtn": "Voeg een nieuw product toe",
+    "productsFetchFailed": "Fout bij het ophalen van producten."
   },
   "AddProductForm": {
     "referenceLabel": "Wat is de productreferentie?",

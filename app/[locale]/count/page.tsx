@@ -1,6 +1,6 @@
 import React from 'react';
-import CountViewer from '@/lib/components/count/count-viewer.component';
-import CountUpdater from '@/lib/components/count/count-updater.component';
+import CountViewer from '@/components/count/count-viewer.component';
+import CountUpdater from '@/components/count/count-updater.component';
 import styles from '@/app/[locale]/count/count.module.css';
 import { useTranslations } from 'next-intl';
 

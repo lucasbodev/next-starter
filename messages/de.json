@@ -53,7 +53,8 @@
   "Products": {
     "title": "Produkte",
     "description": "Hier sehen Sie die zum Shop hinzugefügten Produkte.",
-    "addProductBtn": "Fügen Sie ein neues Produkt hinzu"
+    "addProductBtn": "Fügen Sie ein neues Produkt hinzu",
+    "productsFetchFailed": "Fehler beim Abrufen der Produkte."
   },
   "AddProductForm": {
     "referenceLabel": "Was ist die Produktreferenz?",

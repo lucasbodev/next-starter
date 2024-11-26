@@ -2,8 +2,8 @@
 
 import React, { type ReactElement } from 'react';
 import '@/app/globals.css';
-import useIsomorphicLayoutEffect from '@/lib/styles/animations/use-isomorphic-layout-effect';
-import { revealHomeTitle } from '@/lib/styles/animations/animations';
+import useIsomorphicLayoutEffect from '@/styles/animations/use-isomorphic-layout-effect';
+import { revealHomeTitle } from '@/styles/animations/animations';
 
 const HomeAnimations = (
     { children }:

@@ -1,10 +1,10 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import '@/app/globals.css';
-import Nav from '@/lib/components/nav/nav.component';
+import Nav from '@/components/nav/nav.component';
 import { Providers } from '@/app/providers';
-import '@/lib/styles/animations/gsap-config';
-import Footer from '@/lib/components/footer/footer.component';
+import '@/styles/animations/gsap-config';
+import Footer from '@/components/footer/footer.component';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from "@vercel/analytics/react";
 import { GeistSans } from 'geist/font/sans';

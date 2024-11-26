@@ -56,7 +56,8 @@
   "Products": {
     "title": "Produits",
     "description": "Ici vous pouvez voir les produits ajoutés à la boutique.",
-    "addProductBtn": "Ajouter un nouveau produit"
+    "addProductBtn": "Ajouter un nouveau produit",
+    "productsFetchFailed": "Échec du chargement des produits."
   },
   "AddProductForm": {
     "referenceLabel": "Quelle est la référence du produit ?",

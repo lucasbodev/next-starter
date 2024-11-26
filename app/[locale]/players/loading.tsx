@@ -1,7 +1,0 @@
-import React, { type ReactElement } from "react";
-
-const Loading = (): ReactElement => {
-    return <div>Loading...</div>;
-};
-
-export default Loading;

@@ -58,7 +58,8 @@
   "Products": {
     "title": "Products",
     "description": "Here you can see the products added to the shop.",
-    "addProductBtn": "Add a new product"
+    "addProductBtn": "Add a new product",
+    "productsFetchFailed": "Failed to fetch products."
   },
   "AddProductForm": {
     "referenceLabel": "What is the product reference?",
