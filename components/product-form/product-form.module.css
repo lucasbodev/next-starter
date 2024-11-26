@@ -1,0 +1,7 @@
+.product__form {
+    z-index: 100;
+}
+
+.product__form__description {
+    color: var(--white-750);
+}

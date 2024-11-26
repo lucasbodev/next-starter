@@ -61,7 +61,7 @@
     "addProductBtn": "Add a new product",
     "productsFetchFailed": "Failed to fetch products."
   },
-  "AddProductForm": {
+  "ProductForm": {
     "referenceLabel": "What is the product reference?",
     "nameLabel": "What is the product name?",
     "descriptionLabel": "What is the description?",
@@ -84,7 +84,10 @@
     "pricePlaceholder": "Enter product price...",
     "fileUploadFailed": "Image upload failed",
     "productCreationFailed": "Internal error, please contact the administrator.",
-    "unicityConstraintViolation": "A product with the same reference already exists."
+    "unicityConstraintViolation": "A product with the same reference already exists.",
+    "productUpdateFailed": "Product update failed.",
+    "productNotFound": "Product not found.",
+    "productFetchFailed": "Failed to fetch product."
   },
   "AddProductSuccess": {
     "title": "Success!",

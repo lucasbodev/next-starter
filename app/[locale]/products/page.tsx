@@ -1,7 +1,8 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
 import { getTranslations } from "next-intl/server";
 import { getProducts } from "@/actions/product-actions";
+import Image from 'next/image';
+import { Link } from "@/i18n/routing";
 
 const Products = async () => {
 
@@ -19,6 +20,14 @@ const Products = async () => {
                             alt={product.name} />
                     </figure>
                     <div className="card-body">
+                        <div className="card-actions justify-end">
+                            <Link href={{
+                                pathname: '/edit-product/[id]',
+                                params: { id: `${product.id}` }
+                            }}>
+                                <Image src={`/icons/edit.svg`} alt={'Edit'} width="24" height="24" />
+                            </Link>
+                        </div>
                         <h2 className="card-title">
                             {product.name}
                             <div className="badge badge-secondary">{product.price}€</div>

@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { Validation } from '@/models/validations/validation';
 import { Submission } from '@conform-to/react';
 import { parseWithZod } from '@conform-to/zod';
-import { ProductSubmission } from '../DTOs/product-DTO';
+import { ProductDTO } from '../DTOs/product-DTO';
 
 export const productSchema = (t: (key: string) => string) => z.object({
     reference: z.string({ message: t('referenceRequired') }),
@@ -13,13 +13,13 @@ export const productSchema = (t: (key: string) => string) => z.object({
     errors: z.string().optional(),
 });
 
-export class ProductValidation extends Validation<ProductSubmission> {
+export class ProductValidation extends Validation<ProductDTO> {
     
     constructor(t: (key: string) => string) {
         super(t);
     }
 
-    validate(data: FormData): Submission<ProductSubmission> {
+    validate(data: FormData): Submission<ProductDTO> {
         return parseWithZod(data, {
             schema: productSchema(this.t),
         });

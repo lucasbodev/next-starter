@@ -5,7 +5,6 @@
 //     create: (data: ActionType) => Promise<ActionResult<CreateResultType>>;
 // }
 
-import { ActionResult } from "@/actions/action-result";
 import { Submission, SubmissionResult } from "@conform-to/react";
 
 export abstract class Repository<T> {
@@ -17,7 +16,8 @@ export abstract class Repository<T> {
     }
 
     abstract all(): Promise<T[]>;
+    abstract find(id: number): Promise<T>;
     abstract create(submission: Submission<T>): Promise<SubmissionResult>;
-    abstract update(submission: Submission<T>): Promise<ActionResult<T>>;
-    abstract delete(id: string): Promise<ActionResult<T>>;
+    abstract update(submission: Submission<T>, id: number): Promise<SubmissionResult>;
+    abstract delete(id: string): Promise<T>;
 }

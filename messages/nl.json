@@ -59,7 +59,7 @@
     "addProductBtn": "Voeg een nieuw product toe",
     "productsFetchFailed": "Fout bij het ophalen van producten."
   },
-  "AddProductForm": {
+  "ProductForm": {
     "referenceLabel": "Wat is de productreferentie?",
     "nameLabel": "Wat is de productnaam?",
     "descriptionLabel": "Wat is de beschrijving?",
@@ -82,7 +82,10 @@
     "pricePlaceholder": "Productprijs invoeren...",
     "fileUploadFailed": "Uploaden van afbeelding mislukt",
     "productCreationFailed": "Interne fout, neem contact op met de beheerder.",
-    "unicityConstraintViolation": "Er bestaat al een product met dezelfde referentie."
+    "unicityConstraintViolation": "Er bestaat al een product met dezelfde referentie.",
+    "productUpdateFailed": "Productupdate mislukt.",
+    "productNotFound": "Product niet gevonden.",
+    "productFetchFailed": "Fout bij het ophalen van product."
   },
   "AddProductSuccess": {
     "title": "Succes!",

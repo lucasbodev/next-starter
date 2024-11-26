@@ -2,16 +2,16 @@
 
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useActionState } from "react";
-import styles from "@/components/add-product-form/add-product-form.module.css";
+import styles from "@/components/product-form/product-form.module.css";
 import { useTranslations } from "next-intl";
 import { createProduct } from "@/actions/product-actions";
 import { useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod";
 import { productSchema } from "@/models/validations/product-validation";
 
-const AddProductForm = () => {
+const ProductForm = () => {
 
-    const t = useTranslations("AddProductForm");
+    const t = useTranslations("ProductForm");
     const [lastResult, action, isPending] = useActionState(createProduct, undefined);
 
     const [form, fields] = useForm({
@@ -143,4 +143,4 @@ const AddProductForm = () => {
     );
 };
 
-export default AddProductForm;
+export default ProductForm;

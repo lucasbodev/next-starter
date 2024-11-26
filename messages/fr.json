@@ -59,7 +59,7 @@
     "addProductBtn": "Ajouter un nouveau produit",
     "productsFetchFailed": "Échec du chargement des produits."
   },
-  "AddProductForm": {
+  "ProductForm": {
     "referenceLabel": "Quelle est la référence du produit ?",
     "nameLabel": "Quel est le nom du produit?",
     "descriptionLabel": "Quelle est la description?",
@@ -82,7 +82,10 @@
     "pricePlaceholder": "Entrez le prix du produit...",
     "fileUploadFailed": "Échec du téléchargement de l'image",
     "productCreationFailed": "Erreur interne, veuillez contacter l'administrateur.",
-    "unicityConstraintViolation": "Un produit disposant de la même référence existe déjà."
+    "unicityConstraintViolation": "Un produit disposant de la même référence existe déjà.",
+    "productUpdateFailed": "Échec de la mise à jour du produit.",
+    "productNotFound": "Produit non trouvé.",
+    "productFetchFailed": "Échec du chargement du produit."
   },
   "AddProductSuccess": {
     "title": "Succès!",

@@ -35,6 +35,12 @@ export const routing = defineRouting({
       de: '/produkt-hinzufügen/erfolg',
       nl: '/voeg-product-toe/succes',
     },
+    '/edit-product/[id]': {
+      fr: '/modifier-produit/[id]',
+      en: '/edit-product/[id]',
+      de: '/produkt-bearbeiten/[id]',
+      nl: '/bewerk-product/[id]',
+    },
   }
 });
 
