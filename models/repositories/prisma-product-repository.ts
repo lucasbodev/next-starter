@@ -4,6 +4,7 @@ import { ProductDTO } from "@/models/DTOs/product-DTO";
 import { Submission, SubmissionResult } from "@conform-to/react";
 import { Prisma } from "@prisma/client";
 import { VercelFileStorage } from "../storage/vercel-file-storage";
+import { ErrorResponse } from "../errors/error-response";
 
 
 export class PrismaProductRepository extends Repository<ProductDTO> {
@@ -24,7 +25,7 @@ export class PrismaProductRepository extends Repository<ProductDTO> {
                 name: product.name,
                 description: product.description,
                 price: product.price,
-                imageUrl: product.image,
+                image: product.image,
             })));
         } catch (e) {
             throw new Error(this.t('productsFetchFailed'));
@@ -34,31 +35,42 @@ export class PrismaProductRepository extends Repository<ProductDTO> {
     async find(id: number): Promise<ProductDTO> {
         try {
             return await prisma.product.findUnique({
-                where: { id: id },
+                where: { id: Number(id) }
             }).then(product => ({
                 id: product?.id,
                 reference: product?.reference,
                 name: product?.name,
                 description: product?.description,
                 price: product?.price,
-                imageUrl: product?.image,
+                image: product?.image,
             }) as ProductDTO);
         } catch (e) {
+            console.error(e);
             throw new Error(this.t('productFetchFailed'));
         }
     }
 
-    async create(submission: Submission<ProductDTO>): Promise<SubmissionResult> {
-        const submissionResult = await this.storeImage(submission);
-
-        if (submissionResult.status === 'error') {
-            return submissionResult;
-        }
-
+    async create(data: ProductDTO): Promise<ProductDTO> {
         try {
-            return await this.addProduct(submission);
+            const { reference, name, description, price, image } = data;
+            const product = await prisma.product.create({
+                data: {
+                    reference: reference as string,
+                    name: name as string,
+                    description: description as string,
+                    price: Number(price),
+                    image: image as string,
+                }
+            });
+            return product;
         } catch (e) {
-            return await this.cancelProductCreation(submission, e as Error);
+            console.error((e as Error).message);
+            if (e instanceof Prisma.PrismaClientKnownRequestError) {
+                if (e.code === 'P2002') {
+                    throw new ErrorResponse(this.t('unicityConstraintViolation'), 'reference');
+                }
+            }
+            throw new ErrorResponse(this.t('productCreationFailed'), 'internal');
         }
     }
 
@@ -101,16 +113,17 @@ export class PrismaProductRepository extends Repository<ProductDTO> {
     }
 
     delete(id: string): Promise<ProductDTO> {
-        return prisma.product.delete({
-            where: { id: Number(id) }
-        }).then(product => ({
-            id: product.id,
-            reference: product.reference,
-            name: product.name,
-            description: product.description,
-            price: product.price,
-            imageUrl: product.image,
-        }) as ProductDTO);
+        throw new Error('Method not implemented.');
+        // return prisma.product.delete({
+        //     where: { id: Number(id) }
+        // }).then(product => ({
+        //     id: product.id,
+        //     reference: product.reference,
+        //     name: product.name,
+        //     description: product.description,
+        //     price: product.price,
+        //     imageUrl: product.image,
+        // }) as ProductDTO);
     }
 
     private async storeImage(submission: Submission<ProductDTO>): Promise<SubmissionResult> {
@@ -142,19 +155,20 @@ export class PrismaProductRepository extends Repository<ProductDTO> {
         }
     }
 
-    private async addProduct(submission: Submission<ProductDTO>): Promise<SubmissionResult> {
-        const { reference, name, description, price } = submission.payload;
+    private async addProduct(data: ProductDTO): Promise<ProductDTO> {
+        const { reference, name, description, price } = data;
 
-        await prisma.product.create({
+        const product = await prisma.product.create({
             data: {
                 reference: reference as string,
                 name: name as string,
                 description: description as string,
                 price: Number(price),
-                image: this.lastStoredFile,
+                image: 'refactor',
             }
         });
-        return submission.reply();
+
+        return product;
     }
 
     private async cancelProductCreation(submission: Submission<ProductDTO>, e: Error): Promise<SubmissionResult> {
@@ -173,5 +187,16 @@ export class PrismaProductRepository extends Repository<ProductDTO> {
                 errors: [this.t('productCreationFailed')],
             }
         });
+    }
+
+    parseToDTO = (data: any): ProductDTO => {
+        return {
+            id: data.id,
+            reference: data.reference,
+            name: data.name,
+            description: data.description,
+            price: data.price,
+            image: 'test',
+        };
     }
 }

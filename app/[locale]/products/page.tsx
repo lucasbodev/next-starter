@@ -1,12 +1,9 @@
 import React from "react";
-import { getTranslations } from "next-intl/server";
 import { getProducts } from "@/actions/product-actions";
 import Image from 'next/image';
 import { Link } from "@/i18n/routing";
 
 const Products = async () => {
-
-    const t = await getTranslations("Products");
 
     const products = await getProducts();
 
@@ -16,7 +13,7 @@ const Products = async () => {
                 <div className="card bg-base-100 shadow-xl" key={product.id}>
                     <figure>
                         <img
-                            src={product.imageUrl}
+                            src={product.image as string}
                             alt={product.name} />
                     </figure>
                     <div className="card-body">

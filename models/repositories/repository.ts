@@ -17,7 +17,7 @@ export abstract class Repository<T> {
 
     abstract all(): Promise<T[]>;
     abstract find(id: number): Promise<T>;
-    abstract create(submission: Submission<T>): Promise<SubmissionResult>;
+    abstract create(data: T): Promise<T>;
     abstract update(submission: Submission<T>, id: number): Promise<SubmissionResult>;
     abstract delete(id: string): Promise<T>;
 }

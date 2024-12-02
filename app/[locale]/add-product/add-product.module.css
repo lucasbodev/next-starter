@@ -4,5 +4,6 @@
     align-items: center;
     padding-top: 6rem;
     padding-bottom: var(--spacing-medium);
+    padding-inline: var(--spacing-huge);;
     min-height: 100vh;
 }

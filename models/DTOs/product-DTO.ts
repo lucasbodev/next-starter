@@ -4,7 +4,5 @@ export interface ProductDTO {
     name: string; 
     description: string; 
     price: number; 
-    image?: File;
-    imageUrl?: string;
-    errors?: string | undefined;
+    image?: string;
 }
