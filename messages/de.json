@@ -54,7 +54,8 @@
     "title": "Produkte",
     "description": "Hier sehen Sie die zum Shop hinzugefügten Produkte.",
     "addProductBtn": "Fügen Sie ein neues Produkt hinzu",
-    "productsFetchFailed": "Fehler beim Abrufen der Produkte."
+    "productsFetchFailed": "Fehler beim Abrufen der Produkte.",
+    "productDeletionFailed": "Das Produkt konnte nicht gelöscht werden. Bitte wenden Sie sich an einen Administrator."
   },
   "ProductForm": {
     "referenceLabel": "Was ist die Produktreferenz?",
@@ -62,7 +63,6 @@
     "descriptionLabel": "Wie lautet die Beschreibung?",
     "priceLabel": "Wie hoch ist der Produktpreis?",
     "imagePickerLabel": "Wählen Sie ein Bild aus.",
-    "addProductBtn": "Produkt hinzufügen",
     "addProductTitle": "Neues Produkt hinzufügen",
     "addProductDescription": "Hier können Sie Ihrem Shop ein neues Produkt hinzufügen!",
     "referenceRequired": "Die Produktreferenz ist erforderlich.",
@@ -82,12 +82,21 @@
     "unicityConstraintViolation": "Es existiert bereits ein Produkt mit der gleichen Referenz.",
     "productUpdateFailed": "Produktupdate fehlgeschlagen.",
     "productNotFound": "Produkt nicht gefunden.",
-    "productFetchFailed": "Fehler beim Abrufen des Produkts."
+    "productFetchFailed": "Fehler beim Abrufen des Produkts.",
+    "saveProductBtn": "Produkt speichern",
+    "editProductTitle": "Modifikator eines Produkts",
+    "editProductDescription": "Hier können Sie ein Produkt des Shops bearbeiten."
   },
   "AddProductSuccess": {
     "title": "Erfolg!",
     "description": "Sie haben erfolgreich ein neues Produkt zum Shop hinzugefügt!",
     "linkButton": "Gehen Sie zurück zu den Produkten",
     "closeButton": "Fügen Sie ein weiteres Produkt hinzu"
+  },
+  "ProductCard": {
+    "cancel": "Stornieren",
+    "delete": "Löschen",
+    "deletionModalTitle": "Dieses Produkt löschen",
+    "deletionModalDescription": "Sind Sie sicher, dass Sie dieses Produkt löschen möchten?"
   }
 }

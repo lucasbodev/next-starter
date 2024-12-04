@@ -57,7 +57,8 @@
     "title": "Produits",
     "description": "Ici vous pouvez voir les produits ajoutés à la boutique.",
     "addProductBtn": "Ajouter un nouveau produit",
-    "productsFetchFailed": "Échec du chargement des produits."
+    "productsFetchFailed": "Échec du chargement des produits.",
+    "productDeletionFailed": "Échec de la suppression du produit. Veuillez contacter un administrateur."
   },
   "ProductForm": {
     "referenceLabel": "Quelle est la référence du produit ?",
@@ -65,7 +66,6 @@
     "descriptionLabel": "Quelle est la description?",
     "priceLabel": "Quel est le prix du produit?",
     "imagePickerLabel": "Choisissez une image.",
-    "addProductBtn": "Ajouter un produit",
     "addProductTitle": "Ajouter un nouveau produit",
     "addProductDescription": "Ici, vous pouvez ajouter un nouveau produit à votre boutique!",
     "referenceRequired": "La référence du produit est obligatoire.",
@@ -85,12 +85,21 @@
     "unicityConstraintViolation": "Un produit disposant de la même référence existe déjà.",
     "productUpdateFailed": "Échec de la mise à jour du produit.",
     "productNotFound": "Produit non trouvé.",
-    "productFetchFailed": "Échec du chargement du produit."
+    "productFetchFailed": "Échec du chargement du produit.",
+    "saveProductBtn": "Enregistrer le produit",
+    "editProductTitle": "Modifier un produit",
+    "editProductDescription": "Ici vous pouvez éditer un produit de la boutique."
   },
   "AddProductSuccess": {
     "title": "Succès!",
     "description": "Vous avez ajouté avec succès un nouveau produit à la boutique!",
     "linkButton": "Retour aux produits",
     "closeButton": "Ajouter un autre produit"
+  },
+  "ProductCard": {
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "deletionModalTitle": "Supprimer ce produit",
+    "deletionModalDescription": "Êtes-vous sûr de vouloir supprimer ce produit ?"
   }
 }

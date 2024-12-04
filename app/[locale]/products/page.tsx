@@ -1,42 +1,34 @@
-import React from "react";
+import React, { RefObject, useRef } from "react";
 import { getProducts } from "@/actions/product-actions";
-import Image from 'next/image';
-import { Link } from "@/i18n/routing";
+import ProductCard from "@/components/product-card/product-card.component";
+import { getTranslations } from "next-intl/server";
 
 const Products = async () => {
 
+    const t = await getTranslations("Products");
     const products = await getProducts();
+    const toast = useRef<HTMLDivElement>(null);
+
+
+    const showToast = (toastRef: RefObject<HTMLDivElement>, message: string) => {
+        toast.current!.classList.add('show');
+        setTimeout(() => {
+            toast.current!.classList.remove('show');
+        }, 3000);
+    }
 
     return (
         <>
-            {products.map(product => (
-                <div className="card bg-base-100 shadow-xl" key={product.id}>
-                    <figure>
-                        <img
-                            src={product.image as string}
-                            alt={product.name} />
-                    </figure>
-                    <div className="card-body">
-                        <div className="card-actions justify-end">
-                            <Link href={{
-                                pathname: '/edit-product/[id]',
-                                params: { id: `${product.id}` }
-                            }}>
-                                <Image src={`/icons/edit.svg`} alt={'Edit'} width="24" height="24" />
-                            </Link>
-                        </div>
-                        <h2 className="card-title">
-                            {product.name}
-                            <div className="badge badge-secondary">{product.price}€</div>
-                        </h2>
-                        <p>{product.description}</p>
-                        <div className="card-actions justify-end">
-                            <div className="badge badge-outline">Fashion</div>
-                            <div className="badge badge-outline">Products</div>
-                        </div>
-                    </div>
+            <div ref={toast} className="toast toast-bottom toast-end">
+                <div className="alert alert-success">
+                    <span>{t('deleteSuccessMessage')}</span>
                 </div>
-            ))}
+            </div>
+            {
+                products.map(product => (
+                    <ProductCard key={product.id} product={product} onDeletion={() => showToast} />
+                ))
+            }
         </>
     );
 };

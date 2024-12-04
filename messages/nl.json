@@ -57,7 +57,8 @@
     "title": "Producten",
     "description": "Hier ziet u welke producten aan de winkel zijn toegevoegd.",
     "addProductBtn": "Voeg een nieuw product toe",
-    "productsFetchFailed": "Fout bij het ophalen van producten."
+    "productsFetchFailed": "Fout bij het ophalen van producten.",
+    "productDeletionFailed": "Kan het product niet verwijderen. Neem contact op met een beheerder."
   },
   "ProductForm": {
     "referenceLabel": "Wat is de productreferentie?",
@@ -65,7 +66,6 @@
     "descriptionLabel": "Wat is de beschrijving?",
     "priceLabel": "Wat is de productprijs?",
     "imagePickerLabel": "Kies een afbeelding.",
-    "addProductBtn": "Product toevoegen",
     "addProductTitle": "Nieuw product toevoegen",
     "addProductDescription": "Hier kunt u een nieuw product aan uw winkel toevoegen!",
     "referenceRequired": "De productreferentie is vereist.",
@@ -85,12 +85,21 @@
     "unicityConstraintViolation": "Er bestaat al een product met dezelfde referentie.",
     "productUpdateFailed": "Productupdate mislukt.",
     "productNotFound": "Product niet gevonden.",
-    "productFetchFailed": "Fout bij het ophalen van product."
+    "productFetchFailed": "Fout bij het ophalen van product.",
+    "saveProductBtn": "Product opslaan",
+    "editProductTitle": "Modifier een product",
+    "editProductDescription": "Hier kunt u een product van de winkel bewerken."
   },
   "AddProductSuccess": {
     "title": "Succes!",
     "description": "Je hebt succesvol een nieuw product aan de winkel toegevoegd!",
     "linkButton": "Ga terug naar producten",
     "closeButton": "Voeg nog een product toe"
+  },
+  "ProductCard": {
+    "cancel": "Annuleren",
+    "delete": "Verwijderen",
+    "deletionModalTitle": "Verwijder dit product",
+    "deletionModalDescription": "Weet u zeker dat u dit product wilt verwijderen?"
   }
 }

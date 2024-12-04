@@ -1,20 +1,22 @@
 "use client";
 
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useActionState, useRef, useState } from "react";
 import styles from "@/components/product-form/product-form.module.css";
 import { useTranslations } from "next-intl";
-import { createProduct } from "@/actions/product-actions";
+import { createProduct, updateProduct } from "@/actions/product-actions";
 import { useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod";
-import { productSchema } from "@/models/validations/product-validator";
+import { productCreationSchema, productUpdateSchema } from "@/models/validations/product-validators";
 import { ProductDTO } from "@/models/DTOs/product-DTO";
 import ImagePreview from "@/components/image-preview/image-preview";
 
 const ProductForm = ({ defaultValue }: { defaultValue: ProductDTO }) => {
 
     const t = useTranslations("ProductForm");
-    const [lastResult, action, isPending] = useActionState(createProduct, undefined);
+    const [lastResult, action, isPending] = useActionState(
+        defaultValue ? updateProduct : createProduct,
+        undefined
+    );
     const fileInput = useRef<HTMLInputElement>(null);
     const [imageUrl, setImageUrl] = useState<string>('');
 
@@ -22,7 +24,9 @@ const ProductForm = ({ defaultValue }: { defaultValue: ProductDTO }) => {
         lastResult,
         defaultValue,
         onValidate({ formData }) {
-            return parseWithZod(formData, { schema: productSchema(t) });
+            return parseWithZod(formData, {
+                schema: (defaultValue ? productUpdateSchema(t) : productCreationSchema(t))
+            });
         },
         shouldValidate: 'onBlur',
         shouldRevalidate: 'onInput',
@@ -37,8 +41,16 @@ const ProductForm = ({ defaultValue }: { defaultValue: ProductDTO }) => {
         <form className={styles.product__form} id={form.id} onSubmit={form.onSubmit} action={action}>
             <div className="card bg-base-100 shadow-xl">
                 <div className="card-body">
-                    <h2 className="card-title">{t('addProductTitle')}</h2>
-                    <p className="text-default-400">{t('addProductDescription')}</p>
+                    <h2 className="card-title">{
+                        defaultValue ?
+                            t('editProductTitle') :
+                            t('addProductTitle')
+                    }</h2>
+                    <p className="text-default-400">{
+                        defaultValue ?
+                            t('editProductDescription') :
+                            t('addProductDescription')
+                    }</p>
                     {
                         lastResult?.error?.['internal'] &&
                         <span className="alert alert-error">
@@ -46,6 +58,9 @@ const ProductForm = ({ defaultValue }: { defaultValue: ProductDTO }) => {
                         </span>
                     }
                     <div className={styles.double__column__form}>
+                        {
+                            defaultValue && <input type="hidden" key="id" name="id" value={defaultValue.id} />
+                        }
                         <div className={styles.form__left}>
                             <label className="form-control w-full max-w-xs">
                                 <div className="label">
@@ -147,9 +162,11 @@ const ProductForm = ({ defaultValue }: { defaultValue: ProductDTO }) => {
                                 }
                             </label>
                             {
-                                imageUrl === '' ?
+                                defaultValue ?
                                     <ImagePreview src={defaultValue.image} /> :
-                                    <ImagePreview src={imageUrl} />
+                                    imageUrl ?
+                                        <ImagePreview src={imageUrl} /> :
+                                        <ImagePreview />
                             }
 
                         </div>
@@ -158,7 +175,7 @@ const ProductForm = ({ defaultValue }: { defaultValue: ProductDTO }) => {
                         {
                             isPending ?
                                 <span className="loading loading-ring loading-lg"></span> :
-                                <button className="btn btn-primary">{t('addProductBtn')}</button>
+                                <button className="btn btn-primary">{t('saveProductBtn')}</button>
                         }
                     </div>
                 </div>

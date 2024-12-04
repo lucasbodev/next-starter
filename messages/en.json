@@ -59,7 +59,8 @@
     "title": "Products",
     "description": "Here you can see the products added to the shop.",
     "addProductBtn": "Add a new product",
-    "productsFetchFailed": "Failed to fetch products."
+    "productsFetchFailed": "Failed to fetch products.",
+    "productDeletionFailed": "Failed to delete the product. Please contact an administrator."
   },
   "ProductForm": {
     "referenceLabel": "What is the product reference?",
@@ -67,7 +68,6 @@
     "descriptionLabel": "What is the description?",
     "priceLabel": "What is the product price?",
     "imagePickerLabel": "Pick an image.",
-    "addProductBtn": "Add product",
     "addProductTitle": "Add new product",
     "addProductDescription": "Here your can add a new product to your shop!",
     "referenceRequired": "The product reference is required.",
@@ -87,7 +87,10 @@
     "unicityConstraintViolation": "A product with the same reference already exists.",
     "productUpdateFailed": "Product update failed.",
     "productNotFound": "Product not found.",
-    "productFetchFailed": "Failed to fetch product."
+    "productFetchFailed": "Failed to fetch product.",
+    "saveProductBtn": "Save product",
+    "editProductTitle": "Edit product",
+    "editProductDescription": "Here you can edit a product of the shop."
   },
   "AddProductSuccess": {
     "title": "Success!",
@@ -95,6 +98,11 @@
     "linkButton": "Go back to products",
     "closeButton": "Add another product"
   },
-  "referenceLabel": "What is the product reference?",
-  "referencePlaceholder": "Type product reference..."
+  "cancel": "Cancel",
+  "ProductCard": {
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "deletionModalTitle": "Delete this product",
+    "deletionModalDescription": "Are you sure that you want to delete this product?"
+  }
 }

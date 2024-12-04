@@ -2,7 +2,7 @@
 
 import { redirect } from "@/i18n/routing";
 import { getLocale, getTranslations } from 'next-intl/server';
-import { ProductValidator } from '@/models/validations/product-validator';
+import { ProductCreationValidator, ProductUpdateValidator } from '@/models/validations/product-validators';
 import { PrismaProductRepository } from '@/models/repositories/prisma-product-repository';
 import { ErrorResponse } from "@/models/errors/error-response";
 import { ProductParser } from "@/models/DTOs/product-parser";
@@ -23,7 +23,7 @@ export const getProduct = async (id: number) => {
 export const createProduct = async (prevState: unknown, data: FormData) => {
     const t = await getTranslations("ProductForm");
 
-    let submission = new ProductValidator(t).validate(data);
+    let submission = new ProductCreationValidator(t).validate(data);
 
     if (submission.status === 'error') {
         return submission.reply();
@@ -48,23 +48,52 @@ export const createProduct = async (prevState: unknown, data: FormData) => {
     return redirect({ href: '/add-product/success', locale });
 };
 
-// export const updateProduct = async (prevState: unknown, data: FormData, id: number) => {
-//     const t = await getTranslations("ProductForm");
+export const updateProduct = async (prevState: unknown, data: FormData) => {
+    const t = await getTranslations("ProductForm");
 
-//     let submission = new ProductValidation(t).validate(data);
+    let submission = new ProductUpdateValidator(t).validate(data);
 
-//     if (submission.status === 'error') {
-//         return submission.reply();
-//     }
+    if (submission.status === 'error') {
+        return submission.reply();
+    }
 
-//     let submissionResult = await new PrismaProductRepository(t).update(submission, id);
+    try {
+        const currentProduct = await new PrismaProductRepository(t).find(Number(data.get('id')));
+        let updatedProduct = new ProductParser().parse(data);
+        const storage = new VercelFileStorage();
+        if ((data.get('image') as File).size > 0) {
+            await storage.delete(currentProduct.image);
+            const imageUrl = await storage.store(data.get('image') as File);
+            updatedProduct.image = imageUrl;
+        }
+        await new PrismaProductRepository(t).update(updatedProduct);
+    } catch (e) {
+        const error = e as ErrorResponse;
+        return submission.reply({
+            fieldErrors: {
+                [error.field!]: [error.message]
+            }
+        });
+    }
 
-//     if (submissionResult.status === 'error') {
-//         return submissionResult;
-//     }
+    const locale = await getLocale();
 
-//     const locale = await getLocale();
+    return redirect({ href: '/products', locale });
+}
 
-//     return redirect({ href: '/products', locale });
-// }
+export const deleteProduct = async (id: number) => {
+    const t = await getTranslations("Products");
+
+    try {
+        const product = await new PrismaProductRepository(t).find(id);
+        await new VercelFileStorage().delete(product.image);
+        await new PrismaProductRepository(t).delete(id);
+    } catch (e) {
+        throw new Error((e as Error).message);
+    }
+
+    const locale = await getLocale();
+
+    return redirect({ href: '/products', locale });
+}
 
