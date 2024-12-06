@@ -3,8 +3,7 @@ import styles from "@/app/[locale]/products/products.module.css";
 import { getTranslations } from "next-intl/server";
 import ButtonLink from "@/components/button-link/button-link.component";
 
-const ProductsLayout = async (
-    { children }: { children: React.ReactNode }) => {
+const ProductsLayout = async ({ children }: { children: React.ReactNode }) => {
 
     const t = await getTranslations("Products");
 
@@ -21,7 +20,6 @@ const ProductsLayout = async (
                 {children}
             </div>
         </div>
-
     );
 };
 

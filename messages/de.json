@@ -54,8 +54,10 @@
     "title": "Produkte",
     "description": "Hier sehen Sie die zum Shop hinzugefügten Produkte.",
     "addProductBtn": "Fügen Sie ein neues Produkt hinzu",
+    "productFetchFailed": "Produkt laden fehlgeschlagen. Bitte wenden Sie sich an einen Administrator.",
     "productsFetchFailed": "Fehler beim Abrufen der Produkte.",
-    "productDeletionFailed": "Das Produkt konnte nicht gelöscht werden. Bitte wenden Sie sich an einen Administrator."
+    "productDeletionFailed": "Das Produkt konnte nicht gelöscht werden. Bitte wenden Sie sich an einen Administrator.",
+    "productNotFound": "Produkt nicht gefunden."
   },
   "ProductForm": {
     "referenceLabel": "Was ist die Produktreferenz?",
@@ -97,6 +99,10 @@
     "cancel": "Stornieren",
     "delete": "Löschen",
     "deletionModalTitle": "Dieses Produkt löschen",
-    "deletionModalDescription": "Sind Sie sicher, dass Sie dieses Produkt löschen möchten?"
+    "deletionModalDescription": "Sind Sie sicher, dass Sie dieses Produkt löschen möchten?",
+    "deletionSuccess": "Produkt erfolgreich gelöscht."
+  },
+  "ProductList": {
+    "deletionSuccess": "Produkt erfolgreich gelöscht."
   }
 }

@@ -57,8 +57,10 @@
     "title": "Produits",
     "description": "Ici vous pouvez voir les produits ajoutés à la boutique.",
     "addProductBtn": "Ajouter un nouveau produit",
+    "productFetchFailed": "Échec du chargement du produit. Veuillez contacter un administrateur.",
     "productsFetchFailed": "Échec du chargement des produits.",
-    "productDeletionFailed": "Échec de la suppression du produit. Veuillez contacter un administrateur."
+    "productDeletionFailed": "Échec de la suppression du produit. Veuillez contacter un administrateur.",
+    "productNotFound": "Produit non trouvé."
   },
   "ProductForm": {
     "referenceLabel": "Quelle est la référence du produit ?",
@@ -100,6 +102,10 @@
     "cancel": "Annuler",
     "delete": "Supprimer",
     "deletionModalTitle": "Supprimer ce produit",
-    "deletionModalDescription": "Êtes-vous sûr de vouloir supprimer ce produit ?"
+    "deletionModalDescription": "Êtes-vous sûr de vouloir supprimer ce produit ?",
+    "deletionSuccess": "Produit supprimé avec succès."
+  },
+  "ProductList": {
+    "deletionSuccess": "Produit supprimé avec succès."
   }
 }

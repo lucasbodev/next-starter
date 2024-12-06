@@ -27,18 +27,17 @@ export class PrismaProductRepository extends Repository<ProductDTO> {
 
     async find(id: number): Promise<ProductDTO> {
         try {
-            return await prisma.product.findUnique({
+            let product = await prisma.product.findUnique({
                 where: { id: Number(id) }
-            }).then(product => ({
-                id: product?.id,
-                reference: product?.reference,
-                name: product?.name,
-                description: product?.description,
-                price: product?.price,
-                image: product?.image,
-            }) as ProductDTO);
+            });
+
+            if (!product) {
+                throw new ErrorResponse(this.t('productNotFound'));
+            }
+
+            return product as ProductDTO;
         } catch (e) {
-            console.error(e);
+            console.error((e as Error).message);
             throw new Error(this.t('productFetchFailed'));
         }
     }
@@ -107,8 +106,8 @@ export class PrismaProductRepository extends Repository<ProductDTO> {
                 image: product.image,
             }) as ProductDTO);
         } catch (e) {
-            console.error(e);
-            throw new Error(this.t('productDeletionFailed'));
+            console.error((e as Error).message);
+            throw new ErrorResponse(this.t('productDeletionFailed'));
         }
     }
 }

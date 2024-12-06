@@ -57,8 +57,10 @@
     "title": "Producten",
     "description": "Hier ziet u welke producten aan de winkel zijn toegevoegd.",
     "addProductBtn": "Voeg een nieuw product toe",
+    "productFetchFailed": "Product laden mislukt. Neem contact op met een beheerder.",
     "productsFetchFailed": "Fout bij het ophalen van producten.",
-    "productDeletionFailed": "Kan het product niet verwijderen. Neem contact op met een beheerder."
+    "productDeletionFailed": "Kan het product niet verwijderen. Neem contact op met een beheerder.",
+    "productNotFound": "Product niet gevonden."
   },
   "ProductForm": {
     "referenceLabel": "Wat is de productreferentie?",
@@ -100,6 +102,10 @@
     "cancel": "Annuleren",
     "delete": "Verwijderen",
     "deletionModalTitle": "Verwijder dit product",
-    "deletionModalDescription": "Weet u zeker dat u dit product wilt verwijderen?"
+    "deletionModalDescription": "Weet u zeker dat u dit product wilt verwijderen?",
+    "deletionSuccess": "Product succesvol verwijderd."
+  },
+  "ProductList": {
+    "deletionSuccess": "Product succesvol verwijderd."
   }
 }

@@ -12,6 +12,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -44,9 +45,13 @@ const LocaleLayout = async (
           <Providers>
             <Nav />
             {children}
-            <Footer/>
+            <Footer />
             <SpeedInsights />
             <Analytics />
+            <Toaster
+              position="bottom-left"
+              reverseOrder={false}
+            />
           </Providers>
         </NextIntlClientProvider>
       </body>
