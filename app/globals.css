@@ -71,13 +71,6 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  color: var(--white);
-  background: linear-gradient(to bottom, transparent, var(--black)) var(--black-250);
-  background-repeat: no-repeat;
-  position: relative;
-}
-
 a {
   color: inherit;
   text-decoration: none;

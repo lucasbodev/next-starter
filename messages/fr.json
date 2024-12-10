@@ -13,14 +13,16 @@
     "login": "Connexion",
     "logout": "Déconnexion"
   },
-  "Count": {
+  "Counter": {
     "title": "Compteur"
   },
-  "CountUpdater": {
+  "CounterUpdater": {
     "increment": "Incrémenter"
   },
-  "CountViewer": {
-    "countViewer": "Vous avez cliqué {count} fois"
+  "CounterViewer": {
+    "counterViewer": "{count} fois",
+    "statTitle": "Vous avez cliqué",
+    "statDescription": "Et je l'ai stocké dans Zustand."
   },
   "players": {
     "form": {
@@ -107,5 +109,17 @@
   },
   "ProductList": {
     "deletionSuccess": "Produit supprimé avec succès."
+  },
+  "Error": {
+    "tryAgain": "Essayer à nouveau"
+  },
+  "NotFound": {
+    "title": "Il manque quelque chose.",
+    "description": "Désolé, nous ne trouvons pas cette page. \nVous trouverez beaucoup de choses à explorer sur la page d'accueil.",
+    "goBack": "Retour à la page d'accueil"
+  },
+  "Metadata": {
+    "title": "Next.js Starter",
+    "description": "Un démarrage de Next.js avec i18n, Authentification et plus encore."
   }
 }

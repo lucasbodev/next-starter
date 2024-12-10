@@ -10,18 +10,20 @@ export class PrismaProductRepository extends Repository<ProductDTO> {
         super(t);
     }
 
-    all(): Promise<ProductDTO[]> {
+    async all(): Promise<ProductDTO[]> {
         try {
-            return prisma.product.findMany().then(products => products.map(product => ({
+            const products = await prisma.product.findMany();
+            return products.map(product => ({
                 id: product.id,
                 reference: product.reference,
                 name: product.name,
                 description: product.description,
                 price: product.price,
                 image: product.image,
-            })));
+            }));
         } catch (e) {
-            throw new Error(this.t('productsFetchFailed'));
+            console.error((e as Error).message);
+            throw new ErrorResponse(this.t('productsFetchFailed'));
         }
     }
 

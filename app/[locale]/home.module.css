@@ -33,10 +33,10 @@
 .line {
   transform: scaleX(0);
   border-radius: 50px;
-  height: 16px;
+  height: 1rem;
   width: 100%;
   transform-origin: left;
-  background: -webkit-linear-gradient(135deg, #d2c, hsl(336, 100%, 67%));
+  background: -webkit-linear-gradient(135deg, oklch(var(--p)), oklch(var(--s)));
 }
 
 .reverse__line {
@@ -45,7 +45,7 @@
   height: 16px;
   width: 100%;
   transform-origin: right;
-  background: -webkit-linear-gradient(135deg, hsl(336, 100%, 67%), #d2c);
+  background: -webkit-linear-gradient(135deg, oklch(var(--s)), oklch(var(--p)));
 }
 
 @container style(--is-mobile: true) {

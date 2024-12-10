@@ -11,14 +11,9 @@ const Nav = async () => {
 
     return (
         <ResponsiveNavLayout>
-            <NavLink href="/" name={t('homeLink')} />
-            <NavLink href="/count" name={t('countLink')} />
-            <NavLink href="/products" name={t('productsLink')} />
-            <div className={styles.account}>
-                <div className={styles.link}>
-                    <Account />
-                </div>
-            </div>
+            <li><NavLink href="/" name={t('homeLink')} /></li>
+            <li><NavLink href="/counter" name={t('countLink')} /></li>
+            <li><NavLink href="/products" name={t('productsLink')} /></li>
         </ResponsiveNavLayout>
     );
 };

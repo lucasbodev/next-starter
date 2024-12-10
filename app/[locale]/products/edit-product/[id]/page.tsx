@@ -1,7 +1,17 @@
 import React from "react";
-import styles from "@/app/[locale]/edit-product/edit-product.module.css";
+import styles from "@/app/[locale]/products/edit-product/edit-product.module.css";
 import ProductForm from "@/components/product-form/product-form.component";
 import { getProduct } from "@/actions/product-actions";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Products' });
+
+    return {
+        title: t('title')
+    };
+}
 
 const EditProduct = async ({ params }: { params: Promise<{ id: number }> }) => {
     const id = (await params).id;

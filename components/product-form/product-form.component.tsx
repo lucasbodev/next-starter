@@ -10,7 +10,7 @@ import { productCreationSchema, productUpdateSchema } from "@/models/validations
 import { ProductDTO } from "@/models/DTOs/product-DTO";
 import ImagePreview from "@/components/image-preview/image-preview";
 
-const ProductForm = ({ defaultValue }: { defaultValue: ProductDTO }) => {
+const ProductForm = ({ defaultValue }: { defaultValue?: ProductDTO }) => {
 
     const t = useTranslations("ProductForm");
     const [lastResult, action, isPending] = useActionState(

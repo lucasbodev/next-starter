@@ -46,7 +46,7 @@ export const createProduct = async (prevState: unknown, data: FormData) => {
 
     const locale = await getLocale();
 
-    return redirect({ href: '/add-product/success', locale });
+    return redirect({ href: '/products/add-product/success', locale });
 };
 
 export const updateProduct = async (prevState: unknown, data: FormData) => {

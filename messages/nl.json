@@ -13,14 +13,16 @@
     "login": "Inloggen",
     "logout": "Uitloggen"
   },
-  "Count": {
+  "Counter": {
     "title": "Tegen"
   },
-  "CountUpdater": {
+  "CounterUpdater": {
     "increment": "Toenemen"
   },
-  "CountViewer": {
-    "countViewer": "U heeft {count} keer geklikt"
+  "CounterViewer": {
+    "counterViewer": "{count} keer",
+    "statTitle": "Jij klikte",
+    "statDescription": "En opgeslagen in zustand."
   },
   "players": {
     "form": {
@@ -107,5 +109,17 @@
   },
   "ProductList": {
     "deletionSuccess": "Product succesvol verwijderd."
+  },
+  "Error": {
+    "tryAgain": "Probeer het opnieuw"
+  },
+  "NotFound": {
+    "title": "Er ontbreekt iets.",
+    "description": "Sorry, we kunnen die pagina niet vinden. \nOp de startpagina vindt u veel om te ontdekken",
+    "goBack": "Terug naar de startpagina"
+  },
+  "Metadata": {
+    "title": "Next.js Starter",
+    "description": "Een startproject voor Next.js-applicaties."
   }
 }

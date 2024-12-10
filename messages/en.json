@@ -13,14 +13,16 @@
     "login": "Login",
     "logout": "Logout"
   },
-  "Count": {
+  "Counter": {
     "title": "Counter"
   },
-  "CountUpdater": {
+  "CounterUpdater": {
     "increment": "Increment"
   },
-  "CountViewer": {
-    "countViewer": "You clicked {count} times"
+  "CounterViewer": {
+    "counterViewer": "{count} times",
+    "statTitle": "You clicked",
+    "statDescription": "And stored it in zustand."
   },
   "players": {
     "form": {
@@ -110,5 +112,17 @@
   },
   "ProductList": {
     "deletionSuccess": "Product successfully deleted."
+  },
+  "Error": {
+    "tryAgain": "Try again"
+  },
+  "NotFound": {
+    "title": "Something's missing.",
+    "description": "Sorry, we can't find that page. You'll find lots to explore on the home page.",
+    "goBack": "Back to home page"
+  },
+  "Metadata": {
+    "title": "Next.js Starter",
+    "description": "A starter template to build a Next.js app with TypeScript, Tailwind CSS, and Zustand."
   }
 }

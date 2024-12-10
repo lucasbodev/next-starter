@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import styles from '@/app/[locale]/add-product/success/success.module.css';
+import styles from '@/app/[locale]/products/add-product/success/success.module.css';
 import ButtonLink from '@/components/button-link/button-link.component';
 
 const AddProductSuccess = () => {

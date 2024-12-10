@@ -13,10 +13,12 @@ const NavLink = (props: NavLinkProps) => {
 
     const pathname = usePathname();
 
-    const active = pathname === (props.href as string) ? styles.active : '';
+    const active = props.href === '/'
+        ? pathname === props.href
+        : pathname.startsWith(props.href) && pathname !== '/';
 
     return (
-        <Link className={`${styles.link} ${active}`} href={props.href}>{props.name}</Link>
+        <Link className={`${active && 'text-secondary'}`} href={props.href}>{props.name}</Link>
     );
 };
 
