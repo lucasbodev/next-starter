@@ -21,37 +21,6 @@
     "statTitle": "Du hast geklickt",
     "statDescription": "Und es im Zustand aufbewahrt."
   },
-  "players": {
-    "form": {
-      "title": "Spieler hinzufügen",
-      "name": "Name",
-      "age": "Alter",
-      "position": "Position",
-      "add": "Hinzufügen"
-    },
-    "list": {
-      "title": "Spieler",
-      "name": "Name",
-      "age": "Alter",
-      "position": "Position",
-      "delete": "Löschen",
-      "edit": "Bearbeiten"
-    },
-    "messages": {
-      "addPlayerSuccess": "Spieler erfolgreich hinzugefügt",
-      "addPlayerError": "Fehler beim Hinzufügen des Spielers"
-    }
-  },
-  "errors": {
-    "general": "Ein Fehler ist aufgetreten",
-    "required": "Dieses Feld ist erforderlich",
-    "min": "Mindestwert beträgt {min}",
-    "max": "Höchstwert beträgt {max}",
-    "integer": "Dieses Feld muss eine ganze Zahl sein",
-    "email": "Dieses Feld muss eine E-Mail sein",
-    "unique": "Dieses Feld muss eindeutig sein",
-    "unlogged": "Sie müssen angemeldet sein, um diese Seite zu sehen"
-  },
   "Products": {
     "title": "Produkte",
     "description": "Hier sehen Sie die zum Shop hinzugefügten Produkte.",
@@ -59,7 +28,8 @@
     "productFetchFailed": "Produkt laden fehlgeschlagen. Bitte wenden Sie sich an einen Administrator.",
     "productsFetchFailed": "Fehler beim Abrufen der Produkte.",
     "productDeletionFailed": "Das Produkt konnte nicht gelöscht werden. Bitte wenden Sie sich an einen Administrator.",
-    "productNotFound": "Produkt nicht gefunden."
+    "productNotFound": "Produkt nicht gefunden.",
+    "noProducts": "Es gibt kein Produkt im Shop."
   },
   "ProductForm": {
     "referenceLabel": "Was ist die Produktreferenz?",

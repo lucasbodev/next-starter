@@ -1,5 +1,4 @@
 import React from 'react';
-import type { Metadata } from 'next';
 import '@/app/globals.css';
 import Nav from '@/components/nav/nav.component';
 import { Providers } from '@/app/providers';
@@ -33,6 +32,7 @@ const LocaleLayout = async (
 ) => {
 
   const { locale } = await params;
+  console.log(locale);
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   if (!routing.locales.includes(locale as any)) {

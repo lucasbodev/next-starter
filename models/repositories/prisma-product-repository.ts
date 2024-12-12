@@ -27,10 +27,10 @@ export class PrismaProductRepository extends Repository<ProductDTO> {
         }
     }
 
-    async find(id: number): Promise<ProductDTO> {
+    async find(id: string): Promise<ProductDTO> {
         try {
             let product = await prisma.product.findUnique({
-                where: { id: Number(id) }
+                where: { id: id }
             });
 
             if (!product) {
@@ -95,10 +95,10 @@ export class PrismaProductRepository extends Repository<ProductDTO> {
         }
     }
 
-    delete(id: number): Promise<ProductDTO> {
+    delete(id: string): Promise<ProductDTO> {
         try {
             return prisma.product.delete({
-                where: { id: Number(id) }
+                where: { id: id }
             }).then(product => ({
                 id: product.id,
                 reference: product.reference,

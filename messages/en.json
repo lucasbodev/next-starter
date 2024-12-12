@@ -24,39 +24,6 @@
     "statTitle": "You clicked",
     "statDescription": "And stored it in zustand."
   },
-  "players": {
-    "form": {
-      "title": "Add player",
-      "name": "Name",
-      "age": "Age",
-      "position": "Position",
-      "add": "Add"
-    },
-    "list": {
-      "title": "Players",
-      "name": "Name",
-      "age": "Age",
-      "position": "Position",
-      "delete": "Delete",
-      "edit": "Edit"
-    },
-    "messages": {
-      "addPlayerSuccess": "Player added successfully",
-      "addPlayerError": "Unable to add the player"
-    }
-  },
-  "errors": {
-    "errors": {
-      "general": "An error occurred",
-      "required": "This field is required",
-      "min": "Minimum value is {min}",
-      "max": "Maximum value is {max}",
-      "integer": "This field must be an integer",
-      "email": "This field must be an email",
-      "unique": "This field must be unique",
-      "unlogged": "You must be logged in to access this page"
-    }
-  },
   "Products": {
     "title": "Products",
     "description": "Here you can see the products added to the shop.",
@@ -64,7 +31,8 @@
     "productFetchFailed": "Failed to fetch product. Please contact an administrator.",
     "productsFetchFailed": "Failed to fetch products.",
     "productDeletionFailed": "Failed to delete the product. Please contact an administrator.",
-    "productNotFound": "Product not found."
+    "productNotFound": "Product not found.",
+    "noProducts": "There is no product in the shop."
   },
   "ProductForm": {
     "referenceLabel": "What is the product reference?",

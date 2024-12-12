@@ -24,37 +24,6 @@
     "statTitle": "Jij klikte",
     "statDescription": "En opgeslagen in zustand."
   },
-  "players": {
-    "form": {
-      "title": "Speler toevoegen",
-      "name": "Naam",
-      "age": "Leeftijd",
-      "position": "Positie",
-      "add": "Toevoegen"
-    },
-    "list": {
-      "title": "Spelers",
-      "name": "Naam",
-      "age": "Leeftijd",
-      "position": "Positie",
-      "delete": "Verwijderen",
-      "edit": "Bewerken"
-    },
-    "messages": {
-      "addPlayerSuccess": "Speler toegevoegd",
-      "addPlayerError": "Kan de speler niet toevoegen"
-    }
-  },
-  "errors": {
-    "general": "Er is een fout opgetreden",
-    "required": "Dit veld is verplicht",
-    "min": "Minimale waarde is {min}",
-    "max": "Maximale waarde is {max}",
-    "integer": "Dit veld moet een geheel getal zijn",
-    "email": "Dit veld moet een e-mail zijn",
-    "unique": "Dit veld moet uniek zijn",
-    "unlogged": "U moet inloggen om deze pagina te bekijken"
-  },
   "Products": {
     "title": "Producten",
     "description": "Hier ziet u welke producten aan de winkel zijn toegevoegd.",
@@ -62,7 +31,8 @@
     "productFetchFailed": "Product laden mislukt. Neem contact op met een beheerder.",
     "productsFetchFailed": "Fout bij het ophalen van producten.",
     "productDeletionFailed": "Kan het product niet verwijderen. Neem contact op met een beheerder.",
-    "productNotFound": "Product niet gevonden."
+    "productNotFound": "Product niet gevonden.",
+    "noProducts": "Er is geen product in de winkel."
   },
   "ProductForm": {
     "referenceLabel": "Wat is de productreferentie?",

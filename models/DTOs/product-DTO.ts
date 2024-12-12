@@ -1,5 +1,5 @@
 export interface ProductDTO {
-    id?: number;
+    id?: string;
     reference: string; 
     name: string; 
     description: string; 

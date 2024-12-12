@@ -24,37 +24,6 @@
     "statTitle": "Vous avez cliqué",
     "statDescription": "Et je l'ai stocké dans Zustand."
   },
-  "players": {
-    "form": {
-      "title": "Ajouter un joueur",
-      "name": "Nom",
-      "age": "Âge",
-      "position": "Position",
-      "add": "Ajouter"
-    },
-    "list": {
-      "title": "Joueurs",
-      "name": "Nom",
-      "age": "Âge",
-      "position": "Position",
-      "delete": "Supprimer",
-      "edit": "Modifier"
-    },
-    "messages": {
-      "addPlayerSuccess": "Joueur ajouté avec succès",
-      "addPlayerError": "Impossible d'ajouter le joueur"
-    }
-  },
-  "errors": {
-    "general": "Une erreur s'est produite",
-    "required": "Ce champ est requis",
-    "min": "La valeur minimale est de {min}",
-    "max": "La valeur maximale est de {max}",
-    "integer": "Ce champ doit être un entier",
-    "email": "Ce champ doit être un email",
-    "unique": "Ce champ doit être unique",
-    "unlogged": "Vous devez être connecté pour accéder à cette page"
-  },
   "Products": {
     "title": "Produits",
     "description": "Ici vous pouvez voir les produits ajoutés à la boutique.",
@@ -62,7 +31,8 @@
     "productFetchFailed": "Échec du chargement du produit. Veuillez contacter un administrateur.",
     "productsFetchFailed": "Échec du chargement des produits.",
     "productDeletionFailed": "Échec de la suppression du produit. Veuillez contacter un administrateur.",
-    "productNotFound": "Produit non trouvé."
+    "productNotFound": "Produit non trouvé.",
+    "noProducts": "Il n'y a aucun produit dans la boutique."
   },
   "ProductForm": {
     "referenceLabel": "Quelle est la référence du produit ?",

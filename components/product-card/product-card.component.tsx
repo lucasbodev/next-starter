@@ -2,7 +2,6 @@
 
 import React, { useRef, useState } from "react";
 import styles from "@/components/product-card/product-card.module.css";
-import Image from 'next/image';
 import { Link } from "@/i18n/routing";
 import { ProductDTO } from "@/models/DTOs/product-DTO";
 import { useTranslations } from "next-intl";
@@ -10,8 +9,7 @@ import { deleteProduct } from "@/actions/product-actions";
 import toast from "react-hot-toast";
 import DaisyToast from "../daisy-toast/daisy-toast.component";
 
-const ProductCard = ({ product }:
-    { product: ProductDTO }) => {
+const ProductCard = ({ product }: { product: ProductDTO }) => {
 
     const t = useTranslations("ProductCard");
 
@@ -23,7 +21,7 @@ const ProductCard = ({ product }:
         deletionModal.current!.showModal();
     }
 
-    const handleDeletion = (id: number) => {
+    const handleDeletion = (id: string) => {
         setDeletionLoading(true);
         deleteProduct(id).then(() => {
             deletionModal.current!.close();
@@ -45,12 +43,22 @@ const ProductCard = ({ product }:
             <div className="card-body">
                 <div className="card-actions justify-end">
                     <div className={styles.action__icons}>
+                        
+                        {/* <Link href="/products/1">Test</Link> */}
                         <div className="tooltip tooltip-accent" data-tip="Edit product">
                             <Link href={{
                                 pathname: '/products/edit-product/[id]',
-                                params: { id: `${product.id}` }
+                                params: { id: `${product.id}` },
                             }}>
-                                {/* <Image src={`/icons/edit.svg`} alt={'Edit'} width="24" height="24" /> */}
+
+                                {/* <Link href={url as any}> */}
+                                {/* <span onClick={() => router.replace(
+                                {
+                                    pathname: '/products/edit-product/[id]',
+                                    params: { id: `${product.id}` }
+                                },
+                                { locale: locale }
+                            )}> */}
                                 <svg className="h-6 w-6 text-primary" width="622" height="617" viewBox="0 0 622 617" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M539.817 214.583L406.483 81.25M539.817 214.583L373.2 381.197C351.243 403.153 324.593 420.487 293.997 425.763C263.103 431.093 224.765 432.867 206.481 414.583C188.198 396.3 189.972 357.96 195.3 327.067C200.577 296.47 217.912 269.82 239.867 247.863L406.483 81.25M539.817 214.583C539.817 214.583 639.813 114.583 573.147 47.9167C506.48 -18.75 406.483 81.25 406.483 81.25M591.667 308.333C591.667 525 525 591.667 308.333 591.667C91.6667 591.667 25 525 25 308.333C25 91.6667 91.6667 25 308.333 25" stroke="currentColor" strokeWidth="50" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
@@ -98,7 +106,7 @@ const ProductCard = ({ product }:
                     <div className="badge badge-outline">Products</div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

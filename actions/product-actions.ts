@@ -15,7 +15,7 @@ export const getProducts = async () => {
     return new PrismaProductRepository(t).all();
 };
 
-export const getProduct = async (id: number) => {
+export const getProduct = async (id: string) => {
     const t = await getTranslations("ProductForm");
 
     return new PrismaProductRepository(t).find(id);
@@ -59,7 +59,7 @@ export const updateProduct = async (prevState: unknown, data: FormData) => {
     }
 
     try {
-        const currentProduct = await new PrismaProductRepository(t).find(Number(data.get('id')));
+        const currentProduct = await new PrismaProductRepository(t).find(data.get('id') as string);
         let updatedProduct = new ProductParser().parse(data);
         const storage = new VercelFileStorage();
         if ((data.get('image') as File).size > 0) {
@@ -82,7 +82,7 @@ export const updateProduct = async (prevState: unknown, data: FormData) => {
     return redirect({ href: '/products', locale });
 }
 
-export const deleteProduct = async (id: number) => {
+export const deleteProduct = async (id: string) => {
     const t = await getTranslations("Products");
 
     try {

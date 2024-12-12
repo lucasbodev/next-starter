@@ -29,6 +29,11 @@ const Products = async () => {
                 </div>
                 <Link className="btn btn-primary" href="/products/add-product" >{t('addProductBtn')}</Link>
             </div>
+            {
+                products.length === 0 && (
+                    <p className="flex justify-center mt-8">{t('noProducts')}</p>
+                )
+            }
             <div className={styles.products__grid}>
                 {
                     products.map(product => (

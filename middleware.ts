@@ -1,10 +1,14 @@
 import createMiddleware from 'next-intl/middleware';
-import {routing} from './i18n/routing';
- 
+import { routing } from './i18n/routing';
+
 export default createMiddleware(routing);
- 
+
 export const config = {
-  // Match only internationalized pathnames
+  // For prefixed pathnames, use the following matcher
   // matcher: ['/', '/(fr|nl|de|en)/:path*']
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
+
+  // For pathnames without a prefix, use the following matcher
+  matcher: [
+    '/((?!api|_next|_vercel|.*\\..*).*)'
+  ]
 };
