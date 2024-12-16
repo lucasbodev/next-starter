@@ -17,7 +17,7 @@ const NotFound = async () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default NotFound;

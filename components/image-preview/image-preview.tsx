@@ -1,16 +1,18 @@
-'use client'
+'use client';
 
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import styles from '@/components/image-preview/image-preview.module.css';
-import { useRef } from 'react';
 
 const ImagePreview = ({ src }: { src?: string }) => {
 
     const skeleton = useRef<HTMLDivElement>(null);
 
     const onLoad = () => {
-        skeleton.current!.style.display = "none";
-    }
+        if (skeleton.current) {
+            skeleton.current.style.display = "none";
+        }
+    };
 
     return (
         <div className={styles.image__preview}>
@@ -27,12 +29,12 @@ const ImagePreview = ({ src }: { src?: string }) => {
                         position: 'absolute',
                         objectFit: 'cover',
                     }}
-                    onLoad={() => onLoad()}
+                    onLoad={() => { onLoad(); }}
                 />
             }
-            <div ref={skeleton} className="skeleton h-full w-full" style={{position: 'absolute'}}></div>
+            <div ref={skeleton} className="skeleton h-full w-full" style={{ position: 'absolute' }}></div>
         </div>
-    )
-}
+    );
+};
 
 export default ImagePreview;

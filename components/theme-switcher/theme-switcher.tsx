@@ -10,12 +10,12 @@ const ThemeSwitcher = () => {
         if (themeInput.current) {
             themeInput.current.value = themeInput.current.checked ? "mytheme" : "dark";
         }
-    }
+    };
 
     return (
         <label className="swap swap-rotate">
             {/* this hidden checkbox controls the state */}
-            <input ref={themeInput} type="checkbox" className="theme-controller" onChange={() => switchTheme()} />
+            <input ref={themeInput} type="checkbox" className="theme-controller" onChange={() => { switchTheme(); }} />
 
             {/* sun icon */}
             <svg

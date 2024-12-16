@@ -1,6 +1,5 @@
 'use client';
 
-import styles from '@/app/[locale]/counter/counter.module.css';
 import { useStore } from '@/store/store';
 import { useTranslations } from 'next-intl';
 import React from 'react';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import styles from '@/app/[locale]/products/add-product/success/success.module.css';
-import ButtonLink from '@/components/button-link/button-link.component';
+import { Link } from '@/i18n/routing';
 
 const AddProductSuccess = () => {
 
@@ -14,8 +14,8 @@ const AddProductSuccess = () => {
                     <h3 className="font-bold text-lg">{t('title')}</h3>
                     <p className="py-4">{t('description')}</p>
                     <div className="card-actions justify-center">
-                        <ButtonLink href="/products" name={t('linkButton')} type='outline'/>
-                        <ButtonLink href="/products/add-product" name={t('closeButton')}/>
+                        <Link href="/products" className='btn btn-primary btn-outline'>{t('linkButton')}</Link>
+                        <Link href="/products/add-product" className='btn btn-primary'>{t('closeButton')}</Link>
                     </div>
                 </div>
             </div>

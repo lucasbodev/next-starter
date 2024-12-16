@@ -3,7 +3,6 @@ import styles from "@/app/[locale]/products/edit-product/edit-product.module.css
 import ProductForm from "@/components/product-form/product-form.component";
 import { getProduct } from "@/actions/product-actions";
 import { getTranslations } from "next-intl/server";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;

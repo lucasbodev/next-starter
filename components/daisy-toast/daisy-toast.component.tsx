@@ -9,5 +9,6 @@ const DaisyToast = ({ message, type }: { message: string, type: string }) => {
             </div>
         </div>
     );
-}
+};
+
 export default DaisyToast;

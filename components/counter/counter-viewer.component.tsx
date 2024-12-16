@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import styles from '@/app/[locale]/counter/counter.module.css';
 import { useStore } from '@/store/store';
 import { useTranslations } from 'next-intl';
 
@@ -26,10 +25,9 @@ const CountViewer = () => {
         </svg>
       </div>
       <div className="stat-title">{t('statTitle')}</div>
-      <div className="stat-value text-secondary">{t('counterViewer', {count})}</div>
+      <div className="stat-value text-secondary">{t('counterViewer', { count })}</div>
       <div className="stat-desc">{t('statDescription')}</div>
     </div>
-    // <p className={styles.description}>{t('counterViewer', {count})}</p>
   );
 };
 

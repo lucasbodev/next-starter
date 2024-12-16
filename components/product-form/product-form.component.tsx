@@ -7,7 +7,7 @@ import { createProduct, updateProduct } from "@/actions/product-actions";
 import { useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod";
 import { productCreationSchema, productUpdateSchema } from "@/models/validations/product-validators";
-import { ProductDTO } from "@/models/DTOs/product-DTO";
+import { type ProductDTO } from "@/models/DTOs/product-DTO";
 import ImagePreview from "@/components/image-preview/image-preview";
 
 const ProductForm = ({ defaultValue }: { defaultValue?: ProductDTO }) => {
@@ -34,8 +34,10 @@ const ProductForm = ({ defaultValue }: { defaultValue?: ProductDTO }) => {
 
     const handleFileUpload = () => {
         const file = fileInput.current?.files?.[0];
-        setImageUrl(URL.createObjectURL(file!));
-    }
+        if (file) {
+            setImageUrl(URL.createObjectURL(file));
+        }
+    };
 
     return (
         <form className={styles.product__form} id={form.id} onSubmit={form.onSubmit} action={action}>
@@ -52,9 +54,9 @@ const ProductForm = ({ defaultValue }: { defaultValue?: ProductDTO }) => {
                             t('addProductDescription')
                     }</p>
                     {
-                        lastResult?.error?.['internal'] &&
+                        lastResult?.error?.internal &&
                         <span className="alert alert-error">
-                            {lastResult.error['internal']}
+                            {lastResult.error.internal}
                         </span>
                     }
                     <div className={styles.double__column__form}>

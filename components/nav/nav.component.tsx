@@ -1,6 +1,4 @@
 import React from 'react';
-import styles from '@/components/nav/nav.module.css';
-import Account from '@/components/account/account.component';
 import NavLink from './nav-link.component';
 import ResponsiveNavLayout from './responsive-nav-layout.component';
 import { getTranslations } from 'next-intl/server';

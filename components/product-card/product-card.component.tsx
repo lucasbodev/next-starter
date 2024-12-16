@@ -3,7 +3,7 @@
 import React, { useRef, useState } from "react";
 import styles from "@/components/product-card/product-card.module.css";
 import { Link } from "@/i18n/routing";
-import { ProductDTO } from "@/models/DTOs/product-DTO";
+import { type ProductDTO } from "@/models/DTOs/product-DTO";
 import { useTranslations } from "next-intl";
 import { deleteProduct } from "@/actions/product-actions";
 import toast from "react-hot-toast";
@@ -12,7 +12,7 @@ import { useUser } from "@auth0/nextjs-auth0/client";
 
 const ProductCard = ({ product }: { product: ProductDTO }) => {
 
-    const { user, error, isLoading } = useUser();
+    const { user } = useUser();
 
     const t = useTranslations("ProductCard");
 
@@ -21,26 +21,30 @@ const ProductCard = ({ product }: { product: ProductDTO }) => {
     const deletionModal = useRef<HTMLDialogElement>(null);
 
     const showDeletionModal = () => {
-        deletionModal.current!.showModal();
-    }
+        if (deletionModal.current) {
+            deletionModal.current.showModal();
+        }
+    };
 
     const handleDeletion = (id: string) => {
         setDeletionLoading(true);
         deleteProduct(id).then(() => {
-            deletionModal.current!.close();
+            if (deletionModal.current) {
+                deletionModal.current.close();
+            }
             toast.custom(<DaisyToast message={t('deletionSuccess')} type="success" />);
             setDeletionLoading(false);
         }).catch((e) => {
             toast.custom(<DaisyToast message={(e as Error).message} type="error" />);
             setDeletionLoading(false);
         });
-    }
+    };
 
     return (
         <div className="card bg-base-100 shadow-xl" key={product.id}>
             <figure>
                 <img
-                    src={product.image as string}
+                    src={product.image}
                     alt={product.name} />
             </figure>
             <div className="card-body">
@@ -59,7 +63,7 @@ const ProductCard = ({ product }: { product: ProductDTO }) => {
                                 </Link>
                             </div>
                             <div className="tooltip tooltip-accent" data-tip="Delete product">
-                                <button onClick={() => showDeletionModal()}>
+                                <button onClick={() => { showDeletionModal(); }}>
                                     <svg className="h-6 w-6 text-error" width="601" height="668" viewBox="0 0 601 668" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M234 334V500.667" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
                                         <path d="M367.333 334V500.667" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
@@ -81,7 +85,11 @@ const ProductCard = ({ product }: { product: ProductDTO }) => {
                                         <span className="loading loading-ring loading-lg"></span>
                                     </div> :
                                     <div className="modal-action">
-                                        <button className="btn btn-primary btn-outline" onClick={() => handleDeletion(product.id!)}>{t('delete')}</button>
+                                        <button className="btn btn-primary btn-outline" onClick={() => {
+                                            if (product.id) {
+                                                handleDeletion(product.id);
+                                            }
+                                        }}>{t('delete')}</button>
                                         <form method="dialog">
                                             <button className="btn btn-primary">{t('cancel')}</button>
                                         </form>
