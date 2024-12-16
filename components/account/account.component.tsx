@@ -16,7 +16,7 @@ const Account = () => {
   return (
     user
       ?
-      <a href={`/api/auth/logout?returnTo=${pathname}`} className="btn">{t('logout')}</a>
+      <a href="/api/auth/logout" className="btn">{t('logout')}</a>
       :
       <a href={`/api/auth/login?returnTo=${pathname}`} className="btn">{t('login')}</a>
   );

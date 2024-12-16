@@ -13,12 +13,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
 }
 
-const AddProduct = withPageAuthRequired(async () => {
+const AddProduct = () => {
     return (
         <div className={styles.add__product__form__container}>
             <ProductForm />
         </div>
     );
-}, { returnTo: '/products/add-product' });
+};
 
 export default AddProduct;
