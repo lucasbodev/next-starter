@@ -1,10 +1,8 @@
 export interface ProductDTO {
-    id?: number;
+    id?: string;
     reference: string; 
     name: string; 
     description: string; 
     price: number; 
-    image?: File;
-    imageUrl?: string;
-    errors?: string | undefined;
+    image?: string;
 }

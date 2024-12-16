@@ -1,25 +1,23 @@
 import React from 'react';
 import styles from '@/app/[locale]/home.module.css';
 import HomeAnimations from '@/app/[locale]/home.animations';
-import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 
-const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
-
-  const { locale } = await params;
-
-  setRequestLocale(locale);
+const Home = async () => {
 
   const t = await getTranslations('Home');
 
   return (
-    <main className={styles.main}>
+    <main>
       <HomeAnimations>
-        <div className={styles.title__wrapper}>
-          <div className={styles.line} id='topLine' />
-          <h1 className={styles.title} id='homeTitle'>
-            <strong>{t('title')}</strong>
-          </h1>
-          <div className={styles.reverse__line} id='bottomLine' />
+        <div className="hero bg-base-200 min-h-screen">
+          <div className="hero-content text-center">
+            <div className="max-w-screen-md flex flex-col gap-8 pb-16">
+              <div className={styles.line} id='topLine' />
+              <h1 className="text-6xl font-bold opacity-0 translate-y-3" id='homeTitle'>{t('title')}</h1>
+              <div className={styles.reverse__line} id='bottomLine' />
+            </div>
+          </div>
         </div>
       </HomeAnimations>
     </main>

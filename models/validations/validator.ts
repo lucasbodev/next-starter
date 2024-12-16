@@ -1,6 +1,6 @@
 import { Submission } from "@conform-to/react";
 
-export abstract class Validation<T> {
+export abstract class Validator<T> {
 
     protected readonly t: (key: string) => string;
 

@@ -1,9 +1,23 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from "react";
-import { getTranslations } from "next-intl/server";
 import { getProducts } from "@/actions/product-actions";
+import ProductCard from "@/components/product-card/product-card.component";
+import styles from "@/app/[locale]/products/products.module.css";
+import { Link } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
+import { getSession } from "@auth0/nextjs-auth0";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Nav' });
+
+    return {
+        title: t('productsLink')
+    };
+}
 
 const Products = async () => {
+
+    const session = await getSession();
 
     const t = await getTranslations("Products");
 
@@ -11,26 +25,28 @@ const Products = async () => {
 
     return (
         <>
-            {products.map(product => (
-                <div className="card bg-base-100 shadow-xl" key={product.id}>
-                    <figure>
-                        <img
-                            src={product.imageUrl}
-                            alt={product.name} />
-                    </figure>
-                    <div className="card-body">
-                        <h2 className="card-title">
-                            {product.name}
-                            <div className="badge badge-secondary">{product.price}€</div>
-                        </h2>
-                        <p>{product.description}</p>
-                        <div className="card-actions justify-end">
-                            <div className="badge badge-outline">Fashion</div>
-                            <div className="badge badge-outline">Products</div>
-                        </div>
-                    </div>
+            <div className={styles.products__header}>
+                <div>
+                    <h1 className={styles.products__title}>{t('title')}</h1>
+                    <p className={styles.products__description}>{t('description')}</p>
                 </div>
-            ))}
+                {
+                    session?.user &&
+                    <Link className="btn btn-primary" href="/products/add-product" >{t('addProductBtn')}</Link>
+                }
+            </div>
+            {
+                products.length === 0 && (
+                    <p className="flex justify-center mt-8">{t('noProducts')}</p>
+                )
+            }
+            <div className={styles.products__grid}>
+                {
+                    products.map(product => (
+                        <ProductCard key={product.id} product={product} />
+                    ))
+                }
+            </div>
         </>
     );
 };

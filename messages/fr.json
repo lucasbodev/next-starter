@@ -13,59 +13,34 @@
     "login": "Connexion",
     "logout": "Déconnexion"
   },
-  "Count": {
+  "Counter": {
     "title": "Compteur"
   },
-  "CountUpdater": {
+  "CounterUpdater": {
     "increment": "Incrémenter"
   },
-  "CountViewer": {
-    "countViewer": "Vous avez cliqué {count} fois"
-  },
-  "players": {
-    "form": {
-      "title": "Ajouter un joueur",
-      "name": "Nom",
-      "age": "Âge",
-      "position": "Position",
-      "add": "Ajouter"
-    },
-    "list": {
-      "title": "Joueurs",
-      "name": "Nom",
-      "age": "Âge",
-      "position": "Position",
-      "delete": "Supprimer",
-      "edit": "Modifier"
-    },
-    "messages": {
-      "addPlayerSuccess": "Joueur ajouté avec succès",
-      "addPlayerError": "Impossible d'ajouter le joueur"
-    }
-  },
-  "errors": {
-    "general": "Une erreur s'est produite",
-    "required": "Ce champ est requis",
-    "min": "La valeur minimale est de {min}",
-    "max": "La valeur maximale est de {max}",
-    "integer": "Ce champ doit être un entier",
-    "email": "Ce champ doit être un email",
-    "unique": "Ce champ doit être unique",
-    "unlogged": "Vous devez être connecté pour accéder à cette page"
+  "CounterViewer": {
+    "counterViewer": "{count} fois",
+    "statTitle": "Vous avez cliqué",
+    "statDescription": "Et je l'ai stocké dans Zustand."
   },
   "Products": {
     "title": "Produits",
     "description": "Ici vous pouvez voir les produits ajoutés à la boutique.",
     "addProductBtn": "Ajouter un nouveau produit",
-    "productsFetchFailed": "Échec du chargement des produits."
+    "productFetchFailed": "Échec du chargement du produit. Veuillez contacter un administrateur.",
+    "productsFetchFailed": "Échec du chargement des produits.",
+    "productDeletionFailed": "Échec de la suppression du produit. Veuillez contacter un administrateur.",
+    "productNotFound": "Produit non trouvé.",
+    "noProducts": "Il n'y a aucun produit dans la boutique.",
+    "unauthorized": "Vous devez être connecté pour effectuer cette action."
   },
-  "AddProductForm": {
+  "ProductForm": {
     "referenceLabel": "Quelle est la référence du produit ?",
     "nameLabel": "Quel est le nom du produit?",
     "descriptionLabel": "Quelle est la description?",
     "priceLabel": "Quel est le prix du produit?",
     "imagePickerLabel": "Choisissez une image.",
-    "addProductBtn": "Ajouter un produit",
     "addProductTitle": "Ajouter un nouveau produit",
     "addProductDescription": "Ici, vous pouvez ajouter un nouveau produit à votre boutique!",
     "referenceRequired": "La référence du produit est obligatoire.",
@@ -82,12 +57,41 @@
     "pricePlaceholder": "Entrez le prix du produit...",
     "fileUploadFailed": "Échec du téléchargement de l'image",
     "productCreationFailed": "Erreur interne, veuillez contacter l'administrateur.",
-    "unicityConstraintViolation": "Un produit disposant de la même référence existe déjà."
+    "unicityConstraintViolation": "Un produit disposant de la même référence existe déjà.",
+    "productUpdateFailed": "Échec de la mise à jour du produit.",
+    "productNotFound": "Produit non trouvé.",
+    "productFetchFailed": "Échec du chargement du produit.",
+    "saveProductBtn": "Enregistrer le produit",
+    "editProductTitle": "Modifier un produit",
+    "editProductDescription": "Ici vous pouvez éditer un produit de la boutique.",
+    "unauthorized": "Vous devez être connecté pour effectuer cette action."
   },
   "AddProductSuccess": {
     "title": "Succès!",
     "description": "Vous avez ajouté avec succès un nouveau produit à la boutique!",
     "linkButton": "Retour aux produits",
     "closeButton": "Ajouter un autre produit"
+  },
+  "ProductCard": {
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "deletionModalTitle": "Supprimer ce produit",
+    "deletionModalDescription": "Êtes-vous sûr de vouloir supprimer ce produit ?",
+    "deletionSuccess": "Produit supprimé avec succès."
+  },
+  "ProductList": {
+    "deletionSuccess": "Produit supprimé avec succès."
+  },
+  "Error": {
+    "tryAgain": "Essayer à nouveau"
+  },
+  "NotFound": {
+    "title": "Il manque quelque chose.",
+    "description": "Désolé, nous ne trouvons pas cette page. \nVous trouverez beaucoup de choses à explorer sur la page d'accueil.",
+    "goBack": "Retour à la page d'accueil"
+  },
+  "Metadata": {
+    "title": "Next.js Starter",
+    "description": "Un démarrage de Next.js avec i18n, Authentification et plus encore."
   }
 }

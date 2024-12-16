@@ -21,7 +21,6 @@
 .products__description {
     font-size: var(--font-size-medium);
     font-weight: 400;
-    color: var(--white-750);
 }
 
 .products__grid {

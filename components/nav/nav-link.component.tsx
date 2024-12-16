@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Link, usePathname } from '@/i18n/routing';
-import styles from '@/components/nav/nav.module.css';
 
 interface NavLinkProps {
     href: any;
@@ -13,10 +12,12 @@ const NavLink = (props: NavLinkProps) => {
 
     const pathname = usePathname();
 
-    const active = pathname === (props.href as string) ? styles.active : '';
+    const active = props.href === '/'
+        ? pathname === props.href
+        : pathname.startsWith(props.href as string) && pathname !== '/';
 
     return (
-        <Link className={`${styles.link} ${active}`} href={props.href}>{props.name}</Link>
+        <Link className={`${active && 'text-secondary'}`} href={props.href}>{props.name}</Link>
     );
 };
 

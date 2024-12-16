@@ -13,61 +13,34 @@
     "login": "Login",
     "logout": "Logout"
   },
-  "Count": {
+  "Counter": {
     "title": "Counter"
   },
-  "CountUpdater": {
+  "CounterUpdater": {
     "increment": "Increment"
   },
-  "CountViewer": {
-    "countViewer": "You clicked {count} times"
-  },
-  "players": {
-    "form": {
-      "title": "Add player",
-      "name": "Name",
-      "age": "Age",
-      "position": "Position",
-      "add": "Add"
-    },
-    "list": {
-      "title": "Players",
-      "name": "Name",
-      "age": "Age",
-      "position": "Position",
-      "delete": "Delete",
-      "edit": "Edit"
-    },
-    "messages": {
-      "addPlayerSuccess": "Player added successfully",
-      "addPlayerError": "Unable to add the player"
-    }
-  },
-  "errors": {
-    "errors": {
-      "general": "An error occurred",
-      "required": "This field is required",
-      "min": "Minimum value is {min}",
-      "max": "Maximum value is {max}",
-      "integer": "This field must be an integer",
-      "email": "This field must be an email",
-      "unique": "This field must be unique",
-      "unlogged": "You must be logged in to access this page"
-    }
+  "CounterViewer": {
+    "counterViewer": "{count} times",
+    "statTitle": "You clicked",
+    "statDescription": "And stored it in zustand."
   },
   "Products": {
     "title": "Products",
     "description": "Here you can see the products added to the shop.",
     "addProductBtn": "Add a new product",
-    "productsFetchFailed": "Failed to fetch products."
+    "productFetchFailed": "Failed to fetch product. Please contact an administrator.",
+    "productsFetchFailed": "Failed to fetch products.",
+    "productDeletionFailed": "Failed to delete the product. Please contact an administrator.",
+    "productNotFound": "Product not found.",
+    "noProducts": "There is no product in the shop.",
+    "unauthorized": "You must be logged in to perform this action."
   },
-  "AddProductForm": {
+  "ProductForm": {
     "referenceLabel": "What is the product reference?",
     "nameLabel": "What is the product name?",
     "descriptionLabel": "What is the description?",
     "priceLabel": "What is the product price?",
     "imagePickerLabel": "Pick an image.",
-    "addProductBtn": "Add product",
     "addProductTitle": "Add new product",
     "addProductDescription": "Here your can add a new product to your shop!",
     "referenceRequired": "The product reference is required.",
@@ -84,7 +57,14 @@
     "pricePlaceholder": "Enter product price...",
     "fileUploadFailed": "Image upload failed",
     "productCreationFailed": "Internal error, please contact the administrator.",
-    "unicityConstraintViolation": "A product with the same reference already exists."
+    "unicityConstraintViolation": "A product with the same reference already exists.",
+    "productUpdateFailed": "Product update failed.",
+    "productNotFound": "Product not found.",
+    "productFetchFailed": "Failed to fetch product.",
+    "saveProductBtn": "Save product",
+    "editProductTitle": "Edit product",
+    "editProductDescription": "Here you can edit a product of the shop.",
+    "unauthorized": "You must be logged in to perform this action."
   },
   "AddProductSuccess": {
     "title": "Success!",
@@ -92,6 +72,27 @@
     "linkButton": "Go back to products",
     "closeButton": "Add another product"
   },
-  "referenceLabel": "What is the product reference?",
-  "referencePlaceholder": "Type product reference..."
+  "cancel": "Cancel",
+  "ProductCard": {
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "deletionModalTitle": "Delete this product",
+    "deletionModalDescription": "Are you sure that you want to delete this product?",
+    "deletionSuccess": "Product successfully deleted."
+  },
+  "ProductList": {
+    "deletionSuccess": "Product successfully deleted."
+  },
+  "Error": {
+    "tryAgain": "Try again"
+  },
+  "NotFound": {
+    "title": "Something's missing.",
+    "description": "Sorry, we can't find that page. You'll find lots to explore on the home page.",
+    "goBack": "Back to home page"
+  },
+  "Metadata": {
+    "title": "Next.js Starter",
+    "description": "A starter template to build a Next.js app with TypeScript, Tailwind CSS, and Zustand."
+  }
 }

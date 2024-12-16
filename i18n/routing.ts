@@ -3,17 +3,19 @@ import { createNavigation } from 'next-intl/navigation';
 
 export const routing = defineRouting({
   // A list of all locales that are supported
-  locales: ['fr', 'nl', 'en', 'de'],
+  locales: ['fr', 'en', 'nl', 'de'],
 
   // Used when no locale matches
   defaultLocale: 'fr',
 
+  localePrefix: 'never',
+
   // The routing configuration
   pathnames: {
     '/': '/',
-    '/count': {
+    '/counter': {
       fr: '/compteur',
-      en: '/count',
+      en: '/counter',
       de: '/zähler',
       nl: '/tellen',
     },
@@ -23,17 +25,24 @@ export const routing = defineRouting({
       de: '/produkte',
       nl: '/producten',
     },
-    '/add-product': {
-      fr: '/ajouter-produit',
-      en: '/add-product',
-      de: '/produkt-hinzufügen',
-      nl: '/voeg-product-toe',
+    '/test/[num]': '/test/[num]',
+    '/products/add-product': {
+      fr: '/produits/ajouter-produit',
+      en: '/products/add-product',
+      de: '/produkte/produkt-hinzufügen',
+      nl: '/producten/voeg-product-toe',
     },
-    '/add-product/success': {
-      fr: '/ajouter-produit/succes',
-      en: '/add-product/success',
-      de: '/produkt-hinzufügen/erfolg',
-      nl: '/voeg-product-toe/succes',
+    '/products/add-product/success': {
+      fr: '/produits/ajouter-produit/succes',
+      en: '/products/add-product/success',
+      de: '/produkte/produkt-hinzufügen/erfolg',
+      nl: '/producten/voeg-product-toe/succes',
+    },
+    '/products/edit-product/[id]': {
+      fr: '/produits/modifier-produit/[id]',
+      en: '/products/edit-product/[id]',
+      de: '/produkte/produkt-bearbeiten/[id]',
+      nl: '/producten/bewerk-product/[id]',
     },
   }
 });

@@ -13,59 +13,34 @@
     "login": "Inloggen",
     "logout": "Uitloggen"
   },
-  "Count": {
+  "Counter": {
     "title": "Tegen"
   },
-  "CountUpdater": {
+  "CounterUpdater": {
     "increment": "Toenemen"
   },
-  "CountViewer": {
-    "countViewer": "U heeft {count} keer geklikt"
-  },
-  "players": {
-    "form": {
-      "title": "Speler toevoegen",
-      "name": "Naam",
-      "age": "Leeftijd",
-      "position": "Positie",
-      "add": "Toevoegen"
-    },
-    "list": {
-      "title": "Spelers",
-      "name": "Naam",
-      "age": "Leeftijd",
-      "position": "Positie",
-      "delete": "Verwijderen",
-      "edit": "Bewerken"
-    },
-    "messages": {
-      "addPlayerSuccess": "Speler toegevoegd",
-      "addPlayerError": "Kan de speler niet toevoegen"
-    }
-  },
-  "errors": {
-    "general": "Er is een fout opgetreden",
-    "required": "Dit veld is verplicht",
-    "min": "Minimale waarde is {min}",
-    "max": "Maximale waarde is {max}",
-    "integer": "Dit veld moet een geheel getal zijn",
-    "email": "Dit veld moet een e-mail zijn",
-    "unique": "Dit veld moet uniek zijn",
-    "unlogged": "U moet inloggen om deze pagina te bekijken"
+  "CounterViewer": {
+    "counterViewer": "{count} keer",
+    "statTitle": "Jij klikte",
+    "statDescription": "En opgeslagen in zustand."
   },
   "Products": {
     "title": "Producten",
     "description": "Hier ziet u welke producten aan de winkel zijn toegevoegd.",
     "addProductBtn": "Voeg een nieuw product toe",
-    "productsFetchFailed": "Fout bij het ophalen van producten."
+    "productFetchFailed": "Product laden mislukt. Neem contact op met een beheerder.",
+    "productsFetchFailed": "Fout bij het ophalen van producten.",
+    "productDeletionFailed": "Kan het product niet verwijderen. Neem contact op met een beheerder.",
+    "productNotFound": "Product niet gevonden.",
+    "noProducts": "Er is geen product in de winkel.",
+    "unauthorized": "Om deze actie uit te voeren moet u ingelogd zijn."
   },
-  "AddProductForm": {
+  "ProductForm": {
     "referenceLabel": "Wat is de productreferentie?",
     "nameLabel": "Wat is de productnaam?",
     "descriptionLabel": "Wat is de beschrijving?",
     "priceLabel": "Wat is de productprijs?",
     "imagePickerLabel": "Kies een afbeelding.",
-    "addProductBtn": "Product toevoegen",
     "addProductTitle": "Nieuw product toevoegen",
     "addProductDescription": "Hier kunt u een nieuw product aan uw winkel toevoegen!",
     "referenceRequired": "De productreferentie is vereist.",
@@ -82,12 +57,41 @@
     "pricePlaceholder": "Productprijs invoeren...",
     "fileUploadFailed": "Uploaden van afbeelding mislukt",
     "productCreationFailed": "Interne fout, neem contact op met de beheerder.",
-    "unicityConstraintViolation": "Er bestaat al een product met dezelfde referentie."
+    "unicityConstraintViolation": "Er bestaat al een product met dezelfde referentie.",
+    "productUpdateFailed": "Productupdate mislukt.",
+    "productNotFound": "Product niet gevonden.",
+    "productFetchFailed": "Fout bij het ophalen van product.",
+    "saveProductBtn": "Product opslaan",
+    "editProductTitle": "Modifier een product",
+    "editProductDescription": "Hier kunt u een product van de winkel bewerken.",
+    "unauthorized": "Om deze actie uit te voeren moet u ingelogd zijn."
   },
   "AddProductSuccess": {
     "title": "Succes!",
     "description": "Je hebt succesvol een nieuw product aan de winkel toegevoegd!",
     "linkButton": "Ga terug naar producten",
     "closeButton": "Voeg nog een product toe"
+  },
+  "ProductCard": {
+    "cancel": "Annuleren",
+    "delete": "Verwijderen",
+    "deletionModalTitle": "Verwijder dit product",
+    "deletionModalDescription": "Weet u zeker dat u dit product wilt verwijderen?",
+    "deletionSuccess": "Product succesvol verwijderd."
+  },
+  "ProductList": {
+    "deletionSuccess": "Product succesvol verwijderd."
+  },
+  "Error": {
+    "tryAgain": "Probeer het opnieuw"
+  },
+  "NotFound": {
+    "title": "Er ontbreekt iets.",
+    "description": "Sorry, we kunnen die pagina niet vinden. \nOp de startpagina vindt u veel om te ontdekken",
+    "goBack": "Terug naar de startpagina"
+  },
+  "Metadata": {
+    "title": "Next.js Starter",
+    "description": "Een startproject voor Next.js-applicaties."
   }
 }

@@ -1,38 +1,34 @@
 'use client';
 
 import React from 'react';
-import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
-import { Link, routing, usePathname, useRouter } from '@/i18n/routing';
+import { Link, routing, usePathname } from '@/i18n/routing';
 import { useLocale } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 const Languages = () => {
 
     const currentLocale = useLocale();
-    const router = useRouter();
+
     const pathname = usePathname();
 
+    const params = useParams();
+
     return (
-        <Dropdown>
-            <DropdownTrigger>
-                <Button radius='full'>
-                    {currentLocale.toUpperCase()}
-                </Button>
-            </DropdownTrigger>
-            <DropdownMenu aria-label="Static Actions"
-                variant="flat"
-                disallowEmptySelection
-                selectionMode="single"
-                onSelectionChange={(key) => {
-                    router.replace(pathname, { locale: key.currentKey });
-                }}
-            >
+        <details className="dropdown">
+            <summary className="btn btn-ghost m-1">{currentLocale.toUpperCase()}</summary>
+            <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                 {routing.locales.map((locale) => (
-                    <DropdownItem key={locale} className='text-black' textValue={locale}>
-                        <Link locale={locale} href="/">{locale.toUpperCase()}</Link>
-                    </DropdownItem>
+                    <li key={locale}>
+                        <Link locale={locale} href={{
+                            pathname: pathname as any,
+                            params: params as any,
+                        }}>
+                            {locale.toUpperCase()}
+                        </Link>
+                    </li>
                 ))}
-            </DropdownMenu>
-        </Dropdown>
+            </ul>
+        </details>
     );
 };
 

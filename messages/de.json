@@ -13,56 +13,31 @@
     "login": "Anmelden",
     "logout": "Abmelden"
   },
-  "CountUpdater": {
+  "CounterUpdater": {
     "increment": "Erhöhen"
   },
-  "CountViewer": {
-    "countViewer": "Sie haben {count} Mal geklickt"
-  },
-  "players": {
-    "form": {
-      "title": "Spieler hinzufügen",
-      "name": "Name",
-      "age": "Alter",
-      "position": "Position",
-      "add": "Hinzufügen"
-    },
-    "list": {
-      "title": "Spieler",
-      "name": "Name",
-      "age": "Alter",
-      "position": "Position",
-      "delete": "Löschen",
-      "edit": "Bearbeiten"
-    },
-    "messages": {
-      "addPlayerSuccess": "Spieler erfolgreich hinzugefügt",
-      "addPlayerError": "Fehler beim Hinzufügen des Spielers"
-    }
-  },
-  "errors": {
-    "general": "Ein Fehler ist aufgetreten",
-    "required": "Dieses Feld ist erforderlich",
-    "min": "Mindestwert beträgt {min}",
-    "max": "Höchstwert beträgt {max}",
-    "integer": "Dieses Feld muss eine ganze Zahl sein",
-    "email": "Dieses Feld muss eine E-Mail sein",
-    "unique": "Dieses Feld muss eindeutig sein",
-    "unlogged": "Sie müssen angemeldet sein, um diese Seite zu sehen"
+  "CounterViewer": {
+    "counterViewer": "{count} Mal",
+    "statTitle": "Du hast geklickt",
+    "statDescription": "Und es im Zustand aufbewahrt."
   },
   "Products": {
     "title": "Produkte",
     "description": "Hier sehen Sie die zum Shop hinzugefügten Produkte.",
     "addProductBtn": "Fügen Sie ein neues Produkt hinzu",
-    "productsFetchFailed": "Fehler beim Abrufen der Produkte."
+    "productFetchFailed": "Produkt laden fehlgeschlagen. Bitte wenden Sie sich an einen Administrator.",
+    "productsFetchFailed": "Fehler beim Abrufen der Produkte.",
+    "productDeletionFailed": "Das Produkt konnte nicht gelöscht werden. Bitte wenden Sie sich an einen Administrator.",
+    "productNotFound": "Produkt nicht gefunden.",
+    "noProducts": "Es gibt kein Produkt im Shop.",
+    "unauthorized": "Sie müssen angemeldet sein, um diese Aktion auszuführen."
   },
-  "AddProductForm": {
+  "ProductForm": {
     "referenceLabel": "Was ist die Produktreferenz?",
     "nameLabel": "Wie lautet der Produktname?",
     "descriptionLabel": "Wie lautet die Beschreibung?",
     "priceLabel": "Wie hoch ist der Produktpreis?",
     "imagePickerLabel": "Wählen Sie ein Bild aus.",
-    "addProductBtn": "Produkt hinzufügen",
     "addProductTitle": "Neues Produkt hinzufügen",
     "addProductDescription": "Hier können Sie Ihrem Shop ein neues Produkt hinzufügen!",
     "referenceRequired": "Die Produktreferenz ist erforderlich.",
@@ -79,12 +54,41 @@
     "pricePlaceholder": "Produktpreis eingeben...",
     "fileUploadFailed": "Das Hochladen des Bildes ist fehlgeschlagen",
     "productCreationFailed": "Interner Fehler, bitte wenden Sie sich an den Administrator.",
-    "unicityConstraintViolation": "Es existiert bereits ein Produkt mit der gleichen Referenz."
+    "unicityConstraintViolation": "Es existiert bereits ein Produkt mit der gleichen Referenz.",
+    "productUpdateFailed": "Produktupdate fehlgeschlagen.",
+    "productNotFound": "Produkt nicht gefunden.",
+    "productFetchFailed": "Fehler beim Abrufen des Produkts.",
+    "saveProductBtn": "Produkt speichern",
+    "editProductTitle": "Modifikator eines Produkts",
+    "editProductDescription": "Hier können Sie ein Produkt des Shops bearbeiten.",
+    "unauthorized": "Sie müssen angemeldet sein, um diese Aktion auszuführen."
   },
   "AddProductSuccess": {
     "title": "Erfolg!",
     "description": "Sie haben erfolgreich ein neues Produkt zum Shop hinzugefügt!",
     "linkButton": "Gehen Sie zurück zu den Produkten",
     "closeButton": "Fügen Sie ein weiteres Produkt hinzu"
+  },
+  "ProductCard": {
+    "cancel": "Stornieren",
+    "delete": "Löschen",
+    "deletionModalTitle": "Dieses Produkt löschen",
+    "deletionModalDescription": "Sind Sie sicher, dass Sie dieses Produkt löschen möchten?",
+    "deletionSuccess": "Produkt erfolgreich gelöscht."
+  },
+  "ProductList": {
+    "deletionSuccess": "Produkt erfolgreich gelöscht."
+  },
+  "Error": {
+    "tryAgain": "Versuchen Sie es erneut"
+  },
+  "NotFound": {
+    "title": "Etwas fehlt.",
+    "description": "Leider können wir diese Seite nicht finden. \nAuf der Startseite finden Sie viel zu entdecken.",
+    "goBack": "Zurück zur Startseite"
+  },
+  "Metadata": {
+    "title": "Next.js Starter",
+    "description": "Ein Next.js-Starter-Template mit i18n, API-Integration, Authentifizierung und mehr."
   }
 }

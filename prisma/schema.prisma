@@ -8,16 +8,8 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model Player {
-  id         Int     @id @default(autoincrement())
-  email      String  @unique
-  name       String?
-  age        Int     @default(18)
-  pictureUrl String?
-}
-
 model Product {
-  id          Int    @id @default(autoincrement())
+  id          String @id @default(uuid())
   reference   String @unique @default(cuid())
   name        String
   description String
