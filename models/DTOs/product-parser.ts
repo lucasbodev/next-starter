@@ -6,7 +6,7 @@ export class ProductParser implements Parser<ProductDTO> {
     
     parse(data: FormData): ProductDTO {
         return {
-            id: data.get('id') ? Number(data.get('id')) : undefined,
+            id: data.get('id') ? data.get('id') as string : undefined,
             reference: data.get('reference') as string,
             name: data.get('name') as string,
             description: data.get('description') as string,
