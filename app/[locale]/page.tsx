@@ -1,13 +1,9 @@
 import React from 'react';
 import styles from '@/app/[locale]/home.module.css';
 import HomeAnimations from '@/app/[locale]/home.animations';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 
-const Home = async ({ params }: { params: Promise<{ locale: string }> }) => {
-
-  const { locale } = await params;
-
-  setRequestLocale(locale);
+const Home = async () => {
 
   const t = await getTranslations('Home');
 

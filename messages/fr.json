@@ -32,7 +32,8 @@
     "productsFetchFailed": "Échec du chargement des produits.",
     "productDeletionFailed": "Échec de la suppression du produit. Veuillez contacter un administrateur.",
     "productNotFound": "Produit non trouvé.",
-    "noProducts": "Il n'y a aucun produit dans la boutique."
+    "noProducts": "Il n'y a aucun produit dans la boutique.",
+    "unauthorized": "Vous devez être connecté pour effectuer cette action."
   },
   "ProductForm": {
     "referenceLabel": "Quelle est la référence du produit ?",
@@ -62,7 +63,8 @@
     "productFetchFailed": "Échec du chargement du produit.",
     "saveProductBtn": "Enregistrer le produit",
     "editProductTitle": "Modifier un produit",
-    "editProductDescription": "Ici vous pouvez éditer un produit de la boutique."
+    "editProductDescription": "Ici vous pouvez éditer un produit de la boutique.",
+    "unauthorized": "Vous devez être connecté pour effectuer cette action."
   },
   "AddProductSuccess": {
     "title": "Succès!",

@@ -32,7 +32,6 @@ const LocaleLayout = async (
 ) => {
 
   const { locale } = await params;
-  console.log(locale);
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   if (!routing.locales.includes(locale as any)) {

@@ -1,19 +1,24 @@
+'use client';
+
 import React from 'react';
-import { getSession } from '@auth0/nextjs-auth0';
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
+import { useUser } from '@auth0/nextjs-auth0/client';
+import { usePathname } from '@/i18n/routing';
 
-const Account = async () => {
+const Account = () => {
 
-  const t = await getTranslations('Account');
+  const t = useTranslations('Account');
 
-  const user = await getSession();
+  const { user } = useUser();
+
+  const pathname = usePathname();
 
   return (
-    (user != null)
+    user
       ?
-      <a href="/api/auth/logout" className="btn">{t('logout')}</a>
+      <a href={`/api/auth/logout?returnTo=${pathname}`} className="btn">{t('logout')}</a>
       :
-      <a href="/api/auth/login" className="btn">{t('login')}</a>
+      <a href={`/api/auth/login?returnTo=${pathname}`} className="btn">{t('login')}</a>
   );
 };
 

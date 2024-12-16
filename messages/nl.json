@@ -32,7 +32,8 @@
     "productsFetchFailed": "Fout bij het ophalen van producten.",
     "productDeletionFailed": "Kan het product niet verwijderen. Neem contact op met een beheerder.",
     "productNotFound": "Product niet gevonden.",
-    "noProducts": "Er is geen product in de winkel."
+    "noProducts": "Er is geen product in de winkel.",
+    "unauthorized": "Om deze actie uit te voeren moet u ingelogd zijn."
   },
   "ProductForm": {
     "referenceLabel": "Wat is de productreferentie?",
@@ -62,7 +63,8 @@
     "productFetchFailed": "Fout bij het ophalen van product.",
     "saveProductBtn": "Product opslaan",
     "editProductTitle": "Modifier een product",
-    "editProductDescription": "Hier kunt u een product van de winkel bewerken."
+    "editProductDescription": "Hier kunt u een product van de winkel bewerken.",
+    "unauthorized": "Om deze actie uit te voeren moet u ingelogd zijn."
   },
   "AddProductSuccess": {
     "title": "Succes!",

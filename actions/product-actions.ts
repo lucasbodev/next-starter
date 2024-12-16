@@ -8,6 +8,7 @@ import { ErrorResponse } from "@/models/errors/error-response";
 import { ProductParser } from "@/models/DTOs/product-parser";
 import { VercelFileStorage } from "@/models/storage/vercel-file-storage";
 import { revalidatePath } from "next/cache";
+import { getSession } from "@auth0/nextjs-auth0";
 
 export const getProducts = async () => {
     const t = await getTranslations("Products");
@@ -25,6 +26,16 @@ export const createProduct = async (prevState: unknown, data: FormData) => {
     const t = await getTranslations("ProductForm");
 
     let submission = new ProductCreationValidator(t).validate(data);
+
+    const session = await getSession();
+
+    if (!(session?.user)) {
+        return submission.reply({
+            fieldErrors: {
+                ['internal']: [t('unauthorized')]
+            }
+        });
+    }
 
     if (submission.status === 'error') {
         return submission.reply();
@@ -53,6 +64,16 @@ export const updateProduct = async (prevState: unknown, data: FormData) => {
     const t = await getTranslations("ProductForm");
 
     let submission = new ProductUpdateValidator(t).validate(data);
+
+    const session = await getSession();
+
+    if (!(session?.user)) {
+        return submission.reply({
+            fieldErrors: {
+                ['internal']: [t('unauthorized')]
+            }
+        });
+    }
 
     if (submission.status === 'error') {
         return submission.reply();
@@ -84,6 +105,12 @@ export const updateProduct = async (prevState: unknown, data: FormData) => {
 
 export const deleteProduct = async (id: string) => {
     const t = await getTranslations("Products");
+
+    const session = await getSession();
+
+    if (!(session?.user)) {
+        throw new Error(t('unauthorized'));
+    }
 
     try {
         const product = await new PrismaProductRepository(t).find(id);

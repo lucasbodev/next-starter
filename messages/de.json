@@ -29,7 +29,8 @@
     "productsFetchFailed": "Fehler beim Abrufen der Produkte.",
     "productDeletionFailed": "Das Produkt konnte nicht gelöscht werden. Bitte wenden Sie sich an einen Administrator.",
     "productNotFound": "Produkt nicht gefunden.",
-    "noProducts": "Es gibt kein Produkt im Shop."
+    "noProducts": "Es gibt kein Produkt im Shop.",
+    "unauthorized": "Sie müssen angemeldet sein, um diese Aktion auszuführen."
   },
   "ProductForm": {
     "referenceLabel": "Was ist die Produktreferenz?",
@@ -59,7 +60,8 @@
     "productFetchFailed": "Fehler beim Abrufen des Produkts.",
     "saveProductBtn": "Produkt speichern",
     "editProductTitle": "Modifikator eines Produkts",
-    "editProductDescription": "Hier können Sie ein Produkt des Shops bearbeiten."
+    "editProductDescription": "Hier können Sie ein Produkt des Shops bearbeiten.",
+    "unauthorized": "Sie müssen angemeldet sein, um diese Aktion auszuführen."
   },
   "AddProductSuccess": {
     "title": "Erfolg!",

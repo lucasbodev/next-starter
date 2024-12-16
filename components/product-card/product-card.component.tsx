@@ -8,8 +8,11 @@ import { useTranslations } from "next-intl";
 import { deleteProduct } from "@/actions/product-actions";
 import toast from "react-hot-toast";
 import DaisyToast from "../daisy-toast/daisy-toast.component";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
 const ProductCard = ({ product }: { product: ProductDTO }) => {
+
+    const { user, error, isLoading } = useUser();
 
     const t = useTranslations("ProductCard");
 
@@ -42,41 +45,32 @@ const ProductCard = ({ product }: { product: ProductDTO }) => {
             </figure>
             <div className="card-body">
                 <div className="card-actions justify-end">
-                    <div className={styles.action__icons}>
-                        
-                        {/* <Link href="/products/1">Test</Link> */}
-                        <div className="tooltip tooltip-accent" data-tip="Edit product">
-                            <Link href={{
-                                pathname: '/products/edit-product/[id]',
-                                params: { id: `${product.id}` },
-                            }}>
-
-                                {/* <Link href={url as any}> */}
-                                {/* <span onClick={() => router.replace(
-                                {
+                    {
+                        user &&
+                        <div className={styles.action__icons}>
+                            <div className="tooltip tooltip-accent" data-tip="Edit product">
+                                <Link href={{
                                     pathname: '/products/edit-product/[id]',
-                                    params: { id: `${product.id}` }
-                                },
-                                { locale: locale }
-                            )}> */}
-                                <svg className="h-6 w-6 text-primary" width="622" height="617" viewBox="0 0 622 617" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M539.817 214.583L406.483 81.25M539.817 214.583L373.2 381.197C351.243 403.153 324.593 420.487 293.997 425.763C263.103 431.093 224.765 432.867 206.481 414.583C188.198 396.3 189.972 357.96 195.3 327.067C200.577 296.47 217.912 269.82 239.867 247.863L406.483 81.25M539.817 214.583C539.817 214.583 639.813 114.583 573.147 47.9167C506.48 -18.75 406.483 81.25 406.483 81.25M591.667 308.333C591.667 525 525 591.667 308.333 591.667C91.6667 591.667 25 525 25 308.333C25 91.6667 91.6667 25 308.333 25" stroke="currentColor" strokeWidth="50" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </Link>
+                                    params: { id: `${product.id}` },
+                                }}>
+                                    <svg className="h-6 w-6 text-primary" width="622" height="617" viewBox="0 0 622 617" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M539.817 214.583L406.483 81.25M539.817 214.583L373.2 381.197C351.243 403.153 324.593 420.487 293.997 425.763C263.103 431.093 224.765 432.867 206.481 414.583C188.198 396.3 189.972 357.96 195.3 327.067C200.577 296.47 217.912 269.82 239.867 247.863L406.483 81.25M539.817 214.583C539.817 214.583 639.813 114.583 573.147 47.9167C506.48 -18.75 406.483 81.25 406.483 81.25M591.667 308.333C591.667 525 525 591.667 308.333 591.667C91.6667 591.667 25 525 25 308.333C25 91.6667 91.6667 25 308.333 25" stroke="currentColor" strokeWidth="50" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </Link>
+                            </div>
+                            <div className="tooltip tooltip-accent" data-tip="Delete product">
+                                <button onClick={() => showDeletionModal()}>
+                                    <svg className="h-6 w-6 text-error" width="601" height="668" viewBox="0 0 601 668" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M234 334V500.667" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M367.333 334V500.667" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M34 167.333H567.333" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M100.667 267.333V534C100.667 589.23 145.438 634 200.667 634H400.666C455.896 634 500.666 589.23 500.666 534V267.333" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
+                                        <path d="M200.667 100.667C200.667 63.8477 230.514 34 267.333 34H334C370.82 34 400.666 63.8477 400.666 100.667V167.333H200.667V100.667Z" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                        <div className="tooltip tooltip-accent" data-tip="Delete product">
-                            <button onClick={() => showDeletionModal()}>
-                                <svg className="h-6 w-6 text-error" width="601" height="668" viewBox="0 0 601 668" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M234 334V500.667" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M367.333 334V500.667" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M34 167.333H567.333" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M100.667 267.333V534C100.667 589.23 145.438 634 200.667 634H400.666C455.896 634 500.666 589.23 500.666 534V267.333" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
-                                    <path d="M200.667 100.667C200.667 63.8477 230.514 34 267.333 34H334C370.82 34 400.666 63.8477 400.666 100.667V167.333H200.667V100.667Z" stroke="currentColor" strokeWidth="66.6667" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-
-                    </div>
+                    }
                     <dialog ref={deletionModal} className="modal modal-bottom sm:modal-middle">
                         <div className="modal-box">
                             <h3 className="font-bold text-lg">{t('deletionModalTitle')}</h3>

@@ -4,6 +4,7 @@ import ProductCard from "@/components/product-card/product-card.component";
 import styles from "@/app/[locale]/products/products.module.css";
 import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
+import { getSession } from "@auth0/nextjs-auth0";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -16,6 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const Products = async () => {
 
+    const session = await getSession();
+
     const t = await getTranslations("Products");
 
     const products = await getProducts();
@@ -27,7 +30,10 @@ const Products = async () => {
                     <h1 className={styles.products__title}>{t('title')}</h1>
                     <p className={styles.products__description}>{t('description')}</p>
                 </div>
-                <Link className="btn btn-primary" href="/products/add-product" >{t('addProductBtn')}</Link>
+                {
+                    session?.user &&
+                    <Link className="btn btn-primary" href="/products/add-product" >{t('addProductBtn')}</Link>
+                }
             </div>
             {
                 products.length === 0 && (

@@ -32,7 +32,8 @@
     "productsFetchFailed": "Failed to fetch products.",
     "productDeletionFailed": "Failed to delete the product. Please contact an administrator.",
     "productNotFound": "Product not found.",
-    "noProducts": "There is no product in the shop."
+    "noProducts": "There is no product in the shop.",
+    "unauthorized": "You must be logged in to perform this action."
   },
   "ProductForm": {
     "referenceLabel": "What is the product reference?",
@@ -62,7 +63,8 @@
     "productFetchFailed": "Failed to fetch product.",
     "saveProductBtn": "Save product",
     "editProductTitle": "Edit product",
-    "editProductDescription": "Here you can edit a product of the shop."
+    "editProductDescription": "Here you can edit a product of the shop.",
+    "unauthorized": "You must be logged in to perform this action."
   },
   "AddProductSuccess": {
     "title": "Success!",
