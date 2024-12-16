@@ -1,5 +1,5 @@
-import { ProductDTO } from "@/models/DTOs/product-DTO";
-import { Parser } from "@/models/DTOs/parser";
+import { type ProductDTO } from "@/models/DTOs/product-DTO";
+import { type Parser } from "@/models/DTOs/parser";
 
 
 export class ProductParser implements Parser<ProductDTO> {
