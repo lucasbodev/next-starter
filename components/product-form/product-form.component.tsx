@@ -40,7 +40,7 @@ const ProductForm = ({ defaultValue }: { defaultValue?: ProductDTO }) => {
     };
 
     return (
-        <form className={styles.product__form} id={form.id} onSubmit={form.onSubmit} action={action}>
+        <form id={form.id} onSubmit={form.onSubmit} action={action}>
             <div className="card bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title">{

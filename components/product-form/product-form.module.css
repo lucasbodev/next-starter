@@ -1,7 +1,3 @@
-.product__form {
-    z-index: 100;
-}
-
 .double__column__form {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -9,6 +9,7 @@ import { deleteProduct } from "@/actions/product-actions";
 import toast from "react-hot-toast";
 import DaisyToast from "../daisy-toast/daisy-toast.component";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import Image from 'next/image';
 
 const ProductCard = ({ product }: { product: ProductDTO }) => {
 
@@ -43,9 +44,15 @@ const ProductCard = ({ product }: { product: ProductDTO }) => {
     return (
         <div className="card bg-base-100 shadow-xl" key={product.id}>
             <figure>
-                <img
-                    src={product.image}
-                    alt={product.name} />
+                {
+                    product.image &&
+                    <Image
+                        src={product.image}
+                        alt={product.name}
+                        width={500}
+                        height={500}
+                    />
+                }
             </figure>
             <div className="card-body">
                 <div className="card-actions justify-end">
