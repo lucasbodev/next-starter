@@ -14,9 +14,9 @@ const Languages = () => {
     const params = useParams();
 
     return (
-        <details className="dropdown">
-            <summary className="btn btn-ghost m-1">{currentLocale.toUpperCase()}</summary>
-            <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+        <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn btn-ghost m-1">{currentLocale.toUpperCase()}</div>
+            <ul tabIndex={0} className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                 {routing.locales.map((locale) => (
                     <li key={locale}>
                         <Link locale={locale} href={{
@@ -28,7 +28,7 @@ const Languages = () => {
                     </li>
                 ))}
             </ul>
-        </details>
+        </div>
     );
 };
 
